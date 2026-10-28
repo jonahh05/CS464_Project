@@ -1,0 +1,154 @@
+[
+  {
+    "id": "base-01",
+    "section": "math",
+    "difficulty": "easy",
+    "stem": "If 3x + 5 = 20, what is the value of x?",
+    "choices": ["3", "5", "7", "15"],
+    "correct_index": 1,
+    "ai_answer_index": 1,
+    "explanation_brief": "",
+    "explanation_detailed": "",
+    "source": "PLACEHOLDER - written by team, replace with a question bank item"
+  },
+  {
+    "id": "base-02",
+    "section": "reading_writing",
+    "difficulty": "easy",
+    "stem": "Which choice completes the text with the most logical and precise word?\n\nThe scientist was ______ by the results: they matched her prediction exactly.",
+    "choices": ["baffled", "gratified", "indifferent", "alarmed"],
+    "correct_index": 1,
+    "ai_answer_index": 1,
+    "explanation_brief": "",
+    "explanation_detailed": "",
+    "source": "PLACEHOLDER - written by team, replace with a question bank item"
+  },
+  {
+    "id": "base-03",
+    "section": "math",
+    "difficulty": "medium",
+    "stem": "A shirt costs $40 after a 20% discount. What was the original price of the shirt?",
+    "choices": ["$48", "$50", "$52", "$60"],
+    "correct_index": 1,
+    "ai_answer_index": 1,
+    "explanation_brief": "",
+    "explanation_detailed": "",
+    "source": "PLACEHOLDER - written by team, replace with a question bank item"
+  },
+
+  {
+    "id": "set1-01",
+    "section": "math",
+    "difficulty": "medium",
+    "stem": "What is the slope of the line that passes through the points (2, 3) and (6, 11)?",
+    "choices": ["1/2", "2", "4", "8"],
+    "correct_index": 1,
+    "ai_answer_index": 1,
+    "explanation_brief": "Slope is rise over run: (11 - 3) / (6 - 2) = 8 / 4 = 2.",
+    "explanation_detailed": "Step 1: Slope m = (y2 - y1) / (x2 - x1).\nStep 2: The change in y is 11 - 3 = 8.\nStep 3: The change in x is 6 - 2 = 4.\nStep 4: m = 8 / 4 = 2.\nSo the slope is 2, which is choice B.",
+    "source": "PLACEHOLDER - written by team, replace with a question bank item"
+  },
+  {
+    "id": "set1-02",
+    "section": "math",
+    "difficulty": "medium",
+    "stem": "If f(x) = x² - 4x, what is the value of f(-2)?",
+    "choices": ["-12", "-4", "4", "12"],
+    "correct_index": 3,
+    "ai_answer_index": 0,
+    "explanation_brief": "Substituting -2 gives (-2)² - 4(-2) = -4 - 8 = -12.",
+    "explanation_detailed": "Step 1: Replace x with -2: f(-2) = (-2)² - 4(-2).\nStep 2: (-2)² keeps the negative sign, so it equals -4.\nStep 3: 4(-2) = -8, and subtracting gives -4 - 8.\nStep 4: -4 - 8 = -12.\nSo f(-2) = -12, which is choice A.",
+    "source": "PLACEHOLDER - written by team, replace with a question bank item. AI is intentionally wrong (sign error)."
+  },
+  {
+    "id": "set1-03",
+    "section": "reading_writing",
+    "difficulty": "easy",
+    "stem": "Which choice completes the text with the most logical transition?\n\nMany early critics dismissed the novel as too long and unfocused. ______, it is now taught in most university literature courses.",
+    "choices": ["Similarly", "Nevertheless", "For example", "In addition"],
+    "correct_index": 1,
+    "ai_answer_index": 1,
+    "explanation_brief": "The second sentence contrasts with the first, so a contrast word like \"Nevertheless\" fits.",
+    "explanation_detailed": "Step 1: The first sentence says critics dismissed the novel.\nStep 2: The second sentence says it is now widely taught, which is the opposite outcome.\nStep 3: Opposing ideas need a contrast transition.\nStep 4: \"Similarly\" and \"In addition\" signal agreement, and \"For example\" signals an example; only \"Nevertheless\" signals contrast.\nSo the answer is choice B.",
+    "source": "PLACEHOLDER - written by team, replace with a question bank item"
+  },
+
+  {
+    "id": "set2-01",
+    "section": "math",
+    "difficulty": "medium",
+    "stem": "A rectangle has a perimeter of 30 and a length of 9. What is the area of the rectangle?",
+    "choices": ["36", "45", "54", "81"],
+    "correct_index": 2,
+    "ai_answer_index": 2,
+    "explanation_brief": "Width = (30 - 2 × 9) / 2 = 6, so area = 9 × 6 = 54.",
+    "explanation_detailed": "Step 1: Perimeter = 2 × length + 2 × width.\nStep 2: 30 = 2(9) + 2w, so 30 = 18 + 2w.\nStep 3: 2w = 12, so w = 6.\nStep 4: Area = length × width = 9 × 6 = 54.\nSo the answer is choice C.",
+    "source": "PLACEHOLDER - written by team, replace with a question bank item"
+  },
+  {
+    "id": "set2-02",
+    "section": "math",
+    "difficulty": "medium",
+    "stem": "The average of four numbers is 10. When one of the numbers is removed, the average of the remaining three numbers is 9. What number was removed?",
+    "choices": ["9", "10", "12", "13"],
+    "correct_index": 3,
+    "ai_answer_index": 2,
+    "explanation_brief": "The four numbers total 40 and the remaining three total 28, so the removed number is 40 - 28 = 12.",
+    "explanation_detailed": "Step 1: Total of four numbers = 4 × 10 = 40.\nStep 2: Total of the remaining three = 3 × 9 = 28.\nStep 3: The removed number is the difference between the totals.\nStep 4: 40 - 28 = 12.\nSo the removed number is 12, which is choice C.",
+    "source": "PLACEHOLDER - written by team, replace with a question bank item. AI is intentionally wrong (3 × 9 miscomputed)."
+  },
+  {
+    "id": "set2-03",
+    "section": "reading_writing",
+    "difficulty": "easy",
+    "stem": "Honeybees tell other bees where food is through a \"waggle dance.\" The angle of the dance shows the direction of the food relative to the sun, and the length of the dance shows how far away it is.\n\nWhich choice best states the main purpose of the text?",
+    "choices": [
+      "To argue that bees are more intelligent than other insects",
+      "To explain how bees share information about food sources",
+      "To describe the physical anatomy of honeybees",
+      "To compare bee communication with human language"
+    ],
+    "correct_index": 1,
+    "ai_answer_index": 1,
+    "explanation_brief": "The text describes how the waggle dance communicates the direction and distance of food.",
+    "explanation_detailed": "Step 1: The first sentence introduces the waggle dance as a way to share where food is.\nStep 2: The second sentence explains what parts of the dance mean (direction and distance).\nStep 3: There is no argument about intelligence, no anatomy, and no comparison with humans.\nStep 4: The purpose is explaining how bees share food information.\nSo the answer is choice B.",
+    "source": "PLACEHOLDER - written by team, replace with a question bank item"
+  },
+
+  {
+    "id": "set3-01",
+    "section": "math",
+    "difficulty": "easy",
+    "stem": "If 2^x = 32, what is the value of x?",
+    "choices": ["4", "5", "6", "16"],
+    "correct_index": 1,
+    "ai_answer_index": 1,
+    "explanation_brief": "2 × 2 × 2 × 2 × 2 = 32, so x = 5.",
+    "explanation_detailed": "Step 1: Write 32 as a power of 2.\nStep 2: 2¹ = 2, 2² = 4, 2³ = 8, 2⁴ = 16, 2⁵ = 32.\nStep 3: So 2^x = 2⁵.\nStep 4: Equal bases means equal exponents, so x = 5.\nSo the answer is choice B.",
+    "source": "PLACEHOLDER - written by team, replace with a question bank item"
+  },
+  {
+    "id": "set3-02",
+    "section": "reading_writing",
+    "difficulty": "medium",
+    "stem": "Which choice completes the text so that it conforms to the conventions of Standard English?\n\nThe team of researchers ______ its findings next month.",
+    "choices": ["plan to publish", "plans to publish", "planning to publish", "have planned publishing"],
+    "correct_index": 1,
+    "ai_answer_index": 0,
+    "explanation_brief": "\"Team of researchers\" refers to several people, so it takes the plural verb \"plan.\"",
+    "explanation_detailed": "Step 1: Find the subject of the sentence: \"the team of researchers.\"\nStep 2: The phrase describes multiple researchers, so the subject is plural.\nStep 3: A plural subject needs a plural verb, so \"plan\" (not \"plans\").\nStep 4: \"Planning\" and \"have planned publishing\" are not complete, standard verb forms here.\nSo the answer is choice A.",
+    "source": "PLACEHOLDER - written by team, replace with a question bank item. AI is intentionally wrong (subject is \"team\", singular)."
+  },
+  {
+    "id": "set3-03",
+    "section": "math",
+    "difficulty": "easy",
+    "stem": "A car travels 150 miles in 2.5 hours. What is its average speed in miles per hour?",
+    "choices": ["50", "60", "65", "75"],
+    "correct_index": 1,
+    "ai_answer_index": 1,
+    "explanation_brief": "Speed = distance / time = 150 / 2.5 = 60 miles per hour.",
+    "explanation_detailed": "Step 1: Average speed = total distance / total time.\nStep 2: Distance = 150 miles, time = 2.5 hours.\nStep 3: 150 / 2.5 = 1500 / 25 = 60.\nStep 4: The units are miles per hour.\nSo the answer is choice B.",
+    "source": "PLACEHOLDER - written by team, replace with a question bank item"
+  }
+]

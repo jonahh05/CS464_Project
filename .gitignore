@@ -1,0 +1,15 @@
+# Build output
+target/
+
+# Participant data: never commit real results
+data/*
+!data/.gitkeep
+
+# IDEs / OS
+.idea/
+*.iml
+.vscode/
+.classpath
+.project
+.settings/
+.DS_Store

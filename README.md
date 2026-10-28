@@ -7,7 +7,7 @@ The study design is in [`docs/experiment-design.md`](docs/experiment-design.md).
 
 ## Quick start
 
-Requirements: **JDK 17+** and **Maven** (same setup as Assignment 2).
+Requirements: **JDK 17+** and **Maven**.
 
 ```bash
 mvn javafx:run      # launch the experiment
@@ -15,7 +15,6 @@ mvn test            # check the code and validate the JSON files
 mvn package         # build target/experiment.jar  ->  java -jar target/experiment.jar
 ```
 
-Build the jar on the laptop that will run the study, because JavaFX ships separate jars for each OS.
 Results go to `data/` (gitignored). Each session writes `<ID>_<timestamp>_trials.csv` and
 `<ID>_<timestamp>_ratings.csv`.
 

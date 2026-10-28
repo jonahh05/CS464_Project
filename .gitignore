@@ -1,7 +1,7 @@
 # Build output
 target/
 
-# Participant data: never commit real results
+# Participant data
 data/*
 !data/.gitkeep
 

@@ -1,0 +1,63 @@
+/* Visual style for every screen. Class names are set in the ui/ package. */
+
+.root {
+    -fx-font-size: 16px;
+    -fx-background-color: #f7f7f5;
+}
+
+.page, .page > .viewport {
+    -fx-background-color: #f7f7f5;
+}
+
+.title {
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+}
+
+.body-text {
+    -fx-font-size: 17px;
+    -fx-line-spacing: 3px;
+}
+
+.muted {
+    -fx-text-fill: #666666;
+    -fx-font-size: 14px;
+}
+
+.primary-button {
+    -fx-font-size: 16px;
+    -fx-padding: 8 22 8 22;
+}
+
+.rating-item {
+    -fx-padding: 10 0 10 0;
+}
+
+.rating-button {
+    -fx-min-width: 44px;
+    -fx-min-height: 36px;
+}
+
+.rating-button:selected {
+    -fx-base: #3b6fb6;
+}
+
+/* The AI helper box looks identical across conditions; only its text changes. */
+.ai-panel {
+    -fx-background-color: #eaf1fb;
+    -fx-border-color: #9db8e0;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-padding: 14;
+}
+
+.ai-heading {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c4f80;
+}
+
+.ai-suggestion {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}

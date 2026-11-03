@@ -1,0 +1,70 @@
+{
+  "title": "AI Helper Study (CS464 Team 13)",
+  "output_dir": "data",
+  "rating_min": 1,
+  "rating_max": 10,
+  "shuffle_questions_within_block": false,
+
+  "rating_items": [
+    {
+      "id": "conf_self",
+      "pre_prompt": "How confident are you that you will answer this round's questions correctly?",
+      "post_prompt": "How confident are you that you answered this round's questions correctly?"
+    },
+    {
+      "id": "conf_ai",
+      "pre_prompt": "How confident are you in the AI helper's suggestions for this round?",
+      "post_prompt": "How confident were you in the AI helper's suggestions during this round?"
+    },
+    {
+      "id": "difficulty",
+      "pre_prompt": "How difficult do you expect this round's questions to be?",
+      "post_prompt": "How difficult were this round's questions?"
+    },
+    {
+      "id": "est_accuracy",
+      "pre_prompt": "How many of this round's questions do you expect to get right? (1 = almost none, 10 = all of them)",
+      "post_prompt": "How many of this round's questions do you think you got right? (1 = almost none, 10 = all of them)"
+    }
+  ],
+
+  "orders": [
+    ["none", "brief", "detailed"],
+    ["none", "detailed", "brief"],
+    ["brief", "none", "detailed"],
+    ["brief", "detailed", "none"],
+    ["detailed", "none", "brief"],
+    ["detailed", "brief", "none"]
+  ],
+
+  "blocks": [
+    {
+      "id": "baseline",
+      "title": "Baseline",
+      "instructions": "Answer each question by selecting an option and pressing Submit. The AI helper's suggested answer is shown below each question.",
+      "explanation": "none",
+      "question_ids": ["base-01", "base-02", "base-03"]
+    },
+    {
+      "id": "round_a",
+      "title": "Round A",
+      "instructions": "Answer each question by selecting an option and pressing Submit. The AI helper's suggestion is shown below each question.",
+      "order_slot": 0,
+      "question_ids": ["set1-01", "set1-02", "set1-03"]
+    },
+    {
+      "id": "round_b",
+      "title": "Round B",
+      "instructions": "Answer each question by selecting an option and pressing Submit. The AI helper's suggestion is shown below each question.",
+      "order_slot": 1,
+      "question_ids": ["set2-01", "set2-02", "set2-03"]
+    },
+    {
+      "id": "round_c",
+      "title": "Round C",
+      "instructions": "Answer each question by selecting an option and pressing Submit. The AI helper's suggestion is shown below each question.",
+      "order_slot": 2,
+      "question_ids": ["set3-01", "set3-02", "set3-03"]
+    }
+  ]
+}

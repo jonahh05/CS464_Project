@@ -60,7 +60,17 @@ public final class ExperimentSession {
                 Collections.shuffle(questions, shuffleRandom);
             }
 
-            planned.add(new PlannedBlock(i, block.id(), block.title(), block.instructions(), level, questions));
+            List<PlannedTrial> trials = new ArrayList<>();
+            for (Question q : questions) {
+                int ai = block.drawsSuggestions()
+                        ? SuggestionDrawer.draw(participantId, block.id(), q.id(),
+                                q.choices().size(), q.correctIndex(), block.aiAccuracyPercent())
+                        : q.aiAnswerIndex();
+                trials.add(new PlannedTrial(q, ai));
+            }
+
+            planned.add(new PlannedBlock(i, block.id(), block.title(), block.instructions(), level,
+                    block.aiAccuracyPercent(), trials));
         }
         return new ExperimentSession(participantId, orderId, planned);
     }

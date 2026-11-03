@@ -14,7 +14,7 @@ How the proposal maps onto the software. Keep this in sync with the
 | Variable | Type | How the software implements it |
 |---|---|---|
 | Explanation level (none / brief / detailed) | IV, within-subjects | `explanation` / `order_slot` per block in `experiment.json`; text from `explanation_brief` / `explanation_detailed` |
-| AI accuracy | IV, per block | Implied by the questions: AI is wrong when `ai_answer_index != correct_index`. Baseline = 100%. |
+| AI accuracy | IV, per block | Either fixed (AI is wrong when `ai_answer_index != correct_index`) or `ai_accuracy_percent` on the block: each suggestion drawn, correct with probability p, each wrong choice (1 − p)/3, seeded by participant ID. Baseline = 100%. See [config-format](config-format.md#ai-accuracy-per-block-optional). |
 | Score / following wrong AI | DV | `correct`, `followed_ai`, `ai_correct` in the trials CSV |
 | Response time | DV | `response_time_ms` (question shown until Submit) |
 | Self-reported accuracy | DV | `est_accuracy` rating (pre + post), compare with actual score |
@@ -44,10 +44,13 @@ number picks the order (P01 → 1 ... P06 → 6, P07 → 1 ...), so 12 participa
 These can all be changed in the JSON config without code changes:
 
 - [ ] Questions per round (teammate suggested 40-50 total → ~10 per round)
-- [ ] AI accuracy in rounds A-C (e.g. 70%?) and **where** the wrong answers sit within a round
+- [ ] AI accuracy in rounds A-C (e.g. 70%? 80%?) and **how**: fixed wrong questions (same for everyone)
+      or `ai_accuracy_percent` (drawn per participant, so the count of wrong suggestions varies)
 - [ ] Mix of sections (math vs. reading/writing) and difficulty per round. Keep the rounds balanced.
 - [ ] Shuffle questions within a round (`shuffle_questions_within_block`), or keep a fixed order?
-- [ ] Time limit per question? (not implemented; would go in `QuestionScreen`)
+- [ ] Time limit per question? (`time_limit_seconds`, off by default)
+- [ ] Helper look: `box` or `side_card`? Keep the "Use this answer" button (it makes reliance one click)?
+- [ ] Delay before the suggestion appears (`ai_delay_ms`)?
 - [ ] Practice question before the baseline? (would be a new step in `ExperimentFlow`)
 - [ ] Final rating wording (current text is a first draft)
 - [ ] Google Form contents: consent, demographics, prior AI use, end-of-study questions

@@ -28,7 +28,9 @@ public final class ResultWriter implements Closeable {
             "participant_id", "order_id", "block_index", "block_id", "explanation_level",
             "trial_index", "question_id", "section", "difficulty",
             "ai_suggestion", "ai_correct", "chosen_answer", "correct_answer",
-            "correct", "followed_ai", "response_time_ms", "timestamp");
+            "correct", "followed_ai", "response_time_ms", "timestamp",
+            // Added for the suggestion-panel variant; appended so the original columns keep their positions.
+            "ai_accuracy_percent", "time_to_suggestion_ms", "timed_out", "used_answer_button");
 
     public static final List<String> RATING_COLUMNS = List.of(
             "participant_id", "order_id", "block_index", "block_id", "explanation_level",
@@ -64,14 +66,22 @@ public final class ResultWriter implements Closeable {
                 q.id(),
                 nullToEmpty(q.section()),
                 nullToEmpty(q.difficulty()),
-                Question.letter(q.aiAnswerIndex()),
-                String.valueOf(q.isAiCorrect()),
-                Question.letter(r.chosenIndex()),
+                Question.letter(r.aiAnswerIndex()),
+                String.valueOf(r.isAiCorrect()),
+                r.answered() ? Question.letter(r.chosenIndex()) : "",
                 Question.letter(q.correctIndex()),
                 String.valueOf(r.isCorrect()),
                 String.valueOf(r.followedAi()),
                 String.valueOf(r.responseTimeMs()),
-                r.answeredAt().toString()));
+                r.answeredAt().toString(),
+                r.aiAccuracyPercent() == null ? "" : percent(r.aiAccuracyPercent()),
+                String.valueOf(r.timeToSuggestionMs()),
+                String.valueOf(r.timedOut()),
+                String.valueOf(r.usedAnswerButton())));
+    }
+
+    private static String percent(double value) {
+        return value == Math.rint(value) ? String.valueOf((long) value) : String.valueOf(value);
     }
 
     public void writeRating(RatingResult r) throws IOException {

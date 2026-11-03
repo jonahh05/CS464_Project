@@ -14,4 +14,4 @@ so we can describe it in the report.
 
 | Question id | Bank ID / link | Section | Difficulty | AI wrong? | Added by |
 |---|---|---|---|---|---|
-| base-01 … set3-03 | *placeholders, replace* | | | | |
+| base-01 … set3-06 | *placeholders, replace*: 24 original SAT-style items written for the browser prototype, with an explanation for every choice | 12 math, 12 reading/writing | mostly easy/medium | drawn (80%) | Jenny |

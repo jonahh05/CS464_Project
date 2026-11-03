@@ -38,6 +38,7 @@ That gives 2 participants per order for P01-P12. The experimenter can override i
 | Add / replace questions, write AI explanations | `src/main/resources/questions/questions.json`      | [question-format](docs/question-format.md) |
 | Change which questions go in which round       | `src/main/resources/config/experiment.json`        | [config-format](docs/config-format.md) |
 | Change rating wording, scale, orders           | `src/main/resources/config/experiment.json`        | [config-format](docs/config-format.md) |
+| Set AI accuracy per round, helper look, time limit | `src/main/resources/config/experiment.json`    | [config-format](docs/config-format.md) |
 | Change how a screen looks                      | `src/main/java/.../ui/*Screen.java`, `styles/app.css` | — |
 | Add a step to the session (practice, break)    | `src/main/java/.../ui/ExperimentFlow.java`         | — |
 | Add a column to the output                     | `io/ResultWriter.java` **and** `docs/data-dictionary.md` | [data-dictionary](docs/data-dictionary.md) |
@@ -71,6 +72,11 @@ experiment logic. That means anyone can redesign a screen without touching data 
 
 ## Status
 
-The current `questions.json` contains **12 placeholder questions** (3 per round) so the
+The current `questions.json` contains **24 placeholder questions** (6 per round) so the
 whole flow can be run and demoed. See [`docs/experiment-design.md`](docs/experiment-design.md#open-decisions)
 for what the team still needs to decide.
+
+The bundled config uses the suggestion-card helper (`helper_style: side_card`) with a
+"Use this answer" button, a 0.9 s delay before the suggestion appears, and AI accuracy drawn at
+80% in rounds A-C. To go back to the plain helper box with fixed wrong answers, remove
+`helper_style`, `use_answer_button`, `ai_delay_ms` and the blocks' `ai_accuracy_percent`.

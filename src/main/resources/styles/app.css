@@ -61,3 +61,124 @@
     -fx-font-size: 18px;
     -fx-font-weight: bold;
 }
+
+/* --- helper_style: side_card ------------------------------------------------------------
+   A card beside the question. Like the box, it looks the same in every condition;
+   only the "Why" text changes with the explanation level. */
+
+.question-stem {
+    -fx-font-size: 18px;
+}
+
+.choice {
+    -fx-padding: 10 14 10 14;
+    -fx-background-color: white;
+    -fx-border-color: #dde2ee;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+}
+
+.choice:selected {
+    -fx-border-color: #2f5fe0;
+    -fx-background-color: #eef3fd;
+}
+
+/* The AI's suggested choice gets a violet outline in the answer list. */
+.choice.ai-pick {
+    -fx-border-color: #6b4de6;
+    -fx-border-width: 2;
+}
+
+.choice.ai-pick:selected {
+    -fx-border-color: #2f5fe0;
+}
+
+.ai-card {
+    -fx-background-color: white;
+    -fx-border-color: #dde2ee #dde2ee #dde2ee #6b4de6;
+    -fx-border-width: 1 1 1 4;
+    -fx-border-radius: 12;
+    -fx-background-radius: 12;
+    -fx-effect: dropshadow(gaussian, rgba(20, 30, 60, 0.08), 16, 0, 0, 4);
+}
+
+.ai-card-head {
+    -fx-padding: 12 16 12 16;
+    -fx-border-color: transparent transparent #dde2ee transparent;
+}
+
+.ai-mark {
+    -fx-min-width: 12;
+    -fx-min-height: 12;
+    -fx-max-width: 12;
+    -fx-max-height: 12;
+    -fx-background-color: linear-gradient(to bottom right, #2f5fe0, #6b4de6);
+    -fx-background-radius: 3;
+}
+
+.ai-card-title {
+    -fx-font-weight: bold;
+}
+
+.ai-chip {
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #6b4de6;
+    -fx-background-color: #eeeafc;
+    -fx-background-radius: 999;
+    -fx-padding: 2 8 2 8;
+}
+
+.ai-card-body {
+    -fx-padding: 16;
+}
+
+.eyebrow {
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #5b6375;
+}
+
+.ai-badge {
+    -fx-min-width: 46;
+    -fx-min-height: 46;
+    -fx-alignment: center;
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-background-color: #6b4de6;
+    -fx-background-radius: 10;
+}
+
+.ai-choice-text {
+    -fx-font-size: 17px;
+}
+
+.ai-why {
+    -fx-background-color: #eeeafc;
+    -fx-background-radius: 8;
+    -fx-padding: 10 12 10 12;
+}
+
+.ai-why-text {
+    -fx-font-size: 15px;
+}
+
+.use-answer-button {
+    -fx-text-fill: #6b4de6;
+    -fx-border-color: #6b4de6;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-background-color: white;
+    -fx-padding: 6 14 6 14;
+}
+
+/* --- time_limit_seconds ------------------------------------------------------------------ */
+
+.timer-bar > .bar {
+    -fx-background-color: #d08a1c;
+}
+
+.timer-bar.urgent > .bar {
+    -fx-background-color: #d9383c;
+}

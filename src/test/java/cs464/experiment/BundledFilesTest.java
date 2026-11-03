@@ -1,7 +1,10 @@
 package cs464.experiment;
 
 import cs464.experiment.io.JsonLoader;
+import cs464.experiment.model.BlockConfig;
 import cs464.experiment.model.ExperimentConfig;
+import cs464.experiment.model.ExplanationLevel;
+import cs464.experiment.model.HelperStyle;
 import cs464.experiment.model.Question;
 import cs464.experiment.session.ConfigValidator;
 import org.junit.jupiter.api.Test;
@@ -34,8 +37,13 @@ class BundledFilesTest {
         Map<String, Question> questions = JsonLoader.loadQuestions(JsonLoader.QUESTIONS_RESOURCE);
 
         // The proposal requires the first (baseline) block to have a 100% accurate AI.
-        for (String id : config.blocks().get(0).questionIds()) {
-            assertTrue(questions.get(id).isAiCorrect(), "Baseline question " + id + " has a wrong AI answer");
+        BlockConfig baseline = config.blocks().get(0);
+        if (baseline.drawsSuggestions()) {
+            assertEquals(100.0, baseline.aiAccuracyPercent(), "Baseline ai_accuracy_percent must be 100");
+        } else {
+            for (String id : baseline.questionIds()) {
+                assertTrue(questions.get(id).isAiCorrect(), "Baseline question " + id + " has a wrong AI answer");
+            }
         }
     }
 
@@ -44,8 +52,13 @@ class BundledFilesTest {
         Map<String, Question> questions = JsonLoader.loadQuestions(JsonLoader.QUESTIONS_RESOURCE);
         Question q = questions.get("set1-02");
 
-        assertEquals(3, q.correctIndex());
-        assertEquals(0, q.aiAnswerIndex());
-        assertTrue(q.explanationDetailed().startsWith("Step 1"));
+        assertEquals(1, q.correctIndex());
+        assertEquals("reading_writing", q.section());
+        assertEquals(4, q.explanationsByChoice().size());
+        assertTrue(q.explanationFor(0, ExplanationLevel.DETAILED).contains("contrast"));
+
+        ExperimentConfig config = JsonLoader.loadConfig(JsonLoader.CONFIG_RESOURCE);
+        assertEquals(HelperStyle.SIDE_CARD, config.helper());
+        assertEquals(80.0, config.blocks().get(1).aiAccuracyPercent());
     }
 }

@@ -5,6 +5,11 @@
   "rating_max": 10,
   "shuffle_questions_within_block": false,
 
+  "helper_style": "side_card",
+  "use_answer_button": true,
+  "ai_delay_ms": 900,
+  "time_limit_seconds": 0,
+
   "rating_items": [
     {
       "id": "conf_self",
@@ -41,30 +46,34 @@
     {
       "id": "baseline",
       "title": "Baseline",
-      "instructions": "Answer each question by selecting an option and pressing Submit. The AI helper's suggested answer is shown below each question.",
+      "instructions": "Answer each question by selecting an option and pressing Submit. The AI helper's suggested answer is shown beside each question.",
       "explanation": "none",
-      "question_ids": ["base-01", "base-02", "base-03"]
+      "question_ids": ["base-01", "base-02", "base-03", "base-04", "base-05", "base-06"],
+      "ai_accuracy_percent": 100
     },
     {
       "id": "round_a",
       "title": "Round A",
-      "instructions": "Answer each question by selecting an option and pressing Submit. The AI helper's suggestion is shown below each question.",
+      "instructions": "Answer each question by selecting an option and pressing Submit. The AI helper's suggestion is shown beside each question.",
       "order_slot": 0,
-      "question_ids": ["set1-01", "set1-02", "set1-03"]
+      "question_ids": ["set1-01", "set1-02", "set1-03", "set1-04", "set1-05", "set1-06"],
+      "ai_accuracy_percent": 80
     },
     {
       "id": "round_b",
       "title": "Round B",
-      "instructions": "Answer each question by selecting an option and pressing Submit. The AI helper's suggestion is shown below each question.",
+      "instructions": "Answer each question by selecting an option and pressing Submit. The AI helper's suggestion is shown beside each question.",
       "order_slot": 1,
-      "question_ids": ["set2-01", "set2-02", "set2-03"]
+      "question_ids": ["set2-01", "set2-02", "set2-03", "set2-04", "set2-05", "set2-06"],
+      "ai_accuracy_percent": 80
     },
     {
       "id": "round_c",
       "title": "Round C",
-      "instructions": "Answer each question by selecting an option and pressing Submit. The AI helper's suggestion is shown below each question.",
+      "instructions": "Answer each question by selecting an option and pressing Submit. The AI helper's suggestion is shown beside each question.",
       "order_slot": 2,
-      "question_ids": ["set3-01", "set3-02", "set3-03"]
+      "question_ids": ["set3-01", "set3-02", "set3-03", "set3-04", "set3-05", "set3-06"],
+      "ai_accuracy_percent": 80
     }
   ]
 }

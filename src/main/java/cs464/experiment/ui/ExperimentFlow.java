@@ -2,12 +2,12 @@ package cs464.experiment.ui;
 
 import cs464.experiment.io.ResultWriter;
 import cs464.experiment.model.ExperimentConfig;
-import cs464.experiment.model.Question;
 import cs464.experiment.model.RatingPhase;
 import cs464.experiment.model.RatingResult;
 import cs464.experiment.model.TrialResult;
 import cs464.experiment.session.ExperimentSession;
 import cs464.experiment.session.PlannedBlock;
+import cs464.experiment.session.PlannedTrial;
 import javafx.application.Platform;
 import javafx.scene.control.Alert;
 
@@ -78,14 +78,17 @@ public final class ExperimentFlow {
 
     private void showQuestion(int blockIndex, int trialIndex) {
         PlannedBlock block = session.blocks().get(blockIndex);
-        Question question = block.questions().get(trialIndex);
+        PlannedTrial trial = block.trials().get(trialIndex);
         String progress = "Round " + (blockIndex + 1) + " • Question " + (trialIndex + 1)
-                + " of " + block.questions().size();
+                + " of " + block.trials().size();
 
-        nav.show(new QuestionScreen(progress, question, block.explanationLevel(), (chosen, ms) -> {
+        nav.show(new QuestionScreen(progress, trial, block.explanationLevel(), QuestionScreen.Options.from(config),
+                answer -> {
             saveTrial(new TrialResult(session.participantId(), session.orderId(), block.index(), block.id(),
-                    block.explanationLevel(), trialIndex, question, chosen, ms, Instant.now()));
-            if (trialIndex + 1 < block.questions().size()) {
+                    block.explanationLevel(), trialIndex, trial.question(), trial.aiAnswerIndex(),
+                    block.aiAccuracyPercent(), answer.chosenIndex(), answer.responseTimeMs(),
+                    answer.timeToSuggestionMs(), answer.timedOut(), answer.usedAnswerButton(), Instant.now()));
+            if (trialIndex + 1 < block.trials().size()) {
                 showQuestion(blockIndex, trialIndex + 1);
             } else {
                 showRatings(blockIndex, RatingPhase.POST);

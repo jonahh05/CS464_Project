@@ -74,9 +74,12 @@ public class App extends Application {
     private static void printPlan(ExperimentSession session) {
         System.out.println("Participant " + session.participantId() + ", order " + session.orderId());
         for (PlannedBlock block : session.blocks()) {
-            System.out.printf("  block %d %-10s explanation=%-8s questions=%d ai_accuracy=%.0f%%%n",
+            String setting = block.aiAccuracyPercent() == null
+                    ? "fixed"
+                    : String.format("drawn at %.0f%%", block.aiAccuracyPercent());
+            System.out.printf("  block %d %-10s explanation=%-8s questions=%d ai_accuracy=%.0f%% (%s)%n",
                     block.index(), block.id(), block.explanationLevel().configName(),
-                    block.questions().size(), block.aiAccuracy() * 100);
+                    block.trials().size(), block.aiAccuracy() * 100, setting);
         }
     }
 

@@ -14,7 +14,7 @@ How the proposal maps onto the software. Keep this in sync with the
 | Variable | Type | How the software implements it |
 |---|---|---|
 | Explanation level (none / brief / detailed) | IV, within-subjects | `explanation` / `order_slot` per block in `experiment.json`; text from `explanation_brief` / `explanation_detailed` |
-| AI accuracy | IV, per block | **Used for the study: fixed** (AI is wrong when `ai_answer_index != correct_index`; identical for every participant; currently 2 of 6 wrong in rounds A-C). Also supported but not used: set on the block (AI is wrong when `ai_answer_index != correct_index`) or set on the block: `ai_accuracy_percent` (each suggestion drawn, correct with probability p, each wrong choice (1 − p)/3 for 4 choices) or `ai_wrong_count` (exactly k wrong per round for everyone), seeded by participant ID. Baseline = 100%. See [config-format](config-format.md#ai-accuracy-per-block-optional). |
+| AI accuracy | IV, per block | **Used for the study: fixed** (AI is wrong when `ai_answer_index != correct_index`; identical for every participant; currently 2 of 6 wrong in rounds A-C). Also supported but not used, set on the block: `ai_accuracy_percent` (each suggestion drawn, correct with probability p, each wrong choice (1 − p)/3 for 4 choices) or `ai_wrong_count` (exactly k wrong per round for everyone), seeded by participant ID. Baseline = 100%. See [config-format](config-format.md#ai-accuracy-per-block-optional). |
 | Score / following wrong AI | DV | `correct`, `followed_ai`, `ai_correct` in the trials CSV |
 | Response time | DV | `response_time_ms` (question shown until Submit) |
 | Self-reported accuracy | DV | `est_accuracy` rating (pre + post), compare with actual score |

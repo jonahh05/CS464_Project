@@ -56,6 +56,7 @@ mvn javafx:run
 | Time limit | None | Optional per-question countdown (off in the bundled config) |
 | How AI accuracy works | Fixed: each question has one stored AI answer | **Same as `main` (fixed)**; 2 of 6 wrong in rounds A–C. Per-participant draw modes exist but are not used |
 | Wrong-answer explanations | One explanation per question | `explanations_by_choice`: an explanation for every letter the AI might suggest |
+| Overall look | JavaFX default controls | Light refresh in `app.css`: flat rounded buttons, rounded rating buttons and fields, Segoe UI font, thin scroll bars. Same in every condition |
 | Questions per round | 3 (placeholders) | 6 (placeholders) |
 | CSV output | Base trial columns | Adds `ai_accuracy_percent`, `time_to_suggestion_ms`, `timed_out`, `used_answer_button` |
 | Tests | Base suite | 27 tests, including `SuggestionDrawerTest` and a check that no round draws suggestions per participant |

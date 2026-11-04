@@ -1,17 +1,28 @@
-/* Visual style for every screen. Class names are set in the ui/ package. */
+/* Visual style for every screen. Class names are set in the ui/ package.
+   Palette: blue #2f5fe0 = the participant's own selection and buttons; violet #6b4de6 = the AI.
+   Everything here looks the same in every condition; only the explanation text changes. */
 
 .root {
+    -fx-font-family: "Segoe UI";
     -fx-font-size: 16px;
-    -fx-background-color: #f7f7f5;
+    -fx-background-color: #f5f6f8;
+    -fx-accent: #2f5fe0;
+    -fx-focus-color: #2f5fe0;
+    -fx-faint-focus-color: rgba(47, 95, 224, 0.15);
+}
+
+.label {
+    -fx-text-fill: #1f2430;
 }
 
 .page, .page > .viewport {
-    -fx-background-color: #f7f7f5;
+    -fx-background-color: #f5f6f8;
 }
 
 .title {
     -fx-font-size: 26px;
     -fx-font-weight: bold;
+    -fx-text-fill: #141824;
 }
 
 .body-text {
@@ -20,14 +31,40 @@
 }
 
 .muted {
-    -fx-text-fill: #666666;
+    -fx-text-fill: #6b7280;
     -fx-font-size: 14px;
 }
 
+/* --- buttons ------------------------------------------------------------------------------ */
+
 .primary-button {
     -fx-font-size: 16px;
-    -fx-padding: 8 22 8 22;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-background-color: #2f5fe0;
+    -fx-background-radius: 8;
+    -fx-background-insets: 0;
+    -fx-padding: 10 24 10 24;
+    -fx-cursor: hand;
 }
+
+.primary-button:hover {
+    -fx-background-color: #2a54c8;
+}
+
+.primary-button:pressed {
+    -fx-background-color: #2349ad;
+}
+
+.primary-button:focused {
+    -fx-effect: dropshadow(gaussian, rgba(47, 95, 224, 0.35), 8, 0.3, 0, 0);
+}
+
+.primary-button:disabled {
+    -fx-opacity: 0.45;
+}
+
+/* --- rating screen (1-10 buttons) ---------------------------------------------------------- */
 
 .rating-item {
     -fx-padding: 10 0 10 0;
@@ -36,19 +73,76 @@
 .rating-button {
     -fx-min-width: 44px;
     -fx-min-height: 36px;
+    -fx-text-fill: #1f2430;
+    -fx-background-color: #d5dae5, white;
+    -fx-background-insets: 0, 1;
+    -fx-background-radius: 8, 7;
+    -fx-cursor: hand;
+}
+
+.rating-button:hover {
+    -fx-background-color: #2f5fe0, #f3f6fe;
 }
 
 .rating-button:selected {
-    -fx-base: #3b6fb6;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-color: #2f5fe0, #2f5fe0;
 }
 
-/* The AI helper box looks identical across conditions; only its text changes. */
+/* --- setup screen fields ------------------------------------------------------------------- */
+
+.text-field {
+    -fx-background-color: #d5dae5, white;
+    -fx-background-insets: 0, 1;
+    -fx-background-radius: 8, 7;
+    -fx-padding: 6 10 6 10;
+}
+
+.text-field:focused {
+    -fx-background-color: #2f5fe0, white;
+}
+
+.combo-box {
+    -fx-background-color: #d5dae5, white;
+    -fx-background-insets: 0, 1;
+    -fx-background-radius: 8, 7;
+}
+
+.combo-box:focused {
+    -fx-background-color: #2f5fe0, white;
+}
+
+.combo-box .arrow-button {
+    -fx-background-color: transparent;
+}
+
+/* --- radio buttons (answer choices) -------------------------------------------------------- */
+
+.radio-button > .radio {
+    -fx-background-color: #b9c1d1, white;
+    -fx-background-insets: 0, 1;
+    -fx-background-radius: 1em;
+    -fx-padding: 4;
+}
+
+.radio-button:selected > .radio {
+    -fx-background-color: #2f5fe0, white;
+}
+
+.radio-button:selected > .radio > .dot {
+    -fx-background-color: #2f5fe0;
+}
+
+/* --- helper_style: box --------------------------------------------------------------------
+   The AI helper box looks identical across conditions; only its text changes. */
+
 .ai-panel {
-    -fx-background-color: #eaf1fb;
-    -fx-border-color: #9db8e0;
-    -fx-border-radius: 6;
-    -fx-background-radius: 6;
-    -fx-padding: 14;
+    -fx-background-color: #eef3fd;
+    -fx-border-color: #c9d6f3;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 14 16 14 16;
 }
 
 .ai-heading {
@@ -71,11 +165,17 @@
 }
 
 .choice {
-    -fx-padding: 10 14 10 14;
+    -fx-padding: 12 14 12 14;
     -fx-background-color: white;
-    -fx-border-color: #dde2ee;
+    -fx-border-color: #e1e5ee;
     -fx-border-radius: 10;
     -fx-background-radius: 10;
+    -fx-cursor: hand;
+}
+
+.choice:hover {
+    -fx-border-color: #b9c3dc;
+    -fx-background-color: #fafbfe;
 }
 
 .choice:selected {
@@ -95,16 +195,16 @@
 
 .ai-card {
     -fx-background-color: white;
-    -fx-border-color: #dde2ee #dde2ee #dde2ee #6b4de6;
+    -fx-border-color: #e1e5ee #e1e5ee #e1e5ee #6b4de6;
     -fx-border-width: 1 1 1 4;
     -fx-border-radius: 12;
     -fx-background-radius: 12;
-    -fx-effect: dropshadow(gaussian, rgba(20, 30, 60, 0.08), 16, 0, 0, 4);
+    -fx-effect: dropshadow(gaussian, rgba(20, 30, 60, 0.10), 24, 0, 0, 6);
 }
 
 .ai-card-head {
     -fx-padding: 12 16 12 16;
-    -fx-border-color: transparent transparent #dde2ee transparent;
+    -fx-border-color: transparent transparent #eceff5 transparent;
 }
 
 .ai-mark {
@@ -136,7 +236,7 @@
 .eyebrow {
     -fx-font-size: 11px;
     -fx-font-weight: bold;
-    -fx-text-fill: #5b6375;
+    -fx-text-fill: #6b7280;
 }
 
 .ai-badge {
@@ -155,7 +255,7 @@
 }
 
 .ai-why {
-    -fx-background-color: #eeeafc;
+    -fx-background-color: #f3f0fd;
     -fx-background-radius: 8;
     -fx-padding: 10 12 10 12;
 }
@@ -171,14 +271,49 @@
     -fx-background-radius: 8;
     -fx-background-color: white;
     -fx-padding: 6 14 6 14;
+    -fx-cursor: hand;
+}
+
+.use-answer-button:hover {
+    -fx-background-color: #f3f0fd;
 }
 
 /* --- time_limit_seconds ------------------------------------------------------------------ */
 
+.timer-bar > .track {
+    -fx-background-color: #e6e9f0;
+    -fx-background-insets: 0;
+    -fx-background-radius: 999;
+}
+
 .timer-bar > .bar {
     -fx-background-color: #d08a1c;
+    -fx-background-insets: 0;
+    -fx-background-radius: 999;
 }
 
 .timer-bar.urgent > .bar {
     -fx-background-color: #d9383c;
+}
+
+/* --- thin scroll bars ---------------------------------------------------------------------- */
+
+.scroll-bar {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar > .thumb {
+    -fx-background-color: #c9cfdb;
+    -fx-background-radius: 999;
+    -fx-background-insets: 2;
+}
+
+.scroll-bar > .increment-button, .scroll-bar > .decrement-button {
+    -fx-padding: 0;
+}
+
+.scroll-bar > .increment-button > .increment-arrow,
+.scroll-bar > .decrement-button > .decrement-arrow {
+    -fx-shape: " ";
+    -fx-padding: 0;
 }

@@ -36,6 +36,9 @@ The app checks all of this at startup, and so does `mvn test`.
 
 ### AI accuracy per block (optional)
 
+> **For the study we use fixed mode** (no `ai_accuracy_percent` / `ai_wrong_count` on any block), so every
+> participant sees identical suggestions. The drawn modes below stay available for testing only.
+
 ```json
 { "id": "round_a", ..., "order_slot": 0,
   "question_ids": ["set1-01", "set1-02"],

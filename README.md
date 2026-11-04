@@ -76,8 +76,14 @@ The current `questions.json` contains **24 placeholder questions** (6 per round)
 whole flow can be run and demoed. See [`docs/experiment-design.md`](docs/experiment-design.md#open-decisions)
 for what the team still needs to decide.
 
-The bundled config uses the suggestion-card helper (`helper_style: side_card`) with a
-"Use this answer" button, a 0.9 s delay before the suggestion appears, and AI accuracy drawn at
-80% in rounds A-C (`ai_wrong_count` gives an exact number of wrong suggestions per round instead).
-To go back to the plain helper box with fixed wrong answers, remove
-`helper_style`, `use_answer_button`, `ai_delay_ms` and the blocks' `ai_accuracy_percent`.
+The bundled config uses the suggestion-card helper (`helper_style: side_card`) and a 0.9 s delay
+before the suggestion appears. The "Use this answer" button is off (`use_answer_button: false`).
+
+AI accuracy uses **fixed mode**: each question's stored `ai_answer_index` is what the AI suggests,
+so **every participant sees identical suggestions** (team decision: the AI is scripted).
+Right now 2 of the 6 questions in each of rounds A-C have a wrong AI answer (~67% accuracy) and the
+baseline is 100% correct. To change which questions the AI gets wrong, edit `ai_answer_index` in
+`questions.json`. `ai_accuracy_percent` and `ai_wrong_count` still exist but draw suggestions per
+participant, so don't use them for the study.
+
+See [`VARIANT_README.md`](VARIANT_README.md) for how this branch differs from `main`.

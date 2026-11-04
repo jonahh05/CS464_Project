@@ -13,6 +13,7 @@ import java.util.List;
 import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
@@ -59,6 +60,16 @@ class BundledFilesTest {
 
         ExperimentConfig config = JsonLoader.loadConfig(JsonLoader.CONFIG_RESOURCE);
         assertEquals(HelperStyle.SIDE_CARD, config.helper());
-        assertEquals(80.0, config.blocks().get(1).aiAccuracyPercent());
+        assertFalse(config.showUseAnswerButton());
+    }
+
+    @Test
+    void bundledRoundsUseFixedSuggestionsForEveryone() throws Exception {
+        // Team decision: the AI is scripted, so every participant sees identical suggestions.
+        // That means no block may draw suggestions per participant (ai_accuracy_percent / ai_wrong_count).
+        ExperimentConfig config = JsonLoader.loadConfig(JsonLoader.CONFIG_RESOURCE);
+        for (BlockConfig block : config.blocks()) {
+            assertFalse(block.drawsSuggestions(), "Block " + block.id() + " draws suggestions per participant");
+        }
     }
 }

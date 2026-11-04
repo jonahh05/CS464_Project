@@ -12,7 +12,7 @@ public record PlannedBlock(
         String title,
         String instructions,
         ExplanationLevel explanationLevel,
-        Double aiAccuracyPercent,   // the block's setting, or null in fixed mode
+        Double aiAccuracyPercent,   // the block's planned accuracy (see BlockConfig.plannedAccuracyPercent), null in fixed mode
         List<PlannedTrial> trials
 ) {
     /** The block's questions in presentation order. */

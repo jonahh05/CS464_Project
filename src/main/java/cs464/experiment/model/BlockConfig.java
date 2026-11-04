@@ -12,9 +12,15 @@ import java.util.List;
  *       level depends on which order they were assigned. The questions stay the same.</li>
  * </ul>
  *
- * <p>{@code aiAccuracyPercent} is optional. When it is missing, the AI suggests each question's
- * stored {@code ai_answer_index} (fixed mode). When it is set (0-100), each suggestion is drawn:
- * the correct choice with probability p, each wrong choice with (1 - p) / (number of wrong choices).
+ * <p>How the AI's suggestions are decided (set at most one of the two optional keys):
+ * <ul>
+ *   <li>Neither: the AI suggests each question's stored {@code ai_answer_index} (fixed mode).</li>
+ *   <li>{@code aiAccuracyPercent} (0-100): each suggestion is drawn on its own: the correct choice with
+ *       probability p, each wrong choice with (1 - p) / (number of wrong choices). The number of wrong
+ *       suggestions per round varies between participants.</li>
+ *   <li>{@code aiWrongCount}: exactly this many questions in the round get a wrong suggestion, for every
+ *       participant. Which questions, and which wrong choice, are drawn per participant.</li>
+ * </ul>
  */
 public record BlockConfig(
         String id,
@@ -23,15 +29,34 @@ public record BlockConfig(
         String explanation,
         Integer orderSlot,
         List<String> questionIds,
-        Double aiAccuracyPercent
+        Double aiAccuracyPercent,
+        Integer aiWrongCount
 ) {
-    /** A block in fixed mode (no {@code ai_accuracy_percent}). */
+    /** A block in fixed mode (no {@code ai_accuracy_percent} or {@code ai_wrong_count}). */
     public BlockConfig(String id, String title, String instructions, String explanation,
                        Integer orderSlot, List<String> questionIds) {
-        this(id, title, instructions, explanation, orderSlot, questionIds, null);
+        this(id, title, instructions, explanation, orderSlot, questionIds, null, null);
     }
 
+    /** A block with {@code ai_accuracy_percent} (or fixed mode when null). */
+    public BlockConfig(String id, String title, String instructions, String explanation,
+                       Integer orderSlot, List<String> questionIds, Double aiAccuracyPercent) {
+        this(id, title, instructions, explanation, orderSlot, questionIds, aiAccuracyPercent, null);
+    }
+
+    /** True when suggestions are drawn per participant ({@code ai_accuracy_percent} or {@code ai_wrong_count}). */
     public boolean drawsSuggestions() {
-        return aiAccuracyPercent != null;
+        return aiAccuracyPercent != null || aiWrongCount != null;
+    }
+
+    /**
+     * The round's planned accuracy in percent: the setting for {@code ai_accuracy_percent}, the exact share of
+     * correct suggestions for {@code ai_wrong_count}, or null in fixed mode.
+     */
+    public Double plannedAccuracyPercent() {
+        if (aiWrongCount != null && questionIds != null && !questionIds.isEmpty()) {
+            return 100.0 * (questionIds.size() - aiWrongCount) / questionIds.size();
+        }
+        return aiAccuracyPercent;
     }
 }

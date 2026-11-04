@@ -119,7 +119,69 @@ class SuggestionDrawerTest {
         assertTrue(ConfigValidator.validate(bad, questions()).stream().anyMatch(p -> p.contains("helper_style")));
     }
 
+    @Test
+    void validatorRejectsDelayLongerThanTimeLimit() {
+        ExperimentConfig base = drawnConfig(80.0);
+        ExperimentConfig bad = new ExperimentConfig(base.title(), base.outputDir(), 1, 10, false,
+                base.ratingItems(), base.orders(), base.blocks(), "side_card", true, 5000, 5);
+        assertTrue(ConfigValidator.validate(bad, questions()).stream().anyMatch(p -> p.contains("ai_delay_ms must be shorter")));
+    }
+
+    @Test
+    void wrongCountGivesEveryParticipantExactlyThatManyWrongSuggestions() {
+        ExperimentConfig config = countConfig(2);
+        for (int p = 1; p <= 200; p++) {
+            ExperimentSession s = ExperimentSession.create(config, questions(), "P" + p, 1);
+            PlannedBlock a = s.blocks().get(1);
+            long wrong = a.trials().stream().filter(t -> !t.isAiCorrect()).count();
+            assertEquals(2, wrong, "participant P" + p);
+            assertEquals(50.0, a.aiAccuracyPercent()); // 2 of 4 wrong -> planned 50%
+            assertEquals(1.0, s.blocks().get(0).aiAccuracy()); // baseline stays 100%
+        }
+    }
+
+    @Test
+    void wrongCountVariesWhichQuestionsAndLettersAcrossParticipants() {
+        ExperimentConfig config = countConfig(1);
+        java.util.Set<String> patterns = new java.util.HashSet<>();
+        for (int p = 1; p <= 12; p++) {
+            patterns.add(ExperimentSession.create(config, questions(), String.format("P%02d", p), 1)
+                    .blocks().get(1).trials().stream().map(t -> String.valueOf(t.aiAnswerIndex())).reduce("", String::concat));
+        }
+        assertTrue(patterns.size() > 4, "only " + patterns.size() + " patterns");
+        // Reproducible for the same participant.
+        assertEquals(ExperimentSession.create(config, questions(), "P07", 1).blocks(),
+                ExperimentSession.create(config, questions(), "P07", 1).blocks());
+    }
+
+    @Test
+    void validatorChecksWrongCountRangeAndExclusivity() {
+        assertEquals(List.of(), ConfigValidator.validate(countConfig(1), questions()));
+        assertTrue(ConfigValidator.validate(countConfig(5), questions()).stream()
+                .anyMatch(p -> p.contains("ai_wrong_count 5 must be between 0")));
+        ExperimentConfig base = countConfig(1);
+        List<BlockConfig> blocks = new java.util.ArrayList<>(base.blocks());
+        BlockConfig a = blocks.get(1);
+        blocks.set(1, new BlockConfig(a.id(), a.title(), a.instructions(), a.explanation(), a.orderSlot(),
+                a.questionIds(), 80.0, 1));
+        ExperimentConfig both = new ExperimentConfig(base.title(), base.outputDir(), 1, 10, false,
+                base.ratingItems(), base.orders(), blocks, "side_card", true, 900, 0);
+        assertTrue(ConfigValidator.validate(both, questions()).stream().anyMatch(p -> p.contains("not both")));
+    }
+
     // --- fixtures ---------------------------------------------------------------------------
+
+    private static ExperimentConfig countConfig(int wrongPerRound) {
+        ExperimentConfig base = drawnConfig(80.0);
+        List<BlockConfig> blocks = new java.util.ArrayList<>();
+        for (BlockConfig b : base.blocks()) {
+            Integer count = b.id().equals("baseline") ? 0 : wrongPerRound;
+            blocks.add(new BlockConfig(b.id(), b.title(), b.instructions(), b.explanation(), b.orderSlot(),
+                    b.questionIds(), null, count));
+        }
+        return new ExperimentConfig(base.title(), base.outputDir(), 1, 10, false,
+                base.ratingItems(), base.orders(), blocks, "side_card", true, 900, 0);
+    }
 
     private static ExperimentConfig drawnConfig(double accuracy) {
         List<List<String>> orders = List.of(

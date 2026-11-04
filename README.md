@@ -78,5 +78,6 @@ for what the team still needs to decide.
 
 The bundled config uses the suggestion-card helper (`helper_style: side_card`) with a
 "Use this answer" button, a 0.9 s delay before the suggestion appears, and AI accuracy drawn at
-80% in rounds A-C. To go back to the plain helper box with fixed wrong answers, remove
+80% in rounds A-C (`ai_wrong_count` gives an exact number of wrong suggestions per round instead).
+To go back to the plain helper box with fixed wrong answers, remove
 `helper_style`, `use_answer_button`, `ai_delay_ms` and the blocks' `ai_accuracy_percent`.

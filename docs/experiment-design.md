@@ -14,7 +14,7 @@ How the proposal maps onto the software. Keep this in sync with the
 | Variable | Type | How the software implements it |
 |---|---|---|
 | Explanation level (none / brief / detailed) | IV, within-subjects | `explanation` / `order_slot` per block in `experiment.json`; text from `explanation_brief` / `explanation_detailed` |
-| AI accuracy | IV, per block | Either fixed (AI is wrong when `ai_answer_index != correct_index`) or `ai_accuracy_percent` on the block: each suggestion drawn, correct with probability p, each wrong choice (1 − p)/3, seeded by participant ID. Baseline = 100%. See [config-format](config-format.md#ai-accuracy-per-block-optional). |
+| AI accuracy | IV, per block | Either fixed (AI is wrong when `ai_answer_index != correct_index`) or set on the block: `ai_accuracy_percent` (each suggestion drawn, correct with probability p, each wrong choice (1 − p)/3 for 4 choices) or `ai_wrong_count` (exactly k wrong per round for everyone), seeded by participant ID. Baseline = 100%. See [config-format](config-format.md#ai-accuracy-per-block-optional). |
 | Score / following wrong AI | DV | `correct`, `followed_ai`, `ai_correct` in the trials CSV |
 | Response time | DV | `response_time_ms` (question shown until Submit) |
 | Self-reported accuracy | DV | `est_accuracy` rating (pre + post), compare with actual score |
@@ -45,7 +45,8 @@ These can all be changed in the JSON config without code changes:
 
 - [ ] Questions per round (teammate suggested 40-50 total → ~10 per round)
 - [ ] AI accuracy in rounds A-C (e.g. 70%? 80%?) and **how**: fixed wrong questions (same for everyone)
-      or `ai_accuracy_percent` (drawn per participant, so the count of wrong suggestions varies)
+      or `ai_accuracy_percent` (drawn per participant, so the count of wrong suggestions varies; at 80% with
+      6 questions some participants get a round with no wrong suggestion) or `ai_wrong_count` (exact count)
 - [ ] Mix of sections (math vs. reading/writing) and difficulty per round. Keep the rounds balanced.
 - [ ] Shuffle questions within a round (`shuffle_questions_within_block`), or keep a fixed order?
 - [ ] Time limit per question? (`time_limit_seconds`, off by default)

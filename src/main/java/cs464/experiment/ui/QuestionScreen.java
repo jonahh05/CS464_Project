@@ -8,6 +8,9 @@ import cs464.experiment.session.PlannedTrial;
 import javafx.animation.KeyFrame;
 import javafx.animation.PauseTransition;
 import javafx.animation.Timeline;
+import javafx.application.Platform;
+import javafx.beans.property.BooleanProperty;
+import javafx.beans.property.SimpleBooleanProperty;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Parent;
@@ -38,7 +41,8 @@ import java.util.List;
  * and a per-question time limit.
  *
  * <p>Response time runs from when the screen appears until Submit is pressed (or time runs out),
- * so participants can change their selection before submitting.
+ * so participants can change their selection before submitting. Submit stays disabled until the
+ * suggestion has appeared, so {@code followed_ai} always refers to a suggestion the participant saw.
  */
 public final class QuestionScreen implements Screen {
 
@@ -70,7 +74,9 @@ public final class QuestionScreen implements Screen {
 
     private final ToggleGroup choices = new ToggleGroup();
     private final List<RadioButton> choiceButtons = new ArrayList<>();
-    private final VBox helperBody = new VBox(10);
+    private final VBox helperBody = new VBox(8);
+    /** Submit stays disabled until the suggestion is on screen, so every answer was given with it visible. */
+    private final BooleanProperty suggestionVisible = new SimpleBooleanProperty(false);
     private final Label timerText = Layout.muted("");
     private final ProgressBar timerBar = new ProgressBar(1);
 
@@ -105,7 +111,7 @@ public final class QuestionScreen implements Screen {
 
         Button submit = new Button("Submit answer");
         submit.getStyleClass().add("primary-button");
-        submit.disableProperty().bind(choices.selectedToggleProperty().isNull());
+        submit.disableProperty().bind(choices.selectedToggleProperty().isNull().or(suggestionVisible.not()));
         submit.setOnAction(e -> finish(false));
 
         List<Node> header = new ArrayList<>();
@@ -117,9 +123,10 @@ public final class QuestionScreen implements Screen {
         }
 
         Label stem = Layout.body(question.stem());
-        stem.getStyleClass().add("question-stem");
 
         if (options.style() == HelperStyle.SIDE_CARD) {
+            stem.getStyleClass().add("question-stem");
+            helperBody.setSpacing(10);
             VBox questionColumn = new VBox(18, stem, choiceList, submit);
             questionColumn.setMinWidth(0);
             HBox.setHgrow(questionColumn, Priority.ALWAYS);
@@ -226,6 +233,7 @@ public final class QuestionScreen implements Screen {
         }
         helperBody.getChildren().setAll(content);
         suggestionAtNanos = System.nanoTime();
+        suggestionVisible.set(true);
     }
 
     private static Label eyebrow(String text) {
@@ -259,7 +267,9 @@ public final class QuestionScreen implements Screen {
                 left[0]--;
                 updateTimer(left[0], limit);
                 if (left[0] <= 0) {
-                    finish(true);
+                    // Leave the animation pulse first: saving may need to show an error dialog,
+                    // and JavaFX does not allow a dialog to wait while an animation is running.
+                    Platform.runLater(() -> finish(true));
                 }
             }));
             countdown.setCycleCount(limit);

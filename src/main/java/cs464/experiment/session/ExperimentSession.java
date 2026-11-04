@@ -60,17 +60,30 @@ public final class ExperimentSession {
                 Collections.shuffle(questions, shuffleRandom);
             }
 
+            boolean[] wrongByCount = block.aiWrongCount() == null ? null
+                    : SuggestionDrawer.pickWrongQuestions(participantId, block.id(),
+                            questions.stream().map(Question::id).toList(), block.aiWrongCount());
+
             List<PlannedTrial> trials = new ArrayList<>();
-            for (Question q : questions) {
-                int ai = block.drawsSuggestions()
-                        ? SuggestionDrawer.draw(participantId, block.id(), q.id(),
-                                q.choices().size(), q.correctIndex(), block.aiAccuracyPercent())
-                        : q.aiAnswerIndex();
+            for (int t = 0; t < questions.size(); t++) {
+                Question q = questions.get(t);
+                int ai;
+                if (wrongByCount != null) {
+                    ai = wrongByCount[t]
+                            ? SuggestionDrawer.drawWrong(participantId, block.id(), q.id(),
+                                    q.choices().size(), q.correctIndex())
+                            : q.correctIndex();
+                } else if (block.aiAccuracyPercent() != null) {
+                    ai = SuggestionDrawer.draw(participantId, block.id(), q.id(),
+                            q.choices().size(), q.correctIndex(), block.aiAccuracyPercent());
+                } else {
+                    ai = q.aiAnswerIndex();
+                }
                 trials.add(new PlannedTrial(q, ai));
             }
 
             planned.add(new PlannedBlock(i, block.id(), block.title(), block.instructions(), level,
-                    block.aiAccuracyPercent(), trials));
+                    block.plannedAccuracyPercent(), trials));
         }
         return new ExperimentSession(participantId, orderId, planned);
     }

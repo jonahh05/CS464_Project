@@ -76,7 +76,7 @@ public class App extends Application {
         for (PlannedBlock block : session.blocks()) {
             String setting = block.aiAccuracyPercent() == null
                     ? "fixed"
-                    : String.format("drawn at %.0f%%", block.aiAccuracyPercent());
+                    : String.format("planned %.0f%%", block.aiAccuracyPercent());
             System.out.printf("  block %d %-10s explanation=%-8s questions=%d ai_accuracy=%.0f%% (%s)%n",
                     block.index(), block.id(), block.explanationLevel().configName(),
                     block.trials().size(), block.aiAccuracy() * 100, setting);

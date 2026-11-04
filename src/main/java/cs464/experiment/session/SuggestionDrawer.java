@@ -30,6 +30,35 @@ public final class SuggestionDrawer {
         return pick(u, choiceCount, correctIndex, accuracyPercent);
     }
 
+    /**
+     * For {@code ai_wrong_count}: which questions in a round get a wrong suggestion. Ranks the round's
+     * questions by a seeded number and marks the first {@code wrongCount} of them.
+     *
+     * @return one flag per question id, in the order given; true = this question gets a wrong suggestion
+     */
+    public static boolean[] pickWrongQuestions(String participantId, String blockId,
+                                               java.util.List<String> questionIds, int wrongCount) {
+        Integer[] order = new Integer[questionIds.size()];
+        double[] keys = new double[questionIds.size()];
+        for (int i = 0; i < order.length; i++) {
+            order[i] = i;
+            keys[i] = uniform(participantId + "|" + blockId + "|" + questionIds.get(i) + "|position");
+        }
+        java.util.Arrays.sort(order, (a, b) -> Double.compare(keys[a], keys[b]));
+        boolean[] wrong = new boolean[order.length];
+        for (int i = 0; i < Math.min(wrongCount, order.length); i++) {
+            wrong[order[i]] = true;
+        }
+        return wrong;
+    }
+
+    /** A wrong choice, each with equal chance, seeded like {@link #draw}. */
+    public static int drawWrong(String participantId, String blockId, String questionId,
+                                int choiceCount, int correctIndex) {
+        double u = uniform(participantId + "|" + blockId + "|" + questionId);
+        return pick(u, choiceCount, correctIndex, 0);
+    }
+
     /** Maps a uniform number in [0, 1) to a choice. Separate from {@link #draw} so it can be tested exactly. */
     static int pick(double u, int choiceCount, int correctIndex, double accuracyPercent) {
         double p = Math.max(0, Math.min(100, accuracyPercent)) / 100.0;

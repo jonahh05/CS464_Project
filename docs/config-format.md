@@ -13,8 +13,8 @@
 | `blocks` | The rounds, in presentation order |
 | `helper_style` | Optional. `box` (default): the helper box under the choices. `side_card`: a card beside the question with a letter badge, the choice text and a "Why" box, and the AI's pick outlined in the answer list. |
 | `use_answer_button` | Optional, default `false`. `true` adds a "Use this answer" button to the helper that selects the AI's choice. Logged as `used_answer_button`. |
-| `ai_delay_ms` | Optional, default `0`. Pause before the suggestion appears ("Analyzing the question…"). Logged as `time_to_suggestion_ms`. |
-| `time_limit_seconds` | Optional, default `0` (no limit). Per-question countdown; when it hits 0 the answer is submitted as is and logged with `timed_out = true`. |
+| `ai_delay_ms` | Optional, default `0`. Pause before the suggestion appears ("Analyzing the question…"). Submit stays disabled until it appears. Logged as `time_to_suggestion_ms`. |
+| `time_limit_seconds` | Optional, default `0` (no limit). Per-question countdown; when it hits 0 the answer is submitted as is and logged with `timed_out = true`. Must be longer than `ai_delay_ms`. |
 
 Leaving all four out gives the original behavior.
 
@@ -45,20 +45,28 @@ The app checks all of this at startup, and so does `mvn test`.
 - **Without `ai_accuracy_percent`** (fixed mode): the AI suggests each question's `ai_answer_index`,
   so a block's accuracy is decided by which questions you put in it. Every participant sees the same suggestions.
 - **With `ai_accuracy_percent`** (drawn mode, 0-100): for each question the AI suggests the correct choice
-  with probability p and each wrong choice with probability (1 − p) / 3. At 80: correct 80%, each wrong choice 6.7%.
+  with probability p and each wrong choice with probability (1 − p) divided by the number of wrong choices.
+  For 4-choice questions at 80: correct 80%, each wrong choice 6.7%.
   - The draw is seeded from participant ID + block + question, so re-running the same participant ID gives
     exactly the same suggestions, and shuffling does not change them.
   - Different participants get different draws, so the **number** of wrong suggestions per round varies
     around (1 − p) × questions per round (at 80% and 6 questions: usually 0-3, average 1.2).
+    With the bundled config, 8 of P01-P12 get at least one round with **no** wrong suggestion, and P04 gets
+    none in any round. Use `ai_wrong_count` if every participant must see wrong suggestions in every round.
   - Every choice that can be drawn needs its own explanation (`explanations_by_choice`, see
     [question-format](question-format.md)). The validator lists any that are missing.
   - Set the baseline block to `100` so it stays 100% correct.
+- **With `ai_wrong_count`** (exact mode): exactly this many questions in the round get a wrong suggestion,
+  for every participant. Which questions, and which wrong choice, are drawn per participant (seeded the same way).
+  `"ai_wrong_count": 1` with 6 questions = 83% accuracy for everyone. Set the baseline to `0`.
+  Needs the same `explanations_by_choice`. Set `ai_accuracy_percent` or `ai_wrong_count`, not both.
 
 The console prints each participant's plan when a session starts, including each block's AI accuracy:
 
 ```
 Participant P03, order 3
-  block 0 baseline   explanation=none     questions=6 ai_accuracy=100% (drawn at 100%)
-  block 1 round_a    explanation=brief    questions=6 ai_accuracy=83% (drawn at 80%)
-  ...
+  block 0 baseline   explanation=none     questions=6 ai_accuracy=100% (planned 100%)
+  block 1 round_a    explanation=brief    questions=6 ai_accuracy=100% (planned 80%)
+  block 2 round_b    explanation=none     questions=6 ai_accuracy=67% (planned 80%)
+  block 3 round_c    explanation=detailed questions=6 ai_accuracy=67% (planned 80%)
 ```

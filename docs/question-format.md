@@ -25,14 +25,14 @@
 | `choices` | Displayed as A, B, C, D in this order. |
 | `correct_index` | **0-based**: 0 = A, 1 = B, 2 = C, 3 = D. |
 | `ai_answer_index` | 0-based index the AI suggests. **Set it different from `correct_index` to make the AI wrong.** |
-| `explanation_brief` | 1-2 sentences supporting the AI's answer. Required for questions in rounds A-C. |
-| `explanation_detailed` | Step-by-step reasoning supporting the AI's answer. Required for questions in rounds A-C. |
-| `explanations_by_choice` | Optional. One `{"brief": ..., "detailed": ...}` per choice, in the same order as `choices`. Required for blocks that set `ai_accuracy_percent`, because then any choice can be suggested. When present it is used instead of `explanation_brief`/`explanation_detailed`. |
+| `explanation_brief` | 1-2 sentences supporting the AI's answer. Required for questions in rounds A-C, unless `explanations_by_choice` is given. |
+| `explanation_detailed` | Step-by-step reasoning supporting the AI's answer. Required for questions in rounds A-C, unless `explanations_by_choice` is given. |
+| `explanations_by_choice` | Optional. One `{"brief": ..., "detailed": ...}` per choice, in the same order as `choices`. Required for blocks that set `ai_accuracy_percent` or `ai_wrong_count`, because then any choice can be suggested. When present it is used instead of `explanation_brief`/`explanation_detailed`. |
 | `source` | Where it came from. Also add it to `question-sourcing.md`. |
 
 ### Questions for drawn-accuracy blocks
 
-When a block sets `ai_accuracy_percent` (see [config-format](config-format.md)), write an
+When a block sets `ai_accuracy_percent` or `ai_wrong_count` (see [config-format](config-format.md)), write an
 explanation for **every** choice: the correct one, and a confidently wrong one for each distractor.
 
 ```json

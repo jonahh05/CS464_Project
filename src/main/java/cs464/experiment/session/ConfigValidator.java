@@ -52,6 +52,9 @@ public final class ConfigValidator {
         if (config.timeLimit() < 0) {
             errors.add("time_limit_seconds must be 0 (no limit) or more");
         }
+        if (config.timeLimit() > 0 && config.aiDelay() >= config.timeLimit() * 1000L) {
+            errors.add("ai_delay_ms must be shorter than time_limit_seconds, or time could run out before the suggestion appears");
+        }
     }
 
     private static void checkQuestion(Question q, List<String> errors) {
@@ -177,7 +180,10 @@ public final class ConfigValidator {
                 if (q.choices() == null || q.correctIndex() < 0 || q.correctIndex() >= q.choices().size()) {
                     continue; // already reported by checkQuestion
                 }
-                double pct = block.aiAccuracyPercent();
+                double pct = block.plannedAccuracyPercent();
+                String setting = block.aiWrongCount() != null
+                        ? "ai_wrong_count is " + block.aiWrongCount()
+                        : "ai_accuracy_percent is " + fmt(pct);
                 for (int c = 0; c < q.choices().size(); c++) {
                     boolean canBeSuggested = c == q.correctIndex() ? pct > 0 : pct < 100;
                     if (!canBeSuggested) {
@@ -186,22 +192,34 @@ public final class ConfigValidator {
                     String letter = Question.letter(c);
                     if (needsBrief && isBlank(q.explanationFor(c, ExplanationLevel.BRIEF))) {
                         errors.add(where + "question '" + id + "' needs a brief explanation for choice " + letter
-                                + " in explanations_by_choice (ai_accuracy_percent is " + fmt(pct) + ")");
+                                + " in explanations_by_choice (" + setting + ")");
                     }
                     if (needsDetailed && isBlank(q.explanationFor(c, ExplanationLevel.DETAILED))) {
                         errors.add(where + "question '" + id + "' needs a detailed explanation for choice " + letter
-                                + " in explanations_by_choice (ai_accuracy_percent is " + fmt(pct) + ")");
+                                + " in explanations_by_choice (" + setting + ")");
                     }
                 }
             }
-            if (block.drawsSuggestions()
-                    && (block.aiAccuracyPercent() < 0 || block.aiAccuracyPercent() > 100)) {
-                errors.add(where + "ai_accuracy_percent " + fmt(block.aiAccuracyPercent()) + " must be between 0 and 100");
-            }
+            checkAccuracySetting(block, where, errors);
         }
         if (slots > 0 && usedSlots.size() != slots) {
             errors.add("Orders have " + slots + " slots but only " + usedSlots.size()
                     + " blocks use an order_slot");
+        }
+    }
+
+    private static void checkAccuracySetting(BlockConfig block, String where, List<String> errors) {
+        if (block.aiAccuracyPercent() != null && block.aiWrongCount() != null) {
+            errors.add(where + "set ai_accuracy_percent or ai_wrong_count, not both");
+        }
+        if (block.aiAccuracyPercent() != null
+                && (block.aiAccuracyPercent() < 0 || block.aiAccuracyPercent() > 100)) {
+            errors.add(where + "ai_accuracy_percent " + fmt(block.aiAccuracyPercent()) + " must be between 0 and 100");
+        }
+        int questions = block.questionIds() == null ? 0 : block.questionIds().size();
+        if (block.aiWrongCount() != null && (block.aiWrongCount() < 0 || block.aiWrongCount() > questions)) {
+            errors.add(where + "ai_wrong_count " + block.aiWrongCount() + " must be between 0 and the number of questions ("
+                    + questions + ")");
         }
     }
 

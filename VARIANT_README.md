@@ -20,6 +20,8 @@ mvn javafx:run
 
 Running this shows the variant right away. The bundled `experiment.json` turns on the side card and the suggestion delay.
 
+For the study sessions, each of us runs the app this way from our own laptop.
+
 To go back to the main version:
 
 ```bash

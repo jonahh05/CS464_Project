@@ -15,6 +15,8 @@ mvn test            # check the code and validate the JSON files
 mvn package         # build target/experiment.jar  ->  java -jar target/experiment.jar
 ```
 
+For the study sessions, each of us runs the app from our own laptop with `mvn javafx:run`.
+
 Results go to `data/` (gitignored). Each session writes `<ID>_<timestamp>_trials.csv` and
 `<ID>_<timestamp>_ratings.csv`.
 

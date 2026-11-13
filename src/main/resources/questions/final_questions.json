@@ -1,0 +1,614 @@
+[
+  {
+    "id": "3d1070c9",
+    "section": "math",
+    "difficulty": "easy",
+    "stem": "The function f is defined by f(x) = 25x + 30. What is the value of f(x) when x = 2?",
+    "choices": [
+      "50",
+      "57",
+      "80",
+      "110"
+    ],
+    "correct_index": 2,
+    "ai_answer_index": 2,
+    "explanation_brief": "",
+    "explanation_detailed": "",
+    "source": "College Board SAT Question Bank (Question ID: 3d1070c9)"
+  },
+  {
+    "id": "fa80893a",
+    "section": "math",
+    "difficulty": "easy",
+    "stem": "If 2x + 3 = 9, what is the value of 6x - 1?",
+    "choices": [
+      17,
+      11,
+      23,
+      5
+    ],
+    "correct_index": 0,
+    "ai_answer_index": 0,
+    "explanation_brief": "",
+    "explanation_detailed": "",
+    "source": "College Board SAT Question Bank (Question ID: fa80893a)"
+  },
+  {
+    "id": "1480dd5c",
+    "section": "math",
+    "difficulty": "medium",
+    "stem": "f(x) = 4x + b\n\nFor the linear function f, b is a constant and f(7) = 28. What is the value of b?",
+    "choices": [
+      "0",
+      "1",
+      "4",
+      "7"
+    ],
+    "correct_index": 0,
+    "ai_answer_index": 0,
+    "explanation_brief": "",
+    "explanation_detailed": "",
+    "source": "College Board SAT Question Bank (Question ID: 1480dd5c)"
+  },
+  {
+    "id": "88e13c8c",
+    "section": "math",
+    "difficulty": "easy",
+    "stem": "The total cost f(x), in dollars, to lease a car for 36 months from a particular car dealership is given by f(x) = 36x + 1,000, where x is the monthly payment, in dollars. What is the total cost to lease a car when the monthly payment is $400?",
+    "choices": [
+      "$13,400",
+      "$13,000",
+      "$15,400",
+      "$37,400"
+    ],
+    "correct_index": 2,
+    "ai_answer_index": 2,
+    "explanation_brief": "",
+    "explanation_detailed": "",
+    "source": "College Board SAT Question Bank (Question ID: 88e13c8c)"
+  },
+  {
+    "id": "9b886541",
+    "section": "math",
+    "difficulty": "easy",
+    "stem": "If 3x - 8 = 7, what is the value of 3x + 8?",
+    "choices": [
+      "-1",
+      "5",
+      "13",
+      "23"
+    ],
+    "correct_index": 3,
+    "ai_answer_index": 3,
+    "explanation_brief": "",
+    "explanation_detailed": "",
+    "source": "College Board SAT Question Bank (Question ID: 9b886541)"
+  },
+  {
+    "id": "01682aa5",
+    "section": "math",
+    "difficulty": "medium",
+    "stem": "Line p is defined by 2y + 18x = 9. Line r is perpendicular to line p in the xy-plane. What is the slope of line r?",
+    "choices": [
+      "-9",
+      "-1/9",
+      "1/9",
+      "9"
+    ],
+    "correct_index": 2,
+    "ai_answer_index": 2,
+    "explanation_brief": "",
+    "explanation_detailed": "",
+    "source": "College Board SAT Question Bank (Question ID: 01682aa5)"
+  },
+  {
+    "id": "ad03127d",
+    "section": "math",
+    "difficulty": "easy",
+    "stem": "6r = 7s + t\n\nThe given equation relates the variables r, s, and t. Which equation correctly expresses s in terms of r and t?",
+    "choices": [
+      "s = 42r - t",
+      "s = 7(6r - t)",
+      "s = (6/7)r - t",
+      "s = (6r - t)/7"
+    ],
+    "correct_index": 3,
+    "ai_answer_index": 3,
+    "explanation_brief": "",
+    "explanation_detailed": "",
+    "source": "College Board SAT Question Bank (Question ID: ad03127d)"
+  },
+  {
+    "id": "f89af023",
+    "section": "math",
+    "difficulty": "medium",
+    "stem": "A rectangular volleyball court has an area of 162 square meters. If the length of the court is twice the width, what is the width of the court, in meters?",
+    "choices": [
+      "9",
+      "18",
+      "27",
+      "54"
+    ],
+    "correct_index": 0,
+    "ai_answer_index": 0,
+    "explanation_brief": "",
+    "explanation_detailed": "",
+    "source": "College Board SAT Question Bank (Question ID: f89af023)"
+  },
+  {
+    "id": "4ac59df6",
+    "section": "math",
+    "difficulty": "easy",
+    "stem": "Which expression is equivalent to (8yz)(y)(7z)?",
+    "choices": [
+      "56y²z²",
+      "56y²z",
+      "56yz",
+      "16yz"
+    ],
+    "correct_index": 0,
+    "ai_answer_index": 0,
+    "explanation_brief": "",
+    "explanation_detailed": "",
+    "source": "College Board SAT Question Bank (Question ID: 4ac59df6)"
+  },
+  {
+    "id": "58443765",
+    "section": "math",
+    "difficulty": "easy",
+    "stem": "y = 5x + 4\ny = 5x² + 4\n\nWhich ordered pair (x, y) is a solution to the given system of equations?",
+    "choices": [
+      "(0, 0)",
+      "(0, 4)",
+      "(8, 44)",
+      "(8, 84)"
+    ],
+    "correct_index": 1,
+    "ai_answer_index": 1,
+    "explanation_brief": "",
+    "explanation_detailed": "",
+    "source": "College Board SAT Question Bank (Question ID: 58443765)"
+  },
+  {
+    "id": "53d97af5",
+    "section": "math",
+    "difficulty": "medium",
+    "stem": "A study was done on the weights of different types of fish in a pond. A random sample of fish were caught and marked in order to ensure that none were weighed more than once. The sample contained 150 largemouth bass, of which 30% weighed more than 2 pounds. Which of the following conclusions is best supported by the sample data?",
+    "choices": [
+      "The majority of all fish in the pond weigh less than 2 pounds.",
+      "The average weight of all fish in the pond is approximately 2 pounds.",
+      "Approximately 30% of all fish in the pond weigh more than 2 pounds.",
+      "Approximately 30% of all largemouth bass in the pond weigh more than 2 pounds."
+    ],
+    "correct_index": 3,
+    "ai_answer_index": 3,
+    "explanation_brief": "",
+    "explanation_detailed": "",
+    "source": "College Board SAT Question Bank (Question ID: 53d97af5)"
+  },
+  {
+    "id": "0ae37ff3",
+    "section": "math",
+    "difficulty": "medium",
+    "stem": "In a bag, there are 7 red, 4 white, 33 blue, and 33 yellow cubes. If one of these cubes is selected at random, what is the probability of selecting a cube that is neither blue nor yellow?",
+    "choices": [
+      "6/7",
+      "7/11",
+      "1/3",
+      "1/7"
+    ],
+    "correct_index": 3,
+    "ai_answer_index": 3,
+    "explanation_brief": "",
+    "explanation_detailed": "",
+    "source": "College Board SAT Question Bank (Question ID: 0ae37ff3)"
+  },
+  {
+    "id": "e9fb7774",
+    "section": "math",
+    "difficulty": "easy",
+    "stem": "What percentage of 300 is 75?",
+    "choices": [
+      "25%",
+      "50%",
+      "75%",
+      "225%"
+    ],
+    "correct_index": 0,
+    "ai_answer_index": 0,
+    "explanation_brief": "",
+    "explanation_detailed": "",
+    "source": "College Board SAT Question Bank (Question ID: e9fb7774)"
+  },
+  {
+    "id": "8705ecba",
+    "section": "math",
+    "difficulty": "easy",
+    "stem": "The cost of a certain shirt is $20 before a 5% sales tax is added. What is the total cost, including sales tax, to purchase the shirt?",
+    "choices": [
+      "$20.05",
+      "$20.50",
+      "$21.00",
+      "$25.00"
+    ],
+    "correct_index": 2,
+    "ai_answer_index": 2,
+    "explanation_brief": "",
+    "explanation_detailed": "",
+    "source": "College Board SAT Question Bank (Question ID: 8705ecba)"
+  },
+  {
+    "id": "da9ffcf6",
+    "section": "math",
+    "difficulty": "easy",
+    "stem": "The ratio of the length of line segment XY to the length of line segment ZV is 6 to 1. If the length of line segment XY is 102 inches, what is the length, in inches, of line segment ZV?",
+    "choices": [
+      "17",
+      "96",
+      "102",
+      "612"
+    ],
+    "correct_index": 0,
+    "ai_answer_index": 0,
+    "explanation_brief": "",
+    "explanation_detailed": "",
+    "source": "College Board SAT Question Bank (Question ID: da9ffcf6)"
+  },
+  {
+    "id": "2a549721",
+    "section": "math",
+    "difficulty": "easy",
+    "stem": "Rectangle ABCD has an area of 280 square centimeters. The length of the rectangle is 10 centimeters. What is the width, in centimeters, of the rectangle?",
+    "choices": [
+      "10",
+      "28",
+      "76",
+      "140"
+    ],
+    "correct_index": 1,
+    "ai_answer_index": 1,
+    "explanation_brief": "",
+    "explanation_detailed": "",
+    "source": "College Board SAT Question Bank (Question ID: 2a549721)"
+  },
+  {
+    "id": "d0b6d927",
+    "section": "math",
+    "difficulty": "easy",
+    "stem": "A rectangle has an area of 63 square meters and a length of 9 meters. What is the width, in meters, of the rectangle?",
+    "choices": [
+      "7",
+      "54",
+      "81",
+      "567"
+    ],
+    "correct_index": 0,
+    "ai_answer_index": 0,
+    "explanation_brief": "",
+    "explanation_detailed": "",
+    "source": "College Board SAT Question Bank (Question ID: d0b6d927)"
+  },
+  {
+    "id": "b434e103",
+    "section": "math",
+    "difficulty": "easy",
+    "stem": "In △RST, the measure of ∠R is 63°. Which of the following could be the measure, in degrees, of ∠S?",
+    "choices": [
+      "116",
+      "118",
+      "126",
+      "180"
+    ],
+    "correct_index": 0,
+    "ai_answer_index": 0,
+    "explanation_brief": "",
+    "explanation_detailed": "",
+    "source": "College Board SAT Question Bank (Question ID: b434e103)"
+  },
+  {
+    "id": "87aa7bab",
+    "section": "reading_writing",
+    "difficulty": "medium",
+    "stem": "A common assumption among art historians is that the invention of photography in the mid-nineteenth century displaced the painted portrait in the public consciousness. The diminishing popularity of the portrait miniature, which coincided with the rise of photography, seems to support this claim. However, photography’s impact on the portrait miniature may be overstated. Although records from art exhibitions in the Netherlands from 1820 to 1892 show a decrease in the number of both full-sized and miniature portraits submitted, this trend was established before the invention of photography.\n\nBased on the text, what can be concluded about the diminishing popularity of the portrait miniature in the nineteenth century?",
+    "choices": [
+      "Factors other than the rise of photography may be more directly responsible for the portrait miniature’s decline.",
+      "Although portrait miniatures became less common than photographs, they were widely regarded as having more artistic merit.",
+      "The popularity of the portrait miniature likely persisted for longer than art historians have assumed.",
+      "As demand for portrait miniatures decreased, portrait artists likely shifted their creative focus to photography."
+    ],
+    "correct_index": 0,
+    "ai_answer_index": 0,
+    "explanation_brief": "",
+    "explanation_detailed": "",
+    "source": "College Board SAT Question Bank (Question ID: 87aa7bab)"
+  },
+  {
+    "id": "8c1be131",
+    "section": "reading_writing",
+    "difficulty": "medium",
+    "stem": "During the World War II era, some Mexican American women adopted a striking new look called pachuca style. They wore altered men’s jackets or zoot suits (wide-legged, long-coated suits) and dramatic makeup, and they combed their hair into high, rounded shapes. Some people criticized pachuca style, saying it was dangerous and women should dress traditionally. But historians see things differently. They see pachuca style as a form of rebellion against the era’s rigid social expectations for women. They say that it showed a desire for self-expression and freedom on the part of women who adopted the style.\n\nAccording to the text, how do historians view pachuca style?",
+    "choices": [
+      "They think that pachuca style was such a popular trend that it continues to influence fashion in the United States to the present day.",
+      "They think that pachuca style was a way for some Mexican American women to express themselves and resist strict social expectations.",
+      "They think that pachuca style was celebrated because it enabled some Mexican American women to show their support for the United States during World War II.",
+      "They think that pachuca style was similar to other fashion trends that different groups of women adopted in the same period."
+    ],
+    "correct_index": 1,
+    "ai_answer_index": 1,
+    "explanation_brief": "",
+    "explanation_detailed": "",
+    "source": "College Board SAT Question Bank (Question ID: 8c1be131)"
+  },
+  {
+    "id": "92c2564d",
+    "section": "reading_writing",
+    "difficulty": "medium",
+    "stem": "Utah is home to Pando, a colony of about 47,000 quaking aspen trees that all share a single root system. Pando is one of the largest single organisms by mass on Earth, but ecologists are worried that its growth is declining in part because of grazing by animals. The ecologists say that strong fences could prevent deer from eating young trees and help Pando start thriving again.\n\nAccording to the text, why are ecologists worried about Pando?",
+    "choices": [
+      "It isn’t growing at the same rate it used to.",
+      "It isn’t producing young trees anymore.",
+      "It can’t grow into new areas because it is blocked by fences.",
+      "Its root system can’t support many more new trees."
+    ],
+    "correct_index": 0,
+    "ai_answer_index": 0,
+    "explanation_brief": "",
+    "explanation_detailed": "",
+    "source": "College Board SAT Question Bank (Question ID: 92c2564d)"
+  },
+  {
+    "id": "3543e6e2",
+    "section": "reading_writing",
+    "difficulty": "easy",
+    "stem": "The following text is from Jane Austen’s 1811 novel Sense and Sensibility. Elinor lives with her younger sisters and her mother, Mrs. Dashwood.\n\nElinor, this eldest daughter, whose advice was so effectual, possessed a strength of understanding, and coolness of judgment, which qualified her, though only nineteen, to be the counsellor of her mother, and enabled her frequently to counteract, to the advantage of them all, that eagerness of mind in Mrs. Dashwood which must generally have led to imprudence. She had an excellent heart;—her disposition was affectionate, and her feelings were strong; but she knew how to govern them: it was a knowledge which her mother had yet to learn; and which one of her sisters had resolved never to be taught.\n\nAccording to the text, what is true about Elinor?",
+    "choices": [
+      "Elinor often argues with her mother but fails to change her mind.",
+      "Elinor can be overly sensitive with regard to family matters.",
+      "Elinor thinks her mother is a bad role model.",
+      "Elinor is remarkably mature for her age."
+    ],
+    "correct_index": 3,
+    "ai_answer_index": 3,
+    "explanation_brief": "",
+    "explanation_detailed": "",
+    "source": "College Board SAT Question Bank (Question ID: 3543e6e2)"
+  },
+  {
+    "id": "29f5c8c2",
+    "section": "reading_writing",
+    "difficulty": "medium",
+    "stem": "Fish whose DNA has been modified to include genetic material from other species are known as transgenic. Some transgenic fish have genes from jellyfish that result in fluorescence (that is, they glow in the dark). Although these fish were initially engineered for research purposes in the 1990s, they were sold as pets in the 2000s and can now be found in the wild in creeks in Brazil. A student in a biology seminar who is writing a paper on these fish asserts that their escape from Brazilian fish farms into the wild may have significant negative long-term ecological effects.\n\nWhich quotation from a researcher would best support the student’s assertion?",
+    "choices": [
+      "“In one site in the wild where transgenic fish were observed, females outnumbered males, while in another the numbers of females and males were equivalent.”",
+      "“Though some presence of transgenic fish in the wild has been recorded, there are insufficient studies of the impact of those fish on the ecosystems into which they are introduced.”",
+      "“The ecosystems into which transgenic fish are known to have been introduced may represent a subset of the ecosystems into which the fish have actually been introduced.”",
+      "“Through interbreeding, transgenic fish might introduce the trait of fluorescence into wild fish populations, making those populations more vulnerable to predators.”"
+    ],
+    "correct_index": 3,
+    "ai_answer_index": 3,
+    "explanation_brief": "",
+    "explanation_detailed": "",
+    "source": "College Board SAT Question Bank (Question ID: 29f5c8c2)"
+  },
+  {
+    "id": "ca5a3fb4",
+    "section": "reading_writing",
+    "difficulty": "medium",
+    "stem": "The practice of logging (cutting down trees for commercial and other uses) is often thought to be at odds with forest conservation (the work of preserving forests). However, a massive study in forest management and preservation spanning 700,000 hectares in Oregon’s Malheur National Forest calls that view into question. So far, results of the study suggest that forest plots that have undergone limited logging (the careful removal of a controlled number of trees) may be more robust than plots that haven’t been logged at all. These results, in turn, suggest that ______\n\nWhich choice most logically completes the text?",
+    "choices": [
+      "logging may be useful for maintaining healthy forests, provided it is limited.",
+      "other forest management strategies are more effective than limited logging.",
+      "as time passes, it will be difficult to know whether limited logging has any benefits.",
+      "the best way to support forest health may be to leave large forests entirely untouched."
+    ],
+    "correct_index": 0,
+    "ai_answer_index": 0,
+    "explanation_brief": "",
+    "explanation_detailed": "",
+    "source": "College Board SAT Question Bank (Question ID: ca5a3fb4)"
+  },
+  {
+    "id": "cf956802",
+    "section": "reading_writing",
+    "difficulty": "easy",
+    "stem": "When fashion designer Lloyd Henri Kiva New opened his store in Scottsdale, Arizona, in 1945, he quickly became known for creating delicately crafted leather goods, like belts and hats. He was perhaps most renowned for his colorful handbags, which he made by hand using a long and painstaking process. As he gained more customers, New began using sewing machines and other tools to help him produce bags more efficiently, though he continued to handcraft the crucial details that made each bag unique.\n\nBased on the text, what would have been the most likely consequence if New had not begun using sewing machines?",
+    "choices": [
+      "He would have been unable to ensure that each bag included unique, handcrafted details.",
+      "He would have struggled to meet the increasing demand for his bags.",
+      "He would have had to individually design each bag he produced.",
+      "He would not have been able to generate as much interest in his bags."
+    ],
+    "correct_index": 1,
+    "ai_answer_index": 1,
+    "explanation_brief": "",
+    "explanation_detailed": "",
+    "source": "College Board SAT Question Bank (Question ID: cf956802)"
+  },
+  {
+    "id": "3091f805",
+    "section": "reading_writing",
+    "difficulty": "easy",
+    "stem": "Ochre sea stars live in tidal pools along the shoreline of the Pacific Ocean. At night, they move to higher shore levels in search of prey. But scientists Corey Garza and Carlos Robles noticed that ochre sea stars stayed at lower levels at night after heavy rains. Garza and Robles hypothesized that a layer of fresh water formed by rainfall was a barrier to the sea stars. To test their hypothesis, the scientists did an experiment. They placed some sea stars in a climbable tank of seawater and other sea stars in a similar tank of seawater with a layer of fresh water on top. Then, the scientists watched the sea stars’ behavior at night.\n\nWhich finding from the experiment, if true, would most directly support Garza and Robles’s hypothesis?",
+    "choices": [
+      "None of the sea stars climbed to the tops of the tanks, but sea stars in the tank with only seawater moved around the bottom of the tank more than sea stars in the other tank did.",
+      "Sea stars in the tank with only seawater climbed to the top of the tank, but sea stars in the other tank stopped climbing just below the layer of fresh water.",
+      "Both groups of sea stars climbed to the tops of the tanks, but sea stars in the tank with only seawater climbed more slowly than sea stars in the other tank did.",
+      "Sea stars in the tank with only seawater mostly stayed near the bottom of the tank, but sea stars in the other tank climbed into the layer of fresh water."
+    ],
+    "correct_index": 1,
+    "ai_answer_index": 1,
+    "explanation_brief": "",
+    "explanation_detailed": "",
+    "source": "College Board SAT Question Bank (Question ID: 3091f805)"
+  },
+  {
+    "id": "60c6b64d",
+    "section": "reading_writing",
+    "difficulty": "medium",
+    "stem": "Male túngara frogs make complex calls to attract mates, but their calls also attract frog-biting midges, insects that feed on the frogs’ blood. Researchers Ximena Bernal and Priyanka de Silva wondered if the calls alone are sufficient for midges to locate the frogs or if midges use carbon dioxide emitted by frogs as an additional cue to their prey’s whereabouts, like mosquitoes do. In an experiment, the researchers placed two midge traps in a túngara frog breeding area. One trap played recordings of túngara frog calls and the other released carbon dioxide along with playing the calls. Bernal and de Silva concluded that carbon dioxide does not serve as an additional cue to frog-biting midges.\n\nWhich finding from the experiment, if true, would most directly support Bernal and de Silva’s conclusion?",
+    "choices": [
+      "Only a small number of midges were found in the traps, though the majority were found in the trap that played calls and released carbon dioxide.",
+      "Midges entered the trap that released carbon dioxide and played calls only during or immediately after periods of carbon dioxide release.",
+      "More midges were found in the trap that only played calls than in the trap that played calls and released carbon dioxide.",
+      "The trap that released carbon dioxide and played calls attracted few midges when carbon dioxide concentrations were low but attracted many midges when carbon dioxide concentrations were high."
+    ],
+    "correct_index": 2,
+    "ai_answer_index": 2,
+    "explanation_brief": "",
+    "explanation_detailed": "",
+    "source": "College Board SAT Question Bank (Question ID: 60c6b64d)"
+  },
+  {
+    "id": "1f3be847",
+    "section": "reading_writing",
+    "difficulty": "medium",
+    "stem": "“Loon Point” is a 1912 poem by Amy Lowell. In the poem, which presents a nighttime scene on a body of water, Lowell describes an element of nature as an active participant in the experience, writing, ______\n\nWhich quotation from “Loon Point” most effectively illustrates the claim?",
+    "choices": [
+      "“Through the water the moon writes her legends / In light, on the smooth, wet sand.”",
+      "“Softly the water ripples / Against the canoe’s curving side.”",
+      "“Or like the snow-white petals / Which drop from an overblown rose.”",
+      "“But the moon in her wayward beauty / Is ever and always the same.”"
+    ],
+    "correct_index": 0,
+    "ai_answer_index": 0,
+    "explanation_brief": "",
+    "explanation_detailed": "",
+    "source": "College Board SAT Question Bank (Question ID: 1f3be847)"
+  },
+  {
+    "id": "57485f5e",
+    "section": "reading_writing",
+    "difficulty": "easy",
+    "stem": "The following text is adapted from Johanna Spyri’s 1881 novel Heidi (translated by Elisabeth Stork in 1915). Eight-year-old Heidi and her friend’s grandmother are looking at some illustrated books.\n\nHeidi had come and was looking with wondering eyes at the splendid pictures in the large books, that Grandmama was showing her. Suddenly she screamed aloud, for there on the picture she saw a peaceful flock grazing on a green pasture. In the middle a shepherd was standing, leaning on his crook. The setting sun was shedding a golden light over everything. With glowing eyes Heidi devoured the scene.\n\nWhich choice best states the main idea of the text?",
+    "choices": [
+      "Heidi is upset until she sees a serene image of a pasture in one of Grandmama’s books.",
+      "Heidi is delighted and fascinated by an image she sees in one of Grandmama’s books.",
+      "Heidi is initially frightened by an image in one of Grandmama’s books but quickly comes to appreciate its beauty.",
+      "Heidi is inspecting an image in one of Grandmama’s books because she has never seen a shepherd with his sheep before."
+    ],
+    "correct_index": 1,
+    "ai_answer_index": 1,
+    "explanation_brief": "",
+    "explanation_detailed": "",
+    "source": "College Board SAT Question Bank (Question ID: 57485f5e)"
+  },
+  {
+    "id": "11c68ded",
+    "section": "reading_writing",
+    "difficulty": "medium",
+    "stem": "A contraction of “you all,” the pronoun “y’all” has long been used as a plural version of “you” in the South and in Black communities around the US. In recent decades, most other English-speaking communities in the US have begun to use “y’all.” What explains its rise in popularity? Many varieties of English have no pronoun that specifically addresses more than one person and instead must use “you” to address both one person and more than one. But “y’all” always refers to two or more people. As a result, it conveys the speaker’s meaning more precisely than “you” can.\n\nWhich question does the text most directly attempt to answer?",
+    "choices": [
+      "How many other plural versions of the pronoun “you” are there in English, besides “y’all”?",
+      "Why has the pronoun “y’all” become more widely used in the US?",
+      "When was the first recorded use of the pronoun “y’all” in the English language?",
+      "Is “y’all” commonly used in English-speaking regions of the world besides the US?"
+    ],
+    "correct_index": 1,
+    "ai_answer_index": 1,
+    "explanation_brief": "",
+    "explanation_detailed": "",
+    "source": "College Board SAT Question Bank (Question ID: 11c68ded)"
+  },
+  {
+    "id": "94ca8ebd",
+    "section": "reading_writing",
+    "difficulty": "medium",
+    "stem": "A student is examining a long, challenging poem that was initially published in a quarterly journal without explanatory notes, then later republished in a stand-alone volume containing only that poem and accompanying explanatory notes written by the poet. The student asserts that the explanatory notes were included in the republication primarily as a marketing device to help sell the stand-alone volume.\n\nWhich statement, if true, would most directly support the student’s claim?",
+    "choices": [
+      "The text of the poem as published in the quarterly journal is not identical to the text of the poem published in the stand-alone volume.",
+      "Many critics believe that the poet’s explanatory notes remove certain ambiguities of the poem and make it less interesting as a result.",
+      "The publishers of the stand-alone volume requested the explanatory notes from the poet in order to make the book attractive to readers who already had a copy of the poem in a journal issue.",
+      "Correspondence between the poet and the publisher reveals that the poet’s explanatory notes went through several drafts."
+    ],
+    "correct_index": 2,
+    "ai_answer_index": 2,
+    "explanation_brief": "",
+    "explanation_detailed": "",
+    "source": "College Board SAT Question Bank (Question ID: 94ca8ebd)"
+  },
+  {
+    "id": "66c47028",
+    "section": "reading_writing",
+    "difficulty": "medium",
+    "stem": "In 1934 physicist Eugene Wigner posited the existence of a crystal consisting entirely of electrons in a honeycomb-like structure. The so-called Wigner crystal remained largely conjecture, however, until Feng Wang and colleagues announced in 2021 that they had captured an image of one. The researchers trapped electrons between two semiconductors and then cooled the apparatus, causing the electrons to settle into a crystalline structure. By inserting an ultrathin sheet of graphene above the crystal, the researchers obtained an impression—the first visual confirmation of the Wigner crystal.\n\nWhich choice best states the main idea of the text?",
+    "choices": [
+      "Researchers have obtained the most definitive evidence to date of the existence of the Wigner crystal.",
+      "Researchers have identified an innovative new method for working with unusual crystalline structures.",
+      "Graphene is the most important of the components required to capture an image of a Wigner crystal.",
+      "It’s difficult to acquire an image of a Wigner crystal because of the crystal’s honeycomb structure."
+    ],
+    "correct_index": 0,
+    "ai_answer_index": 0,
+    "explanation_brief": "",
+    "explanation_detailed": "",
+    "source": "College Board SAT Question Bank (Question ID: 66c47028)"
+  },
+  {
+    "id": "3190835d",
+    "section": "reading_writing",
+    "difficulty": "medium",
+    "stem": "Some businesses believe that when employees are interrupted while doing their work, they experience a decrease in energy and productivity. However, a team led by Harshad Puranik, who studies management, has found that interruptions by colleagues can have a social component that increases employees’ sense of belonging, resulting in greater job satisfaction that benefits employees and employers. Therefore, businesses should recognize that ______\n\nWhich choice most logically completes the text?",
+    "choices": [
+      "the interpersonal benefits of some interruptions in the workplace may offset the perceived negative effects.",
+      "in order to maximize productivity, employers should be willing to interrupt employees frequently throughout the day.",
+      "most employees avoid interrupting colleagues because they don’t appreciate being interrupted themselves.",
+      "in order to cultivate an ideal workplace environment, interruptions of work should be discouraged."
+    ],
+    "correct_index": 0,
+    "ai_answer_index": 0,
+    "explanation_brief": "",
+    "explanation_detailed": "",
+    "source": "College Board SAT Question Bank (Question ID: 3190835d)"
+  },
+  {
+    "id": "85439572",
+    "section": "reading_writing",
+    "difficulty": "medium",
+    "stem": "Roasted green chiles are a popular ingredient in Southwestern cuisine, but the traditional roasting method of burning propane is not environmentally friendly. To see if solar power could provide a better alternative, engineer Kenneth Armijo and his team roasted batches of green chiles using between 38 and 42 heliostats, which are devices that concentrate sunlight. The team was successful in reaching the same roasting temperature used in traditional propane roasting, but they found that propane yielded faster results. While the fastest solar-roasted green chiles took six minutes, batches using propane took only four. Armijo hypothesizes that they can reduce the roasting time for solar-roasted green chiles by using more heliostats.\n\nWhich finding, if true, would most directly support Armijo’s hypothesis?",
+    "choices": [
+      "The temperature inside the roasting drum is distributed more evenly when roasting green chiles with solar power than with propane.",
+      "Attempts to roast green chiles using 50 heliostats yields results in fewer than six minutes.",
+      "Green chile connoisseurs prefer the flavor of solar-roasted green chiles over the flavor of propane-roasted green chiles.",
+      "The skins of solar-roasted green chiles are easier to peel than the skins of propane-roasted green chiles."
+    ],
+    "correct_index": 1,
+    "ai_answer_index": 1,
+    "explanation_brief": "",
+    "explanation_detailed": "",
+    "source": "College Board SAT Question Bank (Question ID: 85439572)"
+  },
+  {
+    "id": "01989d77",
+    "section": "reading_writing",
+    "difficulty": "medium",
+    "stem": "Microbes that live in shallow lakes and ponds produce methane, a harmful greenhouse gas. Ecologist Ralf Aben and his team wanted to see how different types of shallow-water plants might affect the amount of methane that escapes into the atmosphere. Aben’s team set up some water tanks with soil and microbes from local ponds. Some tanks had a type of underwater plant that grows in the soil called watermilfoil. Other tanks had either duckweed, a type of plant that floats on the water’s surface, or algae. Aben and his team found that tanks with duckweed and algae released higher levels of methane than tanks with watermilfoil did. This finding suggests that ______\n\nWhich choice most logically completes the text?",
+    "choices": [
+      "the presence of some kinds of underwater plants like watermilfoil helps prevent methane from escaping shallow lakes and ponds.",
+      "shallow lakes and ponds release more methane than deeper bodies of water because shallow bodies of water usually have more plants than deep bodies of water do.",
+      "shallow lakes and ponds are more likely to contain algae than to contain either watermilfoil or duckweed.",
+      "having a mix of algae, underwater plants, and floating plants is the best way to reduce the amount of methane in shallow lakes and ponds."
+    ],
+    "correct_index": 0,
+    "ai_answer_index": 0,
+    "explanation_brief": "",
+    "explanation_detailed": "",
+    "source": "College Board SAT Question Bank (Question ID: 01989d77)"
+  },
+  {
+    "id": "a13541c0",
+    "section": "reading_writing",
+    "difficulty": "medium",
+    "stem": "Sandra Cisneros’s 1984 novella The House on Mango Street made a lasting impact on US literature. Its depiction of Mexican American culture inspired later authors to examine their own heritage within their fictional works. Also influential was the book’s portrayal of the main character, Esperanza, during a pivotal year of her youth. <u>This insightful depiction of a preteen girl encouraged authors who, like Cisneros herself, are Latina to use fictional works to examine experiences from their own youth.</u>\n\nWhich statement, if true, would most strongly support the claim in the underlined sentence?",
+    "choices": [
+      "In interviews, a number of Latina authors say that The House on Mango Street inspired them to write about their own adolescence in their novels.",
+      "In published writings, several prominent authors who are not Latina say that reading The House on Mango Street influenced their approach to writing fiction.",
+      "The House on Mango Street has sold over six million copies and is one of the most commonly read books among high school and university students in the US.",
+      "Since 1984, new novels about young Latina characters by Latina authors have often been compared to The House on Mango Street."
+    ],
+    "correct_index": 0,
+    "ai_answer_index": 0,
+    "explanation_brief": "",
+    "explanation_detailed": "",
+    "source": "College Board SAT Question Bank (Question ID: a13541c0)"
+  }
+]

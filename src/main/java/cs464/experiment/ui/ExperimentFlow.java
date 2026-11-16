@@ -19,6 +19,7 @@ import java.util.Map;
  * The order of screens for one participant:
  *
  * <pre>
+ * about you (demographic questions, skipped if demographic_questions is empty)
  * welcome
  * for each block:
  *     round intro -> pre-round ratings -> each question -> post-round ratings
@@ -43,6 +44,17 @@ public final class ExperimentFlow {
     }
 
     public void start() {
+        if (config.demographicQuestions().isEmpty()) {
+            showWelcome();
+            return;
+        }
+        nav.show(new DemographicsScreen(config.demographicQuestions(), answers -> {
+            saveDemographics(answers);
+            showWelcome();
+        }));
+    }
+
+    private void showWelcome() {
         nav.show(new MessageScreen(
                 "Welcome",
                 "In this study you will answer several rounds of SAT-style multiple-choice questions. "
@@ -103,7 +115,8 @@ public final class ExperimentFlow {
 
     private void finish() {
         closeWriter();
-        System.out.println("Session complete. Data written to:\n  " + writer.trialsFile() + "\n  " + writer.ratingsFile());
+        System.out.println("Session complete. Data written to:\n  " + writer.demographicsFile()
+                + "\n  " + writer.trialsFile() + "\n  " + writer.ratingsFile());
         nav.show(new MessageScreen(
                 "Thank you!",
                 "You have finished the study. Your participant ID is " + session.participantId()
@@ -113,6 +126,14 @@ public final class ExperimentFlow {
     }
 
     // --- saving ---------------------------------------------------------------------------
+
+    private void saveDemographics(Map<String, String> answers) {
+        try {
+            writer.writeDemographics(session.participantId(), session.orderId(), answers, Instant.now());
+        } catch (IOException e) {
+            showSaveError(e);
+        }
+    }
 
     private void saveTrial(TrialResult result) {
         try {

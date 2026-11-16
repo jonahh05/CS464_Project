@@ -11,9 +11,12 @@ import org.junit.jupiter.api.io.TempDir;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.time.Instant;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class ResultWriterTest {
 
@@ -45,6 +48,28 @@ class ResultWriterTest {
         List<String> ratingLines = Files.readAllLines(ratings);
         assertEquals(String.join(",", ResultWriter.RATING_COLUMNS), ratingLines.get(0));
         assertEquals("P01,2,1,round_a,brief,pre,conf_ai,7,2026-11-01T12:00:00Z", ratingLines.get(1));
+    }
+
+    @Test
+    void writesOneRowPerDemographicAnswer() throws Exception {
+        Instant t = Instant.parse("2026-11-01T12:00:00Z");
+        Map<String, String> answers = new LinkedHashMap<>();
+        answers.put("age", "21 to 24");
+        answers.put("education", "College graduate, not currently a student");
+        answers.put("major", "");
+
+        Path demographics;
+        try (ResultWriter writer = new ResultWriter(tempDir, "P02")) {
+            writer.writeDemographics("P02", 2, answers, t);
+            demographics = writer.demographicsFile();
+        }
+
+        List<String> lines = Files.readAllLines(demographics);
+        assertEquals(String.join(",", ResultWriter.DEMOGRAPHIC_COLUMNS), lines.get(0));
+        assertEquals("P02,2,age,21 to 24,2026-11-01T12:00:00Z", lines.get(1));
+        assertEquals("P02,2,education,\"College graduate, not currently a student\",2026-11-01T12:00:00Z", lines.get(2));
+        assertEquals("P02,2,major,,2026-11-01T12:00:00Z", lines.get(3));
+        assertTrue(demographics.getFileName().toString().endsWith("_demographics.csv"));
     }
 
     @Test

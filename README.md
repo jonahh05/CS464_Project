@@ -15,13 +15,14 @@ mvn test            # check the code and validate the JSON files
 mvn package         # build target/experiment.jar  ->  java -jar target/experiment.jar
 ```
 
-Results go to `data/` (gitignored). Each session writes `<ID>_<timestamp>_trials.csv` and
-`<ID>_<timestamp>_ratings.csv`.
+Results go to `data/` (gitignored). Each session writes `<ID>_<timestamp>_demographics.csv`,
+`<ID>_<timestamp>_trials.csv` and `<ID>_<timestamp>_ratings.csv`.
 
 ## What a session looks like
 
 ```
-Setup (experimenter)  ->  Welcome
+(consent: signed on the separate Google consent form before the app starts)
+Setup (experimenter)  ->  About you (optional demographic questions)  ->  Welcome
   -> Round 1 (baseline: no explanation, AI 100% correct)
   -> Round 2, 3, 4 (none / brief / detailed in the participant's counterbalanced order)
        each round = intro -> pre-round ratings -> questions -> post-round ratings

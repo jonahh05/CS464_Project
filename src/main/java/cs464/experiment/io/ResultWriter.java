@@ -10,13 +10,16 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
+import java.util.Map;
 
 /**
- * Writes a participant's results to two CSV files in the output directory:
- * {@code <id>_<timestamp>_trials.csv} and {@code <id>_<timestamp>_ratings.csv}.
+ * Writes a participant's results to three CSV files in the output directory:
+ * {@code <id>_<timestamp>_demographics.csv}, {@code <id>_<timestamp>_trials.csv} and
+ * {@code <id>_<timestamp>_ratings.csv}.
  *
  * <p>Every row is flushed as soon as it is written, so a crash loses at most the
  * current question. The timestamp in the file name means a re-run never overwrites data.
@@ -34,22 +37,43 @@ public final class ResultWriter implements Closeable {
             "participant_id", "order_id", "block_index", "block_id", "explanation_level",
             "phase", "item_id", "value", "timestamp");
 
+    public static final List<String> DEMOGRAPHIC_COLUMNS = List.of(
+            "participant_id", "order_id", "item_id", "answer", "timestamp");
+
     private static final DateTimeFormatter FILE_STAMP = DateTimeFormatter.ofPattern("yyyyMMdd-HHmmss");
 
+    private final Path demographicsFile;
     private final Path trialsFile;
     private final Path ratingsFile;
+    private final BufferedWriter demographics;
     private final BufferedWriter trials;
     private final BufferedWriter ratings;
 
     public ResultWriter(Path outputDir, String participantId) throws IOException {
         Files.createDirectories(outputDir);
         String prefix = safeFileName(participantId) + "_" + LocalDateTime.now().format(FILE_STAMP);
+        this.demographicsFile = outputDir.resolve(prefix + "_demographics.csv");
         this.trialsFile = outputDir.resolve(prefix + "_trials.csv");
         this.ratingsFile = outputDir.resolve(prefix + "_ratings.csv");
+        this.demographics = Files.newBufferedWriter(demographicsFile, StandardCharsets.UTF_8);
         this.trials = Files.newBufferedWriter(trialsFile, StandardCharsets.UTF_8);
         this.ratings = Files.newBufferedWriter(ratingsFile, StandardCharsets.UTF_8);
+        writeRow(demographics, DEMOGRAPHIC_COLUMNS);
         writeRow(trials, TRIAL_COLUMNS);
         writeRow(ratings, RATING_COLUMNS);
+    }
+
+    /** One row per demographic question; a skipped question is written with an empty answer. */
+    public void writeDemographics(String participantId, int orderId, Map<String, String> answers, Instant answeredAt)
+            throws IOException {
+        for (Map.Entry<String, String> entry : answers.entrySet()) {
+            writeRow(demographics, List.of(
+                    participantId,
+                    String.valueOf(orderId),
+                    entry.getKey(),
+                    nullToEmpty(entry.getValue()),
+                    answeredAt.toString()));
+        }
     }
 
     public void writeTrial(TrialResult r) throws IOException {
@@ -87,6 +111,10 @@ public final class ResultWriter implements Closeable {
                 r.answeredAt().toString()));
     }
 
+    public Path demographicsFile() {
+        return demographicsFile;
+    }
+
     public Path trialsFile() {
         return trialsFile;
     }
@@ -98,9 +126,13 @@ public final class ResultWriter implements Closeable {
     @Override
     public void close() throws IOException {
         try {
-            trials.close();
+            demographics.close();
         } finally {
-            ratings.close();
+            try {
+                trials.close();
+            } finally {
+                ratings.close();
+            }
         }
     }
 

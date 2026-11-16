@@ -1,7 +1,19 @@
 # Data dictionary
 
-Each session writes two CSV files to `data/`. Timestamps are ISO-8601 UTC.
+Each session writes three CSV files to `data/`. Timestamps are ISO-8601 UTC.
 If you add or rename a column in `io/ResultWriter.java`, update this file in the same PR.
+
+## `<ID>_<timestamp>_demographics.csv`: one row per "About you" question
+
+| Column | Example | Meaning |
+|---|---|---|
+| `participant_id`, `order_id` | `P01`, `1` | Same as in the trials file |
+| `item_id` | `education` | Question id from `demographic_questions` in `experiment.json` |
+| `answer` | `Undergraduate student` | The chosen option, `Other: <text>` for the Other box, the typed text for a text question, or empty if skipped |
+| `timestamp` | | When the About you page was submitted |
+
+No names are stored here. Consent (name and e-signature) is collected on a separate Google Form
+that never records the participant ID.
 
 ## `<ID>_<timestamp>_trials.csv`: one row per answered question
 

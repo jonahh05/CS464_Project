@@ -1,6 +1,7 @@
 package cs464.experiment;
 
 import cs464.experiment.io.JsonLoader;
+import cs464.experiment.model.DemographicQuestion;
 import cs464.experiment.model.ExperimentConfig;
 import cs464.experiment.model.Question;
 import cs464.experiment.session.ConfigValidator;
@@ -10,6 +11,7 @@ import java.util.List;
 import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
@@ -37,6 +39,23 @@ class BundledFilesTest {
         for (String id : config.blocks().get(0).questionIds()) {
             assertTrue(questions.get(id).isAiCorrect(), "Baseline question " + id + " has a wrong AI answer");
         }
+    }
+
+    @Test
+    void bundledDemographicsAreOptionalAndNeverAskForAName() throws Exception {
+        ExperimentConfig config = JsonLoader.loadConfig(JsonLoader.CONFIG_RESOURCE);
+
+        assertFalse(config.demographicQuestions().isEmpty(), "demographic_questions is missing from experiment.json");
+        for (DemographicQuestion q : config.demographicQuestions()) {
+            // Names go only on the separate Google consent form, never into the study data.
+            assertFalse(q.prompt().toLowerCase().contains("name"), "Don't ask for names in the app: " + q.id());
+            if (!q.isFreeText()) {
+                assertTrue(q.choices().contains("Prefer not to say") || q.choices().contains("Not sure"),
+                        "Choice question " + q.id() + " needs a way to opt out");
+            }
+        }
+        assertTrue(config.demographicQuestions().stream().anyMatch(q -> q.id().equals("gender") && q.allowOther()),
+                "allow_other should map from snake_case JSON");
     }
 
     @Test

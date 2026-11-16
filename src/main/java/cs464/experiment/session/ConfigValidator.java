@@ -1,6 +1,7 @@
 package cs464.experiment.session;
 
 import cs464.experiment.model.BlockConfig;
+import cs464.experiment.model.DemographicQuestion;
 import cs464.experiment.model.ExperimentConfig;
 import cs464.experiment.model.ExplanationLevel;
 import cs464.experiment.model.Question;
@@ -35,6 +36,7 @@ public final class ConfigValidator {
         checkRatingItems(config.ratingItems(), errors);
         int slots = checkOrders(config.orders(), errors);
         checkBlocks(config.blocks(), slots, questionsById, errors);
+        checkDemographics(config.demographicQuestions(), errors);
 
         return errors;
     }
@@ -53,6 +55,21 @@ public final class ConfigValidator {
         }
         if (q.aiAnswerIndex() < 0 || q.aiAnswerIndex() >= q.choices().size()) {
             errors.add(where + "ai_answer_index " + q.aiAnswerIndex() + " is out of range");
+        }
+    }
+
+    private static void checkDemographics(List<DemographicQuestion> questions, List<String> errors) {
+        Set<String> ids = new HashSet<>();
+        for (DemographicQuestion q : questions) {
+            if (isBlank(q.id()) || !ids.add(q.id())) {
+                errors.add("Demographic question id '" + q.id() + "' is missing or duplicated");
+            }
+            if (isBlank(q.prompt())) {
+                errors.add("Demographic question '" + q.id() + "' has no prompt");
+            }
+            if (!q.isFreeText() && q.choices().stream().anyMatch(ConfigValidator::isBlank)) {
+                errors.add("Demographic question '" + q.id() + "' has an empty choice");
+            }
         }
     }
 

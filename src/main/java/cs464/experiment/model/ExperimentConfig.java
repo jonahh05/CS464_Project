@@ -14,6 +14,12 @@ public record ExperimentConfig(
         boolean shuffleQuestionsWithinBlock, // if true, order is shuffled per participant (seeded by ID)
         List<RatingItem> ratingItems,
         List<List<String>> orders,           // counterbalancing orders of explanation levels; order 1 = first entry
-        List<BlockConfig> blocks
+        List<BlockConfig> blocks,
+        List<DemographicQuestion> demographicQuestions // "About you" screen before Welcome; empty = skipped
 ) {
+
+    /** Never null, so a config without demographic_questions simply skips that screen. */
+    public List<DemographicQuestion> demographicQuestions() {
+        return demographicQuestions == null ? List.of() : demographicQuestions;
+    }
 }

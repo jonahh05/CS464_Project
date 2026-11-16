@@ -22,6 +22,8 @@ How the proposal maps onto the software. Keep this in sync with the
 
 ## Session structure
 
+0. **Before the app**: the participant signs the separate Google consent form.
+   **In the app**: the "About you" demographic questions (all optional), then Welcome.
 1. **Baseline round**: no explanation, AI always correct. Same for everyone.
 2. **Rounds A, B, C**: each uses one explanation level, in the participant's counterbalanced order.
    The **question sets stay at a fixed position** (round A always has set 1, etc.); only the
@@ -36,8 +38,11 @@ number picks the order (P01 → 1 ... P06 → 6, P07 → 1 ...), so 12 participa
 ## Changes from the proposal (note in the interim report)
 
 - The between-round ratings are collected **in the experiment app** instead of Google Forms, so they
-  share the participant ID and timestamps with the trial data. Google Forms is still used for
-  consent, demographics and any end-of-study questions.
+  share the participant ID and timestamps with the trial data.
+- The demographic questions are also asked **in the app** (the "About you" screen before Welcome) and
+  saved to the demographics CSV under the participant ID.
+- Consent is a **separate Google Form** with a typed e-signature and date. It is the only place names are
+  collected, and it never records the participant ID, so names are never linked to the study data.
 
 ## Open decisions
 
@@ -50,4 +55,4 @@ These can all be changed in the JSON config without code changes:
 - [ ] Time limit per question? (not implemented; would go in `QuestionScreen`)
 - [ ] Practice question before the baseline? (would be a new step in `ExperimentFlow`)
 - [ ] Final rating wording (current text is a first draft)
-- [ ] Google Form contents: consent, demographics, prior AI use, end-of-study questions
+- [ ] End-of-study questionnaire contents (prior AI use, end-of-study questions)

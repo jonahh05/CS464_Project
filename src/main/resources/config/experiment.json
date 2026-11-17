@@ -5,6 +5,41 @@
   "rating_max": 10,
   "shuffle_questions_within_block": false,
 
+  "demographic_questions": [
+    {
+      "id": "age",
+      "prompt": "What is your age?",
+      "choices": ["18 to 20", "21 to 24", "25 to 29", "30 or older", "Prefer not to say"]
+    },
+    {
+      "id": "gender",
+      "prompt": "What is your gender?",
+      "choices": ["Woman", "Man", "Nonbinary", "Prefer not to say"],
+      "allow_other": true
+    },
+    {
+      "id": "education",
+      "prompt": "What is your current level of education?",
+      "choices": ["High school graduate, not in college", "Undergraduate student", "Graduate student",
+                  "College graduate, not currently a student", "Prefer not to say"],
+      "allow_other": true
+    },
+    {
+      "id": "major",
+      "prompt": "What is your major or field of study? (Leave blank if this does not apply to you.)"
+    },
+    {
+      "id": "english_first_language",
+      "prompt": "Is English your first language?",
+      "choices": ["Yes", "No", "Prefer not to say"]
+    },
+    {
+      "id": "taken_sat_act_psat",
+      "prompt": "Have you taken the SAT, ACT or PSAT before?",
+      "choices": ["Yes", "No", "Not sure"]
+    }
+  ],
+
   "rating_items": [
     {
       "id": "conf_self",

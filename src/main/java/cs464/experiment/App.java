@@ -59,6 +59,9 @@ public class App extends Application {
             }
             new ExperimentFlow(nav, config, session, writer).start();
         }));
+        // Full screen so participants only see the study. Esc leaves full screen for the experimenter.
+        stage.setFullScreenExitHint("");
+        stage.setFullScreen(true);
         stage.show();
     }
 

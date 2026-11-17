@@ -1,6 +1,7 @@
 package cs464.experiment.session;
 
 import cs464.experiment.model.BlockConfig;
+import cs464.experiment.model.DemographicQuestion;
 import cs464.experiment.model.ExperimentConfig;
 import cs464.experiment.model.ExplanationLevel;
 import cs464.experiment.model.Question;
@@ -85,7 +86,38 @@ class SessionLogicTest {
 
     // --- tiny in-memory fixtures ------------------------------------------------------------
 
+    @Test
+    void missingDemographicQuestionsMeansNoAboutYouScreen() {
+        ExperimentConfig config = sampleConfig(null);
+        assertEquals(List.of(), config.demographicQuestions());
+        assertEquals(List.of(), ConfigValidator.validate(config, sampleQuestions()));
+    }
+
+    @Test
+    void validatorReportsDuplicateDemographicIdsAndEmptyChoices() {
+        List<DemographicQuestion> demographics = List.of(
+                new DemographicQuestion("age", "What is your age?", List.of("18 to 20", ""), false),
+                new DemographicQuestion("age", "Age again?", null, false));
+
+        List<String> problems = ConfigValidator.validate(sampleConfig(demographics), sampleQuestions());
+
+        assertTrue(problems.stream().anyMatch(p -> p.contains("'age' is missing or duplicated")), problems.toString());
+        assertTrue(problems.stream().anyMatch(p -> p.contains("'age' has an empty choice")), problems.toString());
+    }
+
+    @Test
+    void demographicQuestionWithoutChoicesIsFreeText() {
+        assertTrue(new DemographicQuestion("major", "Major?", null, false).isFreeText());
+        assertTrue(new DemographicQuestion("major", "Major?", List.of(), false).isFreeText());
+        assertFalse(new DemographicQuestion("age", "Age?", List.of("18 to 20"), false).isFreeText());
+    }
+
     private static ExperimentConfig sampleConfig() {
+        return sampleConfig(List.of(new DemographicQuestion("age", "What is your age?",
+                List.of("18 to 20", "21 or older", "Prefer not to say"), false)));
+    }
+
+    private static ExperimentConfig sampleConfig(List<DemographicQuestion> demographics) {
         List<List<String>> orders = List.of(
                 List.of("none", "brief", "detailed"),
                 List.of("none", "detailed", "brief"),
@@ -99,7 +131,7 @@ class SessionLogicTest {
                 new BlockConfig("b", "B", "", null, 1, List.of("q3")),
                 new BlockConfig("c", "C", "", null, 2, List.of("q4")));
         List<RatingItem> items = List.of(new RatingItem("conf_ai", "before?", "after?"));
-        return new ExperimentConfig("Test", "data", 1, 10, false, items, orders, blocks);
+        return new ExperimentConfig("Test", "data", 1, 10, false, items, orders, blocks, demographics);
     }
 
     private static Map<String, Question> sampleQuestions() {

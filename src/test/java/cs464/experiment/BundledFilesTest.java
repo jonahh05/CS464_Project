@@ -69,6 +69,19 @@ class BundledFilesTest {
 
         assertEquals(2, q.correctIndex());
         assertEquals(2, q.aiAnswerIndex());
-        assertEquals("", q.explanationDetailed());
+        assertTrue(q.explanationDetailed().startsWith("Step 1: "), "explanation_detailed should map from snake_case JSON");
+    }
+
+    @Test
+    void everyQuestionHasBriefAndDetailedExplanations() throws Exception {
+        // Style rules are in docs/question-format.md: brief is one or two sentences, detailed is exactly three steps.
+        for (Question q : JsonLoader.loadQuestions(JsonLoader.QUESTIONS_RESOURCE).values()) {
+            assertFalse(q.explanationBrief().isBlank(), "Missing explanation_brief: " + q.id());
+            String[] steps = q.explanationDetailed().split("\n");
+            assertEquals(3, steps.length, "explanation_detailed should have exactly 3 steps: " + q.id());
+            for (int i = 0; i < steps.length; i++) {
+                assertTrue(steps[i].startsWith("Step " + (i + 1) + ": "), "Step " + (i + 1) + " is mislabeled in " + q.id());
+            }
+        }
     }
 }

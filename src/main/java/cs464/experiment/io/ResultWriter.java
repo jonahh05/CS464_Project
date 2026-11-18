@@ -30,8 +30,8 @@ public final class ResultWriter implements Closeable {
     public static final List<String> TRIAL_COLUMNS = List.of(
             "participant_id", "order_id", "block_index", "block_id", "explanation_level",
             "trial_index", "question_id", "section", "difficulty",
-            "ai_suggestion", "ai_correct", "chosen_answer", "correct_answer",
-            "correct", "followed_ai", "response_time_ms", "timestamp");
+            "ai_suggestion", "ai_correct", "original_answer", "final_answer", "correct_answer",
+            "correct", "followed_ai", "switched_answer", "initial_response_time_ms", "total_response_time_ms", "timestamp");
 
     public static final List<String> RATING_COLUMNS = List.of(
             "participant_id", "order_id", "block_index", "block_id", "explanation_level",
@@ -90,11 +90,14 @@ public final class ResultWriter implements Closeable {
                 nullToEmpty(q.difficulty()),
                 Question.letter(q.aiAnswerIndex()),
                 String.valueOf(q.isAiCorrect()),
-                Question.letter(r.chosenIndex()),
+                Question.letter(r.originalIndex()),
+                Question.letter(r.finalIndex()),
                 Question.letter(q.correctIndex()),
                 String.valueOf(r.isCorrect()),
                 String.valueOf(r.followedAi()),
-                String.valueOf(r.responseTimeMs()),
+                String.valueOf(r.switchedAnswer()),
+                String.valueOf(r.initialResponseTimeMs()),
+                String.valueOf(r.totalResponseTimeMs()),
                 r.answeredAt().toString()));
     }
 

@@ -31,13 +31,17 @@ class BundledFilesTest {
     }
 
     @Test
-    void baselineBlockAiIsAlwaysCorrect() throws Exception {
+    void everySectionHasFourQuestionsTwoMathAndTwoEnglish() throws Exception {
         ExperimentConfig config = JsonLoader.loadConfig(JsonLoader.CONFIG_RESOURCE);
         Map<String, Question> questions = JsonLoader.loadQuestions(JsonLoader.QUESTIONS_RESOURCE);
 
-        // The proposal requires the first (baseline) block to have a 100% accurate AI.
-        for (String id : config.blocks().get(0).questionIds()) {
-            assertTrue(questions.get(id).isAiCorrect(), "Baseline question " + id + " has a wrong AI answer");
+        assertEquals(9, config.blocks().size());
+        for (var block : config.blocks()) {
+            assertEquals(4, block.questionIds().size(), block.id());
+            assertEquals(2, block.questionIds().stream()
+                    .filter(id -> "math".equals(questions.get(id).section())).count(), block.id() + " math");
+            assertEquals(2, block.questionIds().stream()
+                    .filter(id -> "reading_writing".equals(questions.get(id).section())).count(), block.id() + " english");
         }
     }
 
@@ -61,10 +65,10 @@ class BundledFilesTest {
     @Test
     void snakeCaseJsonMapsOntoRecordFields() throws Exception {
         Map<String, Question> questions = JsonLoader.loadQuestions(JsonLoader.QUESTIONS_RESOURCE);
-        Question q = questions.get("set1-02");
+        Question q = questions.get("3d1070c9");
 
-        assertEquals(3, q.correctIndex());
-        assertEquals(0, q.aiAnswerIndex());
-        assertTrue(q.explanationDetailed().startsWith("Step 1"));
+        assertEquals(2, q.correctIndex());
+        assertEquals(2, q.aiAnswerIndex());
+        assertEquals("", q.explanationDetailed());
     }
 }

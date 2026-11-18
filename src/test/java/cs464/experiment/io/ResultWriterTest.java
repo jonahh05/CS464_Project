@@ -16,6 +16,7 @@ import java.util.List;
 import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class ResultWriterTest {
@@ -25,30 +26,41 @@ class ResultWriterTest {
 
     @Test
     void writesOneRowPerTrialAndRating() throws Exception {
-        // Correct answer is D, AI suggests A, participant follows the AI.
+        // Correct answer is D, AI suggests A, participant starts with B then switches to the AI's A.
         Question q = new Question("q1", "math", "easy", "stem", List.of("a", "b", "c", "d"),
                 3, 0, "brief", "detailed", "test");
         Instant t = Instant.parse("2026-11-01T12:00:00Z");
 
         Path trials;
-        Path ratings;
         try (ResultWriter writer = new ResultWriter(tempDir, "P01")) {
-            writer.writeTrial(new TrialResult("P01", 2, 1, "round_a", ExplanationLevel.BRIEF, 0, q, 0, 4321, t));
+            writer.writeTrial(new TrialResult("P01", 2, 1, "round_a", ExplanationLevel.BRIEF, 0, q, 1, 0, 4321, 9876, t));
             writer.writeRating(new RatingResult("P01", 2, 1, "round_a", ExplanationLevel.BRIEF,
                     RatingPhase.PRE, "conf_ai", 7, t));
             trials = writer.trialsFile();
-            ratings = writer.ratingsFile();
         }
 
         List<String> trialLines = Files.readAllLines(trials);
         assertEquals(String.join(",", ResultWriter.TRIAL_COLUMNS), trialLines.get(0));
-        assertEquals("P01,2,1,round_a,brief,0,q1,math,easy,A,false,A,D,false,true,4321,2026-11-01T12:00:00Z",
+        assertEquals("P01,2,1,round_a,brief,0,q1,math,easy,A,false,B,A,D,false,true,true,4321,9876,2026-11-01T12:00:00Z",
                 trialLines.get(1));
+                assertTrue(trialLines.get(0).contains("original_answer,final_answer"));
+                assertFalse(trialLines.get(0).contains("chosen_answer"));
+                assertFalse(trialLines.get(0).contains(",response_time_ms"));
+            }
 
-        List<String> ratingLines = Files.readAllLines(ratings);
-        assertEquals(String.join(",", ResultWriter.RATING_COLUMNS), ratingLines.get(0));
-        assertEquals("P01,2,1,round_a,brief,pre,conf_ai,7,2026-11-01T12:00:00Z", ratingLines.get(1));
-    }
+            @Test
+            void switchedAnswerIsFalseWhenOriginalEqualsFinal() throws Exception {
+                Question q = new Question("q1", "math", "easy", "stem", List.of("a", "b", "c", "d"),
+                        3, 0, "brief", "detailed", "test");
+                Instant t = Instant.parse("2026-11-01T12:00:00Z");
+                Path trials;
+                try (ResultWriter writer = new ResultWriter(tempDir, "P03")) {
+                    writer.writeTrial(new TrialResult("P03", 1, 0, "round_a", ExplanationLevel.NONE, 0, q, 2, 2, 100, 200, t));
+                    trials = writer.trialsFile();
+                }
+                assertEquals("P03,1,0,round_a,none,0,q1,math,easy,A,false,C,C,D,false,false,false,100,200,2026-11-01T12:00:00Z",
+                        Files.readAllLines(trials).get(1));
+            }
 
     @Test
     void writesOneRowPerDemographicAnswer() throws Exception {

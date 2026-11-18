@@ -14,9 +14,10 @@ How the proposal maps onto the software. Keep this in sync with the
 | Variable | Type | How the software implements it |
 |---|---|---|
 | Explanation level (none / brief / detailed) | IV, within-subjects | `explanation` / `order_slot` per block in `experiment.json`; text from `explanation_brief` / `explanation_detailed` |
-| AI accuracy | IV, per block | Implied by the questions: AI is wrong when `ai_answer_index != correct_index`. Baseline = 100%. |
+| AI accuracy | IV, per block | Implied by the questions: AI is wrong when `ai_answer_index != correct_index`. Currently every question has a correct AI answer. |
 | Score / following wrong AI | DV | `correct`, `followed_ai`, `ai_correct` in the trials CSV |
-| Response time | DV | `response_time_ms` (question shown until Submit) |
+| Response time | DV | `initial_response_time_ms` (to first Submit), `total_response_time_ms` (to second Submit) |
+| Answer change after AI | DV | `switched_answer` (and `original_answer` vs `final_answer`) in the trials CSV |
 | Self-reported accuracy | DV | `est_accuracy` rating (pre + post), compare with actual score |
 | Confidence in self / AI, difficulty | DV | `conf_self`, `conf_ai`, `difficulty` ratings (pre + post) |
 
@@ -24,11 +25,12 @@ How the proposal maps onto the software. Keep this in sync with the
 
 0. **Before the app**: the participant signs the separate Google consent form.
    **In the app**: the "About you" demographic questions (all optional), then Welcome.
-1. **Baseline round**: no explanation, AI always correct. Same for everyone.
-2. **Rounds A, B, C**: each uses one explanation level, in the participant's counterbalanced order.
-   The **question sets stay at a fixed position** (round A always has set 1, etc.); only the
-   explanation level rotates. So every question in rounds A-C needs both a brief and a detailed explanation.
-3. Before and after every round: four 1-10 ratings, collected **in the app**.
+1. **Nine sections** of four questions each, two `math` and two `reading_writing` (English), all from `final_questions.json`.
+   Question order inside a section does not matter.
+2. Each explanation level covers three sections: sections 1-3 use the participant's order[0], 4-6 use order[1], 7-9 use order[2].
+   The **question sets stay at a fixed position**; only the explanation level rotates, so every question
+   eventually needs both a brief and a detailed explanation (still empty for now; the app shows nothing extra for them).
+3. Before and after every section: four 1-10 ratings, collected **in the app**.
 
 ## Counterbalancing
 

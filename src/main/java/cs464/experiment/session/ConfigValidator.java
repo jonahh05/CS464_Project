@@ -14,7 +14,7 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * Checks experiment.json and questions.json against each other before a session starts,
+ * Checks experiment.json and final_questions.json against each other before a session starts,
  * so a typo in a JSON file shows up as a readable message instead of a crash mid-session.
  */
 public final class ConfigValidator {
@@ -33,7 +33,7 @@ public final class ConfigValidator {
         if (config.ratingMin() >= config.ratingMax()) {
             errors.add("rating_min must be smaller than rating_max");
         }
-        checkRatingItems(config.ratingItems(), errors);
+        checkRatingItems(config.ratingItems(), config.ratingMin(), errors);
         int slots = checkOrders(config.orders(), errors);
         checkBlocks(config.blocks(), slots, questionsById, errors);
         checkDemographics(config.demographicQuestions(), errors);
@@ -73,7 +73,7 @@ public final class ConfigValidator {
         }
     }
 
-    private static void checkRatingItems(List<RatingItem> items, List<String> errors) {
+    private static void checkRatingItems(List<RatingItem> items, int ratingMin, List<String> errors) {
         if (items == null || items.isEmpty()) {
             errors.add("rating_items is empty");
             return;
@@ -82,6 +82,9 @@ public final class ConfigValidator {
         for (RatingItem item : items) {
             if (isBlank(item.id()) || !ids.add(item.id())) {
                 errors.add("Rating item id '" + item.id() + "' is missing or duplicated");
+            }
+            if (item.ratingMax() != null && item.ratingMax() <= ratingMin) {
+                errors.add("Rating item '" + item.id() + "' rating_max must be larger than rating_min");
             }
             if (isBlank(item.prePrompt()) || isBlank(item.postPrompt())) {
                 errors.add("Rating item '" + item.id() + "' needs both pre_prompt and post_prompt");
@@ -145,8 +148,8 @@ public final class ConfigValidator {
             if (hasSlot) {
                 if (block.orderSlot() < 0 || block.orderSlot() >= slots) {
                     errors.add(where + "order_slot " + block.orderSlot() + " is out of range (0-" + (slots - 1) + ")");
-                } else if (!usedSlots.add(block.orderSlot())) {
-                    errors.add(where + "order_slot " + block.orderSlot() + " is used by more than one block");
+                } else {
+                    usedSlots.add(block.orderSlot());
                 }
             }
             if (block.questionIds() == null || block.questionIds().isEmpty()) {
@@ -156,27 +159,19 @@ public final class ConfigValidator {
             for (String id : block.questionIds()) {
                 Question q = questionsById.get(id);
                 if (q == null) {
-                    errors.add(where + "question '" + id + "' is not in questions.json");
+                    errors.add(where + "question '" + id + "' is not in final_questions.json");
                     continue;
                 }
                 if (!usedQuestions.add(id)) {
                     errors.add(where + "question '" + id + "' is used in more than one block");
                 }
-                // Order-slot blocks rotate through every level, so they need every explanation.
-                // A fixed block only needs the explanation for its own level.
-                boolean needsBrief = hasSlot || "brief".equalsIgnoreCase(block.explanation());
-                boolean needsDetailed = hasSlot || "detailed".equalsIgnoreCase(block.explanation());
-                if (needsBrief && isBlank(q.explanationBrief())) {
-                    errors.add(where + "question '" + id + "' is missing explanation_brief");
-                }
-                if (needsDetailed && isBlank(q.explanationDetailed())) {
-                    errors.add(where + "question '" + id + "' is missing explanation_detailed");
-                }
+                // Empty explanation_brief / explanation_detailed are allowed while the text is
+                // still being written; the question screen then shows only the AI's answer.
             }
         }
         if (slots > 0 && usedSlots.size() != slots) {
             errors.add("Orders have " + slots + " slots but only " + usedSlots.size()
-                    + " blocks use an order_slot");
+                    + " of them are used by an order_slot block");
         }
     }
 

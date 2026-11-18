@@ -11,16 +11,24 @@ public record TrialResult(
         ExplanationLevel explanationLevel,
         int trialIndex,
         Question question,
-        int chosenIndex,
-        long responseTimeMs,
+        int originalIndex,
+        int finalIndex,
+        long initialResponseTimeMs,
+        long totalResponseTimeMs,
         Instant answeredAt
 ) {
-    public boolean isCorrect() {
-        return chosenIndex == question.correctIndex();
+    /** True when the participant changed their answer after seeing the AI suggestion. */
+    public boolean switchedAnswer() {
+        return originalIndex != finalIndex;
     }
 
-    /** True when the participant picked the AI's suggestion (right or wrong). */
+    /** Correctness of the final answer. */
+    public boolean isCorrect() {
+        return finalIndex == question.correctIndex();
+    }
+
+    /** True when the final answer matches the AI's suggestion (right or wrong). */
     public boolean followedAi() {
-        return chosenIndex == question.aiAnswerIndex();
+        return finalIndex == question.aiAnswerIndex();
     }
 }

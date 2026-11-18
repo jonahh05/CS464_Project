@@ -31,13 +31,13 @@ public final class RatingScreen implements Screen {
                         int min, int max, Consumer<Map<String, Integer>> onDone) {
         List<Node> content = new ArrayList<>();
         content.add(Layout.title(heading));
-        content.add(Layout.body("Rate each statement from " + min + " (lowest) to " + max + " (highest)."));
+        content.add(Layout.body("Rate each statement using the scale shown, starting at " + min + " (lowest)."));
 
         Map<String, ToggleGroup> groups = new LinkedHashMap<>();
         for (RatingItem item : items) {
             ToggleGroup group = new ToggleGroup();
             HBox scale = new HBox(6);
-            for (int value = min; value <= max; value++) {
+            for (int value = min; value <= item.maxOr(max); value++) {
                 ToggleButton button = new ToggleButton(String.valueOf(value));
                 button.setUserData(value);
                 button.setToggleGroup(group);

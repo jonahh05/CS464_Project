@@ -65,16 +65,15 @@ class SessionLogicTest {
     }
 
     @Test
-    void validatorReportsMissingQuestionAndExplanation() {
+    void validatorReportsMissingQuestionButAllowsEmptyExplanations() {
         Map<String, Question> questions = sampleQuestions();
-        questions.put("q2", question("q2", 1, 1, "", "detailed"));   // no brief explanation
-        questions.remove("q3");                                       // referenced but missing
+        questions.put("q2", question("q2", 1, 1, "", ""));   // explanations not written yet
+        questions.remove("q3");                               // referenced but missing
 
         List<String> problems = ConfigValidator.validate(sampleConfig(), questions);
 
-        assertFalse(problems.isEmpty());
-        assertTrue(problems.stream().anyMatch(p -> p.contains("'q2' is missing explanation_brief")), problems.toString());
-        assertTrue(problems.stream().anyMatch(p -> p.contains("'q3' is not in questions.json")), problems.toString());
+        assertEquals(1, problems.size(), problems.toString());
+        assertTrue(problems.get(0).contains("'q3' is not in final_questions.json"), problems.toString());
     }
 
     @Test

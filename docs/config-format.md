@@ -30,24 +30,23 @@ separate Google consent form, so they are never stored with the study data.
 ## Blocks
 
 ```json
-{ "id": "baseline", "title": "Baseline", "instructions": "...",
-  "explanation": "none",               // fixed level for everyone
-  "question_ids": ["base-01", "base-02"] }
-
-{ "id": "round_a", "title": "Round A", "instructions": "...",
+{ "id": "section_1", "title": "Section 1", "instructions": "...",
   "order_slot": 0,                      // level = participant's order[0]
-  "question_ids": ["set1-01", "set1-02"] }
+  "question_ids": ["3d1070c9", "fa80893a", "87aa7bab", "8c1be131"] }
+
+// A block can instead use a fixed level for everyone:  "explanation": "none"
 ```
 
 Give each block **exactly one** of `explanation` (fixed) or `order_slot` (counterbalanced).
-Every slot in the orders (0, 1, 2) must be used by exactly one block, and a question can only be in one block.
+The bundled config has 9 blocks of 4 questions (2 `math` + 2 `reading_writing`); sections 1-3 use slot 0, 4-6 slot 1, 7-9 slot 2.
+Several blocks may share a slot, but every slot in the orders (0, 1, 2) must be used by at least one block, and a question can only be in one block.
 The app checks all of this at startup, and so does `mvn test`.
 
 The console prints each participant's plan when a session starts, including each block's AI accuracy:
 
 ```
 Participant P03, order 3
-  block 0 baseline   explanation=none     questions=3 ai_accuracy=100%
-  block 1 round_a    explanation=brief    questions=3 ai_accuracy=67%
+  block 0 section_1  explanation=brief    questions=4 ai_accuracy=100%
+  block 1 section_2  explanation=brief    questions=4 ai_accuracy=75%
   ...
 ```

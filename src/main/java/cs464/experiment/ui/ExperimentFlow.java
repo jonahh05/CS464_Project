@@ -94,7 +94,7 @@ public final class ExperimentFlow {
         String progress = "Round " + (blockIndex + 1) + " • Question " + (trialIndex + 1)
                 + " of " + block.questions().size();
 
-        nav.show(new QuestionScreen(progress, question, block.explanationLevel(),                 (original, last, initialMs, totalMs) -> {
+        nav.show(new QuestionScreen(progress, question, block.explanationLevel(), (original, last, initialMs, totalMs) -> {
             saveTrial(new TrialResult(session.participantId(), session.orderId(), block.index(), block.id(),
                             block.explanationLevel(), trialIndex, question, original, last, initialMs, totalMs,
                             Instant.now()));

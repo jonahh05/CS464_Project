@@ -1,6 +1,6 @@
-# Question format (`questions.json`)
+# Question format (`final_questions.json`)
 
-`src/main/resources/questions/questions.json` is a JSON array of questions:
+`src/main/resources/questions/final_questions.json` is a JSON array of questions:
 
 ```json
 {
@@ -19,14 +19,14 @@
 
 | Field | Notes |
 |---|---|
-| `id` | Unique. Referenced from `experiment.json`. Convention: `base-NN`, `set1-NN`, `set2-NN`, `set3-NN`. |
+| `id` | Unique. Referenced from `experiment.json`. Currently the College Board question ID. |
 | `section`, `difficulty` | Free text, copied to the CSV for analysis. Use consistent values (`math` / `reading_writing`, `easy` / `medium` / `hard`). |
 | `stem` | The question. `\n\n` starts a new paragraph (e.g. passage, then question). |
 | `choices` | Displayed as A, B, C, D in this order. |
 | `correct_index` | **0-based**: 0 = A, 1 = B, 2 = C, 3 = D. |
 | `ai_answer_index` | 0-based index the AI suggests. **Set it different from `correct_index` to make the AI wrong.** |
-| `explanation_brief` | 1-2 sentences supporting the AI's answer. Required for questions in rounds A-C. |
-| `explanation_detailed` | Step-by-step reasoning supporting the AI's answer. Required for questions in rounds A-C. |
+| `explanation_brief` | 1-2 sentences supporting the AI's answer. May be `""` until written; the app then shows only the AI's suggested answer. |
+| `explanation_detailed` | Step-by-step reasoning supporting the AI's answer. May be `""` until written; the app then shows only the AI's suggested answer. |
 | `source` | Where it came from. Also add it to `question-sourcing.md`. |
 
 ## Writing the scripted AI
@@ -35,6 +35,6 @@
   (a "confidently wrong" answer, e.g. one subtle arithmetic or grammar slip). It should never hint that it might be wrong.
 - Brief and detailed explanations for the same question should argue for the **same** answer.
 - Keep tone and length consistent across questions, so explanation level is the only thing that changes.
-- Baseline questions only need `""` for both explanations, since the baseline shows none.
+- Until the explanations are written, leave both as `""`; nothing extra is shown.
 
-Run `mvn test` after editing. It catches out-of-range indexes, missing explanations and unknown IDs.
+Run `mvn test` after editing. It catches out-of-range indexes and unknown IDs.

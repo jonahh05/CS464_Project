@@ -7,10 +7,9 @@ after the intro and consent form, with the app on the Welcome screen.
 
 > You'll answer four rounds of SAT-style multiple-choice questions on this laptop.
 >
-> For each question, an AI helper will suggest an answer. You can use its suggestion
-> or ignore it.
->
-> Click your answer, then click "Submit answer". You can't go back after you submit.
+> For each question, first click your answer and click "Submit answer". Then an AI helper
+> will show its suggested answer. You can keep your answer or switch to a different one,
+> then click "Submit final answer" to confirm. You can't go back after that.
 >
 > Before and after each round, you'll rate a few things from 1 to 10. Just answer
 > honestly.

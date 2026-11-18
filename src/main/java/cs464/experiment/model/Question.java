@@ -4,7 +4,9 @@ import java.util.List;
 
 /**
  * One multiple-choice question plus the scripted AI helper's suggestion for it.
- * Loaded from src/main/resources/questions/questions.json (see docs/question-format.md).
+ * Loaded from src/main/resources/questions/final_questions.json (see docs/question-format.md).
+ *
+ * <p>The explanation fields may be empty strings until the text is written; nothing is shown then.
  *
  * <p>The AI is "wrong" on a question exactly when {@code aiAnswerIndex != correctIndex};
  * a block's AI accuracy is therefore decided by which questions we put in it.

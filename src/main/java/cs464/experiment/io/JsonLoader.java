@@ -23,7 +23,7 @@ import java.util.Map;
  */
 public final class JsonLoader {
 
-    public static final String QUESTIONS_RESOURCE = "/questions/questions.json";
+    public static final String QUESTIONS_RESOURCE = "/questions/final_questions.json";
     public static final String CONFIG_RESOURCE = "/config/experiment.json";
 
     private static final Gson GSON = new GsonBuilder()
@@ -63,10 +63,10 @@ public final class JsonLoader {
         Map<String, Question> byId = new LinkedHashMap<>();
         for (Question q : questions) {
             if (q.id() == null || q.id().isBlank()) {
-                throw new IOException("A question in questions.json has no id");
+                throw new IOException("                A question in final_questions.json has no id");
             }
             if (byId.put(q.id(), q) != null) {
-                throw new IOException("Duplicate question id '" + q.id() + "' in questions.json");
+                                throw new IOException("Duplicate question id '" + q.id() + "' in final_questions.json");
             }
         }
         return byId;

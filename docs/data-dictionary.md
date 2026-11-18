@@ -21,7 +21,7 @@ that never records the participant ID.
 |---|---|---|
 | `participant_id` | `P01` | Entered on the setup screen |
 | `order_id` | `3` | Counterbalancing order (1-6), see `orders` in `experiment.json` |
-| `block_index` | `1` | 0 = baseline, then 1, 2, 3 in presentation order |
+| `block_index` | `1` | 0-8 in presentation order (section 1 = 0) |
 | `block_id` | `round_a` | Block id from `experiment.json` |
 | `explanation_level` | `brief` | `none`, `brief` or `detailed` shown in this block |
 | `trial_index` | `0` | Position of the question within the block (0-based) |
@@ -30,14 +30,18 @@ that never records the participant ID.
 | `difficulty` | `medium` | From `questions.json` |
 | `ai_suggestion` | `A` | Letter the AI suggested |
 | `ai_correct` | `false` | Was the AI's suggestion correct? |
-| `chosen_answer` | `A` | Letter the participant submitted |
+| `original_answer` | `B` | Letter submitted the first time, before the AI suggestion was shown |
+| `final_answer` | `A` | Letter submitted the second time, after seeing the AI suggestion (same as `original_answer` if kept) |
 | `correct_answer` | `D` | The correct letter |
-| `correct` | `false` | Did the participant answer correctly? |
-| `followed_ai` | `true` | Did the participant pick the AI's suggestion? |
-| `response_time_ms` | `8421` | From question shown to Submit pressed |
-| `timestamp` | `2026-11-01T18:03:12.512Z` | When Submit was pressed |
+| `correct` | `false` | Was `final_answer` correct? |
+| `followed_ai` | `true` | Did `final_answer` match the AI's suggestion? |
+| `switched_answer` | `true` | `true` if `original_answer` differs from `final_answer`, else `false` |
+| `initial_response_time_ms` | `8421` | From question shown to the first Submit (original answer) |
+| `total_response_time_ms` | `15230` | From question shown to the second Submit (final answer) |
+| `timestamp` | `2026-11-01T18:03:12.512Z` | When the second Submit (final answer) was pressed |
 
 **Automation bias** = rows where `ai_correct == false`, then look at the share with `followed_ai == true`.
+`switched_answer` shows whether the AI changed the participant's mind.
 
 ## `<ID>_<timestamp>_ratings.csv`: one row per rating item
 

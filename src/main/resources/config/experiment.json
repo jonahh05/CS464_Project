@@ -58,8 +58,9 @@
     },
     {
       "id": "est_accuracy",
-      "pre_prompt": "How many of this round's questions do you expect to get right? (1 = almost none, 10 = all of them)",
-      "post_prompt": "How many of this round's questions do you think you got right? (1 = almost none, 10 = all of them)"
+      "rating_max": 4,
+      "pre_prompt": "How many of this round's questions do you expect to get right?",
+      "post_prompt": "How many of this round's questions do you think you got right?"
     }
   ],
 
@@ -74,32 +75,67 @@
 
   "blocks": [
     {
-      "id": "baseline",
-      "title": "Baseline",
-      "instructions": "Answer each question by selecting an option and pressing Submit. The AI helper's suggested answer is shown below each question.",
-      "explanation": "none",
-      "question_ids": ["base-01", "base-02", "base-03"]
-    },
-    {
-      "id": "round_a",
-      "title": "Round A",
+      "id": "section_1",
+      "title": "Section 1",
       "instructions": "Answer each question by selecting an option and pressing Submit. The AI helper's suggestion is shown below each question.",
       "order_slot": 0,
-      "question_ids": ["set1-01", "set1-02", "set1-03"]
+      "question_ids": ["3d1070c9", "fa80893a", "87aa7bab", "8c1be131"]
     },
     {
-      "id": "round_b",
-      "title": "Round B",
+      "id": "section_2",
+      "title": "Section 2",
+      "instructions": "Answer each question by selecting an option and pressing Submit. The AI helper's suggestion is shown below each question.",
+      "order_slot": 0,
+      "question_ids": ["1480dd5c", "88e13c8c", "92c2564d", "3543e6e2"]
+    },
+    {
+      "id": "section_3",
+      "title": "Section 3",
+      "instructions": "Answer each question by selecting an option and pressing Submit. The AI helper's suggestion is shown below each question.",
+      "order_slot": 0,
+      "question_ids": ["9b886541", "01682aa5", "29f5c8c2", "ca5a3fb4"]
+    },
+    {
+      "id": "section_4",
+      "title": "Section 4",
       "instructions": "Answer each question by selecting an option and pressing Submit. The AI helper's suggestion is shown below each question.",
       "order_slot": 1,
-      "question_ids": ["set2-01", "set2-02", "set2-03"]
+      "question_ids": ["ad03127d", "f89af023", "cf956802", "3091f805"]
     },
     {
-      "id": "round_c",
-      "title": "Round C",
+      "id": "section_5",
+      "title": "Section 5",
+      "instructions": "Answer each question by selecting an option and pressing Submit. The AI helper's suggestion is shown below each question.",
+      "order_slot": 1,
+      "question_ids": ["4ac59df6", "58443765", "60c6b64d", "1f3be847"]
+    },
+    {
+      "id": "section_6",
+      "title": "Section 6",
+      "instructions": "Answer each question by selecting an option and pressing Submit. The AI helper's suggestion is shown below each question.",
+      "order_slot": 1,
+      "question_ids": ["53d97af5", "0ae37ff3", "57485f5e", "11c68ded"]
+    },
+    {
+      "id": "section_7",
+      "title": "Section 7",
       "instructions": "Answer each question by selecting an option and pressing Submit. The AI helper's suggestion is shown below each question.",
       "order_slot": 2,
-      "question_ids": ["set3-01", "set3-02", "set3-03"]
+      "question_ids": ["e9fb7774", "8705ecba", "94ca8ebd", "66c47028"]
+    },
+    {
+      "id": "section_8",
+      "title": "Section 8",
+      "instructions": "Answer each question by selecting an option and pressing Submit. The AI helper's suggestion is shown below each question.",
+      "order_slot": 2,
+      "question_ids": ["da9ffcf6", "2a549721", "3190835d", "85439572"]
+    },
+    {
+      "id": "section_9",
+      "title": "Section 9",
+      "instructions": "Answer each question by selecting an option and pressing Submit. The AI helper's suggestion is shown below each question.",
+      "order_slot": 2,
+      "question_ids": ["d0b6d927", "b434e103", "01989d77", "a13541c0"]
     }
   ]
 }

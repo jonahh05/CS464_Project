@@ -94,9 +94,10 @@ public final class ExperimentFlow {
         String progress = "Round " + (blockIndex + 1) + " • Question " + (trialIndex + 1)
                 + " of " + block.questions().size();
 
-        nav.show(new QuestionScreen(progress, question, block.explanationLevel(), (chosen, ms) -> {
+        nav.show(new QuestionScreen(progress, question, block.explanationLevel(), (original, last, initialMs, totalMs) -> {
             saveTrial(new TrialResult(session.participantId(), session.orderId(), block.index(), block.id(),
-                    block.explanationLevel(), trialIndex, question, chosen, ms, Instant.now()));
+                            block.explanationLevel(), trialIndex, question, original, last, initialMs, totalMs,
+                            Instant.now()));
             if (trialIndex + 1 < block.questions().size()) {
                 showQuestion(blockIndex, trialIndex + 1);
             } else {

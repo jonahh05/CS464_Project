@@ -43,8 +43,8 @@ Every explanation follows the same pattern, so a participant can't tell a right 
 
 | | Brief | Detailed |
 |---|---|---|
-| Shape | One or two sentences | Exactly three lines: `Step 1: ...\nStep 2: ...\nStep 3: ...` |
-| Length | About 15 to 30 words | About 35 to 65 words (not counting the `Step` labels) |
+| Shape | One short sentence | Exactly three lines: `Step 1: ...\nStep 2: ...\nStep 3: ...`, one short sentence each |
+| Length | About 8 to 18 words | About 15 to 35 words (not counting the `Step` labels) |
 | Content | Names the answer and the single key reason | Walks from what the question gives to the answer; the last step reaches the answer |
 
 - Write in a plain, confident voice. No "I", no "probably" or "might be", no hedging.

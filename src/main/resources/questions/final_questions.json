@@ -12,8 +12,8 @@
     ],
     "correct_index": 2,
     "ai_answer_index": 2,
-    "explanation_brief": "Substituting 2 for x gives f(2) = 25(2) + 30 = 50 + 30, so the value is 80.",
-    "explanation_detailed": "Step 1: The function is f(x) = 25x + 30, so replace x with 2.\nStep 2: That gives f(2) = 25(2) + 30, and 25(2) = 50.\nStep 3: Adding 50 + 30 gives 80, so f(x) = 80 when x = 2.",
+    "explanation_brief": "f(2) = 25(2) + 30 = 50 + 30 = 80.",
+    "explanation_detailed": "Step 1: Replace x with 2: f(2) = 25(2) + 30.\nStep 2: 25(2) = 50.\nStep 3: 50 + 30 = 80, so the value is 80.",
     "source": "College Board SAT Question Bank (Question ID: 3d1070c9)"
   },
   {
@@ -29,8 +29,8 @@
     ],
     "correct_index": 0,
     "ai_answer_index": 0,
-    "explanation_brief": "Solving 2x + 3 = 9 gives x = 3, so 6x - 1 = 6(3) - 1 = 17.",
-    "explanation_detailed": "Step 1: Subtract 3 from both sides of 2x + 3 = 9 to get 2x = 6.\nStep 2: Divide both sides by 2 to get x = 3.\nStep 3: Substitute 3 for x in 6x - 1 to get 18 - 1 = 17, so the value is 17.",
+    "explanation_brief": "2x + 3 = 9 gives x = 3, so 6x - 1 = 18 - 1 = 17.",
+    "explanation_detailed": "Step 1: Subtract 3 from both sides: 2x = 6.\nStep 2: Divide by 2: x = 3.\nStep 3: 6(3) - 1 = 18 - 1 = 17.",
     "source": "College Board SAT Question Bank (Question ID: fa80893a)"
   },
   {
@@ -46,8 +46,8 @@
     ],
     "correct_index": 0,
     "ai_answer_index": 0,
-    "explanation_brief": "Since f(7) = 28, substituting gives 28 = 4(7) + b, which is 28 = 28 + b, so b = 0.",
-    "explanation_detailed": "Step 1: f(7) = 28 means that when x = 7, the output is 28.\nStep 2: Substitute into f(x) = 4x + b to get 28 = 4(7) + b, which simplifies to 28 = 28 + b.\nStep 3: Subtract 28 from both sides to get b = 0.",
+    "explanation_brief": "f(7) = 28 gives 28 = 4(7) + b = 28 + b, so b = 0.",
+    "explanation_detailed": "Step 1: f(7) = 28 means x = 7 gives an output of 28.\nStep 2: So 28 = 4(7) + b, which is 28 = 28 + b.\nStep 3: Subtract 28 from both sides: b = 0.",
     "source": "College Board SAT Question Bank (Question ID: 1480dd5c)"
   },
   {
@@ -63,8 +63,8 @@
     ],
     "correct_index": 2,
     "ai_answer_index": 2,
-    "explanation_brief": "The monthly payment is x = 400, so f(400) = 36(400) + 1,000 = 14,400 + 1,000 = $15,400.",
-    "explanation_detailed": "Step 1: x is the monthly payment, so the total cost for a $400 payment is f(400).\nStep 2: Substitute 400 for x: f(400) = 36(400) + 1,000, and 36(400) = 14,400.\nStep 3: Add 14,400 + 1,000 to get 15,400, so the total cost is $15,400.",
+    "explanation_brief": "f(400) = 36(400) + 1,000 = 14,400 + 1,000 = $15,400.",
+    "explanation_detailed": "Step 1: The payment is x = 400, so find f(400).\nStep 2: 36(400) = 14,400.\nStep 3: 14,400 + 1,000 = 15,400, so the total cost is $15,400.",
     "source": "College Board SAT Question Bank (Question ID: 88e13c8c)"
   },
   {
@@ -80,8 +80,8 @@
     ],
     "correct_index": 3,
     "ai_answer_index": 3,
-    "explanation_brief": "Adding 8 to both sides of 3x - 8 = 7 gives 3x = 15, so 3x + 8 = 15 + 8 = 23.",
-    "explanation_detailed": "Step 1: Add 8 to both sides of 3x - 8 = 7 to get 3x = 15.\nStep 2: The question asks for 3x + 8, so there is no need to solve for x itself.\nStep 3: Add 8 to 3x = 15 to get 3x + 8 = 23.",
+    "explanation_brief": "Adding 8 to both sides gives 3x = 15, so 3x + 8 = 23.",
+    "explanation_detailed": "Step 1: Add 8 to both sides: 3x = 15.\nStep 2: There is no need to solve for x, just use 3x.\nStep 3: 15 + 8 = 23.",
     "source": "College Board SAT Question Bank (Question ID: 9b886541)"
   },
   {
@@ -97,8 +97,8 @@
     ],
     "correct_index": 2,
     "ai_answer_index": 2,
-    "explanation_brief": "Rewriting line p as y = -9x + 9/2 shows its slope is -9, and a perpendicular line has the negative reciprocal slope, 1/9.",
-    "explanation_detailed": "Step 1: Solve 2y + 18x = 9 for y: 2y = -18x + 9, so y = -9x + 9/2.\nStep 2: In the form y = mx + b, m is the slope, so line p has a slope of -9.\nStep 3: Perpendicular lines have slopes that are negative reciprocals, and the negative reciprocal of -9 is 1/9, so line r has a slope of 1/9.",
+    "explanation_brief": "Line p has a slope of -9, so a perpendicular line has a slope of 1/9.",
+    "explanation_detailed": "Step 1: Solve for y: y = -9x + 9/2.\nStep 2: So line p has a slope of -9.\nStep 3: The negative reciprocal of -9 is 1/9.",
     "source": "College Board SAT Question Bank (Question ID: 01682aa5)"
   },
   {
@@ -114,8 +114,8 @@
     ],
     "correct_index": 3,
     "ai_answer_index": 3,
-    "explanation_brief": "Subtracting t from both sides gives 6r - t = 7s, and dividing by 7 gives s = (6r - t)/7.",
-    "explanation_detailed": "Step 1: Start with 6r = 7s + t and subtract t from both sides to get 6r - t = 7s.\nStep 2: Divide both sides by 7, the number multiplying s.\nStep 3: This gives (6r - t)/7 = s, so s = (6r - t)/7.",
+    "explanation_brief": "Subtract t, then divide by 7: s = (6r - t)/7.",
+    "explanation_detailed": "Step 1: Subtract t from both sides: 6r - t = 7s.\nStep 2: Divide both sides by 7.\nStep 3: So s = (6r - t)/7.",
     "source": "College Board SAT Question Bank (Question ID: ad03127d)"
   },
   {
@@ -131,8 +131,8 @@
     ],
     "correct_index": 0,
     "ai_answer_index": 0,
-    "explanation_brief": "With a length of 2w, the area is (2w)(w) = 2w² = 162, so w² = 81 and the width is 9 meters.",
-    "explanation_detailed": "Step 1: Let the width be w, so the length is 2w and the area is (2w)(w) = 2w².\nStep 2: Set the area equal to 162: 2w² = 162, so w² = 81.\nStep 3: A width must be positive, so w = 9, and the width is 9 meters.",
+    "explanation_brief": "The length is 2w, so 2w² = 162, w² = 81, and the width is 9.",
+    "explanation_detailed": "Step 1: Let the width be w, so the length is 2w and the area is 2w².\nStep 2: 2w² = 162, so w² = 81.\nStep 3: w = 9, so the width is 9 meters.",
     "source": "College Board SAT Question Bank (Question ID: f89af023)"
   },
   {
@@ -148,8 +148,8 @@
     ],
     "correct_index": 0,
     "ai_answer_index": 0,
-    "explanation_brief": "Grouping like factors gives (8 · 7)(y · y)(z · z), which is 56y²z².",
-    "explanation_detailed": "Step 1: Multiply the numbers: 8 · 7 = 56.\nStep 2: Multiply the y factors, y · y = y², and the z factors, z · z = z².\nStep 3: Put them together to get 56y²z².",
+    "explanation_brief": "Multiply the numbers and the like variables to get 56y²z².",
+    "explanation_detailed": "Step 1: 8 · 7 = 56.\nStep 2: y · y = y² and z · z = z².\nStep 3: Together that is 56y²z².",
     "source": "College Board SAT Question Bank (Question ID: 4ac59df6)"
   },
   {
@@ -165,8 +165,8 @@
     ],
     "correct_index": 1,
     "ai_answer_index": 1,
-    "explanation_brief": "Setting 5x + 4 equal to 5x² + 4 gives x = 0 or x = 1, and x = 0 gives y = 4, so (0, 4) is a solution.",
-    "explanation_detailed": "Step 1: Both equations equal y, so set them equal: 5x² + 4 = 5x + 4.\nStep 2: Subtract 5x + 4 from both sides and factor: 5x² - 5x = 5x(x - 1) = 0, so x = 0 or x = 1.\nStep 3: For x = 0, y = 5(0) + 4 = 4, so (0, 4) satisfies both equations.",
+    "explanation_brief": "Setting 5x + 4 equal to 5x² + 4 gives x = 0, so y = 4.",
+    "explanation_detailed": "Step 1: Set the equations equal: 5x² + 4 = 5x + 4.\nStep 2: 5x² - 5x = 0, so x = 0 or x = 1.\nStep 3: x = 0 gives y = 4, so (0, 4) works.",
     "source": "College Board SAT Question Bank (Question ID: 58443765)"
   },
   {
@@ -182,8 +182,8 @@
     ],
     "correct_index": 3,
     "ai_answer_index": 3,
-    "explanation_brief": "The random sample contained only largemouth bass, so its 30% result applies to all largemouth bass in the pond, not to all fish.",
-    "explanation_detailed": "Step 1: The sample was 150 largemouth bass chosen at random, and 30% of them weighed more than 2 pounds.\nStep 2: A random sample supports conclusions only about the group it was drawn from, which here is largemouth bass.\nStep 3: So the data best support that about 30% of all largemouth bass in the pond weigh more than 2 pounds.",
+    "explanation_brief": "The sample was only largemouth bass, so the 30% applies to largemouth bass.",
+    "explanation_detailed": "Step 1: 30% of the 150 sampled bass weighed over 2 pounds.\nStep 2: The sample only included largemouth bass.\nStep 3: So about 30% of all largemouth bass weigh over 2 pounds.",
     "source": "College Board SAT Question Bank (Question ID: 53d97af5)"
   },
   {
@@ -199,8 +199,8 @@
     ],
     "correct_index": 3,
     "ai_answer_index": 3,
-    "explanation_brief": "A cube that is neither blue nor yellow is red or white, which is 11 of the 77 cubes, so the probability is 11/77 = 1/7.",
-    "explanation_detailed": "Step 1: The bag has 7 + 4 + 33 + 33 = 77 cubes in total.\nStep 2: Neither blue nor yellow means red or white, and there are 7 + 4 = 11 of those.\nStep 3: The probability is 11/77, which simplifies to 1/7.",
+    "explanation_brief": "Red or white is 11 of the 77 cubes, so the probability is 1/7.",
+    "explanation_detailed": "Step 1: There are 7 + 4 + 33 + 33 = 77 cubes.\nStep 2: Neither blue nor yellow means red or white: 11 cubes.\nStep 3: 11/77 = 1/7.",
     "source": "College Board SAT Question Bank (Question ID: 0ae37ff3)"
   },
   {
@@ -216,8 +216,8 @@
     ],
     "correct_index": 0,
     "ai_answer_index": 0,
-    "explanation_brief": "Dividing 75 by 300 gives 0.25, which is 25%, so 75 is 25% of 300.",
-    "explanation_detailed": "Step 1: To find what percentage 75 is of 300, divide the part by the whole: 75 ÷ 300.\nStep 2: 75 ÷ 300 = 0.25.\nStep 3: Multiply by 100 to convert to a percentage: 0.25 × 100 = 25%.",
+    "explanation_brief": "75 ÷ 300 = 0.25, which is 25%.",
+    "explanation_detailed": "Step 1: Divide the part by the whole: 75 ÷ 300.\nStep 2: 75 ÷ 300 = 0.25.\nStep 3: 0.25 × 100 = 25%.",
     "source": "College Board SAT Question Bank (Question ID: e9fb7774)"
   },
   {
@@ -233,8 +233,8 @@
     ],
     "correct_index": 2,
     "ai_answer_index": 2,
-    "explanation_brief": "The tax is 5% of $20, which is 0.05 × 20 = $1, so the total cost is $20 + $1 = $21.00.",
-    "explanation_detailed": "Step 1: Find the sales tax: 5% of $20 is 0.05 × 20 = $1.\nStep 2: The total cost is the price of the shirt plus the tax.\nStep 3: $20 + $1 = $21.00, so the total cost is $21.00.",
+    "explanation_brief": "5% of $20 is $1, so the total is $21.00.",
+    "explanation_detailed": "Step 1: Tax: 0.05 × 20 = $1.\nStep 2: Total cost = price + tax.\nStep 3: $20 + $1 = $21.00.",
     "source": "College Board SAT Question Bank (Question ID: 8705ecba)"
   },
   {
@@ -250,8 +250,8 @@
     ],
     "correct_index": 0,
     "ai_answer_index": 0,
-    "explanation_brief": "A 6 to 1 ratio means XY is 6 times as long as ZV, so ZV = 102 ÷ 6 = 17 inches.",
-    "explanation_detailed": "Step 1: A 6 to 1 ratio of XY to ZV means XY/ZV = 6, so XY is 6 times ZV.\nStep 2: Substitute XY = 102 to get 102 = 6 · ZV.\nStep 3: Divide both sides by 6 to get ZV = 17 inches.",
+    "explanation_brief": "XY is 6 times ZV, so ZV = 102 ÷ 6 = 17.",
+    "explanation_detailed": "Step 1: 6 to 1 means XY = 6 × ZV.\nStep 2: So 102 = 6 × ZV.\nStep 3: 102 ÷ 6 = 17 inches.",
     "source": "College Board SAT Question Bank (Question ID: da9ffcf6)"
   },
   {
@@ -267,8 +267,8 @@
     ],
     "correct_index": 1,
     "ai_answer_index": 1,
-    "explanation_brief": "Area equals length times width, so 280 = 10w and the width is 280 ÷ 10 = 28 centimeters.",
-    "explanation_detailed": "Step 1: The area of a rectangle is length × width.\nStep 2: Substitute the area and the length: 280 = 10w.\nStep 3: Divide both sides by 10 to get w = 28, so the width is 28 centimeters.",
+    "explanation_brief": "Area = length × width, so 280 = 10w and w = 28.",
+    "explanation_detailed": "Step 1: Area = length × width.\nStep 2: 280 = 10w.\nStep 3: w = 280 ÷ 10 = 28 centimeters.",
     "source": "College Board SAT Question Bank (Question ID: 2a549721)"
   },
   {
@@ -284,8 +284,8 @@
     ],
     "correct_index": 0,
     "ai_answer_index": 0,
-    "explanation_brief": "Area equals length times width, so 63 = 9w and the width is 63 ÷ 9 = 7 meters.",
-    "explanation_detailed": "Step 1: The area of a rectangle is length × width.\nStep 2: Substitute the area and the length: 63 = 9w.\nStep 3: Divide both sides by 9 to get w = 7, so the width is 7 meters.",
+    "explanation_brief": "63 = 9w, so the width is 7 meters.",
+    "explanation_detailed": "Step 1: Area = length × width.\nStep 2: 63 = 9w.\nStep 3: w = 63 ÷ 9 = 7 meters.",
     "source": "College Board SAT Question Bank (Question ID: d0b6d927)"
   },
   {
@@ -301,8 +301,8 @@
     ],
     "correct_index": 0,
     "ai_answer_index": 0,
-    "explanation_brief": "The angles of a triangle add to 180°, so ∠S and ∠T together are 180 - 63 = 117°, which means ∠S must be less than 117°; only 116 works.",
-    "explanation_detailed": "Step 1: The three angles of a triangle add up to 180°.\nStep 2: Since ∠R = 63°, the other two angles add up to 180 - 63 = 117°.\nStep 3: ∠T must be greater than 0°, so ∠S must be less than 117°, and 116 is the only choice that fits.",
+    "explanation_brief": "∠S and ∠T add to 117°, so ∠S must be under 117°, and only 116 works.",
+    "explanation_detailed": "Step 1: The angles of a triangle add to 180°.\nStep 2: 180 - 63 = 117°, so ∠S + ∠T = 117°.\nStep 3: ∠S must be under 117°, so 116 works.",
     "source": "College Board SAT Question Bank (Question ID: b434e103)"
   },
   {
@@ -318,8 +318,8 @@
     ],
     "correct_index": 0,
     "ai_answer_index": 0,
-    "explanation_brief": "The text says the decline in portraits began before photography was invented, so other factors may be more directly responsible for the miniature’s decline.",
-    "explanation_detailed": "Step 1: The text says many assume photography caused the portrait miniature to lose popularity.\nStep 2: It then notes that exhibition records show the decrease in portraits was already underway before photography was invented.\nStep 3: If the decline started first, photography can’t fully explain it, so factors other than photography may be more directly responsible.",
+    "explanation_brief": "The decline started before photography, so other factors may be more responsible.",
+    "explanation_detailed": "Step 1: Many assume photography caused the decline.\nStep 2: But records show the decline started before photography.\nStep 3: So other factors may be more directly responsible.",
     "source": "College Board SAT Question Bank (Question ID: 87aa7bab)"
   },
   {
@@ -335,8 +335,8 @@
     ],
     "correct_index": 1,
     "ai_answer_index": 1,
-    "explanation_brief": "The text says historians see pachuca style as rebellion against rigid expectations for women and as a sign of a desire for self-expression and freedom.",
-    "explanation_detailed": "Step 1: The text contrasts critics of pachuca style with historians, who “see things differently.”\nStep 2: Historians view the style as a form of rebellion against the era’s rigid social expectations for women.\nStep 3: They also say it showed a desire for self-expression and freedom, so historians see it as a way for these women to express themselves and resist strict expectations.",
+    "explanation_brief": "Historians see pachuca style as rebellion and a way for women to express themselves.",
+    "explanation_detailed": "Step 1: The text says historians “see things differently.”\nStep 2: They see the style as rebellion against rigid expectations.\nStep 3: It showed a desire to express themselves and be free.",
     "source": "College Board SAT Question Bank (Question ID: 8c1be131)"
   },
   {
@@ -352,8 +352,8 @@
     ],
     "correct_index": 0,
     "ai_answer_index": 0,
-    "explanation_brief": "The text says ecologists are worried that Pando’s growth is declining, which means it isn’t growing at the same rate it used to.",
-    "explanation_detailed": "Step 1: The question asks why ecologists are worried about Pando.\nStep 2: The text states that ecologists worry “its growth is declining,” partly because of grazing animals.\nStep 3: Declining growth means Pando isn’t growing at the rate it used to, which matches this answer.",
+    "explanation_brief": "Ecologists worry Pando’s growth is declining, so it isn’t growing like it used to.",
+    "explanation_detailed": "Step 1: The question asks why ecologists are worried.\nStep 2: They worry that “its growth is declining.”\nStep 3: So Pando isn’t growing at the rate it used to.",
     "source": "College Board SAT Question Bank (Question ID: 92c2564d)"
   },
   {
@@ -369,8 +369,8 @@
     ],
     "correct_index": 3,
     "ai_answer_index": 3,
-    "explanation_brief": "Although Elinor is “only nineteen,” her understanding and judgment make her the counsellor of her mother, so she is remarkably mature for her age.",
-    "explanation_detailed": "Step 1: The text describes Elinor’s “strength of understanding, and coolness of judgment.”\nStep 2: These qualities make her, “though only nineteen,” the counsellor of her mother, and she knows how to govern her strong feelings.\nStep 3: Someone that young giving wise advice to her parent is remarkably mature for her age.",
+    "explanation_brief": "At only nineteen, Elinor advises her mother, so she is mature for her age.",
+    "explanation_detailed": "Step 1: Elinor has “strength of understanding, and coolness of judgment.”\nStep 2: Though “only nineteen,” she counsels her mother.\nStep 3: That shows she is remarkably mature for her age.",
     "source": "College Board SAT Question Bank (Question ID: 3543e6e2)"
   },
   {
@@ -386,8 +386,8 @@
     ],
     "correct_index": 3,
     "ai_answer_index": 3,
-    "explanation_brief": "The student claims the escaped fish may harm ecosystems, and this quotation names a specific harm: fluorescence spreading to wild fish and making them easier prey.",
-    "explanation_detailed": "Step 1: The student asserts that the fish’s escape may have significant negative long-term ecological effects.\nStep 2: Supporting that claim requires evidence of a specific harm that could last over time.\nStep 3: This quotation says interbreeding could spread fluorescence into wild populations and make them more vulnerable to predators, which is exactly that kind of harm.",
+    "explanation_brief": "This quotation names a real harm: wild fish becoming easier prey.",
+    "explanation_detailed": "Step 1: The student says the escape may harm ecosystems long term.\nStep 2: Support needs a specific, lasting harm.\nStep 3: Fluorescence spreading to wild fish makes them easier prey.",
     "source": "College Board SAT Question Bank (Question ID: 29f5c8c2)"
   },
   {
@@ -403,8 +403,8 @@
     ],
     "correct_index": 0,
     "ai_answer_index": 0,
-    "explanation_brief": "The study found that plots with limited logging may be more robust than unlogged plots, so logging may help keep forests healthy when it is limited.",
-    "explanation_detailed": "Step 1: The text begins with the common view that logging and forest conservation are at odds.\nStep 2: It then says a large study found that plots with limited logging may be more robust than plots that weren’t logged at all.\nStep 3: The logical conclusion is that logging may be useful for maintaining healthy forests, as long as it is limited.",
+    "explanation_brief": "Plots with limited logging may be more robust, so limited logging can help forests.",
+    "explanation_detailed": "Step 1: Logging is usually seen as bad for conservation.\nStep 2: But plots with limited logging may be more robust.\nStep 3: So limited logging may help keep forests healthy.",
     "source": "College Board SAT Question Bank (Question ID: ca5a3fb4)"
   },
   {
@@ -420,8 +420,8 @@
     ],
     "correct_index": 1,
     "ai_answer_index": 1,
-    "explanation_brief": "New started using sewing machines to make bags more efficiently as he gained customers, so without them he would have struggled to keep up with demand.",
-    "explanation_detailed": "Step 1: The text says New made each bag by hand through a long, painstaking process.\nStep 2: As he gained more customers, he began using sewing machines to produce bags more efficiently.\nStep 3: Without that faster production, he would likely have struggled to meet the growing demand for his bags.",
+    "explanation_brief": "Machines helped New keep up with more customers, so without them he’d struggle with demand.",
+    "explanation_detailed": "Step 1: New made each bag by a long, careful process.\nStep 2: As his customers grew, machines helped him work faster.\nStep 3: Without them, he would struggle to meet demand.",
     "source": "College Board SAT Question Bank (Question ID: cf956802)"
   },
   {
@@ -437,8 +437,8 @@
     ],
     "correct_index": 1,
     "ai_answer_index": 1,
-    "explanation_brief": "If sea stars in plain seawater climb to the top but those in the other tank stop just below the fresh water, the fresh water is acting as a barrier.",
-    "explanation_detailed": "Step 1: The hypothesis is that a layer of fresh water is a barrier that keeps the sea stars from climbing.\nStep 2: The tank with only seawater shows how the sea stars climb when nothing blocks them.\nStep 3: If they climb to the top there but stop just below the fresh water in the other tank, the fresh water is blocking them, which supports the hypothesis.",
+    "explanation_brief": "Stopping right below the fresh water shows it acts as a barrier.",
+    "explanation_detailed": "Step 1: The hypothesis is that fresh water is a barrier.\nStep 2: In plain seawater, the sea stars climbed to the top.\nStep 3: Under fresh water, they stopped just below it, so it blocks them.",
     "source": "College Board SAT Question Bank (Question ID: 3091f805)"
   },
   {
@@ -454,8 +454,8 @@
     ],
     "correct_index": 2,
     "ai_answer_index": 2,
-    "explanation_brief": "If the trap with calls alone caught more midges than the trap that also released carbon dioxide, carbon dioxide isn’t helping midges find the frogs.",
-    "explanation_detailed": "Step 1: The researchers concluded that carbon dioxide does not serve as an additional cue for the midges.\nStep 2: The experiment compared a trap with calls only to a trap with calls plus carbon dioxide.\nStep 3: If the calls only trap caught more midges, adding carbon dioxide gave no extra pull, which directly supports the conclusion.",
+    "explanation_brief": "The trap with only calls caught more midges, so carbon dioxide added nothing.",
+    "explanation_detailed": "Step 1: The conclusion is that carbon dioxide isn’t an extra cue.\nStep 2: One trap played calls, and the other also released carbon dioxide.\nStep 3: More midges in the calls only trap supports the conclusion.",
     "source": "College Board SAT Question Bank (Question ID: 60c6b64d)"
   },
   {
@@ -471,8 +471,8 @@
     ],
     "correct_index": 0,
     "ai_answer_index": 0,
-    "explanation_brief": "In this quotation the moon “writes her legends” in light on the sand, so a part of nature is shown actively taking part in the nighttime scene on the water.",
-    "explanation_detailed": "Step 1: The claim is that Lowell presents an element of nature as an active participant in a nighttime scene on the water.\nStep 2: In this quotation the moon shines through the water and “writes her legends” on the sand, a deliberate, humanlike action.\nStep 3: That makes the moon an active participant in the scene, which illustrates the claim.",
+    "explanation_brief": "The moon “writes her legends,” so it acts as an active participant.",
+    "explanation_detailed": "Step 1: The claim is that nature acts as an active participant.\nStep 2: Here the moon “writes her legends” on the sand.\nStep 3: Writing is a deliberate action, so this fits the claim.",
     "source": "College Board SAT Question Bank (Question ID: 1f3be847)"
   },
   {
@@ -488,8 +488,8 @@
     ],
     "correct_index": 1,
     "ai_answer_index": 1,
-    "explanation_brief": "Heidi looks with “wondering eyes,” then with “glowing eyes” she “devoured the scene,” so she is delighted and fascinated by the picture.",
-    "explanation_detailed": "Step 1: Heidi screams when she sees the picture, but the picture is a peaceful, sunlit pasture, not something frightening.\nStep 2: The text then says she looked “with glowing eyes” and “devoured the scene.”\nStep 3: These details show excitement and close attention, so the main idea is that Heidi is delighted and fascinated by the image.",
+    "explanation_brief": "Heidi looks “with glowing eyes” and “devoured the scene,” so she is delighted.",
+    "explanation_detailed": "Step 1: The picture shows a peaceful pasture, nothing scary.\nStep 2: Heidi looks “with glowing eyes” and “devoured the scene.”\nStep 3: So she is delighted and fascinated by it.",
     "source": "College Board SAT Question Bank (Question ID: 57485f5e)"
   },
   {
@@ -505,8 +505,8 @@
     ],
     "correct_index": 1,
     "ai_answer_index": 1,
-    "explanation_brief": "The text asks “What explains its rise in popularity?” and answers that “y’all” refers to two or more people more precisely than “you” can.",
-    "explanation_detailed": "Step 1: The text notes that most English-speaking communities in the US have recently begun using “y’all.”\nStep 2: It then asks directly, “What explains its rise in popularity?”\nStep 3: The rest of the text answers that “y’all” always means more than one person, so the text is explaining why “y’all” has become more widely used in the US.",
+    "explanation_brief": "The text asks why “y’all” became popular and then answers it.",
+    "explanation_detailed": "Step 1: Most US communities have started using “y’all.”\nStep 2: The text asks, “What explains its rise in popularity?”\nStep 3: It answers that “y’all” is more precise than “you.”",
     "source": "College Board SAT Question Bank (Question ID: 11c68ded)"
   },
   {
@@ -522,8 +522,8 @@
     ],
     "correct_index": 2,
     "ai_answer_index": 2,
-    "explanation_brief": "If the publishers asked for the notes to attract readers who already owned the poem, the notes were added mainly to help sell the volume.",
-    "explanation_detailed": "Step 1: The student claims the notes were included mainly as a marketing device to sell the stand-alone volume.\nStep 2: Readers who already had the poem in the journal would have little reason to buy it again unless the volume offered something new.\nStep 3: Publishers requesting the notes to appeal to those readers shows a sales motive, which directly supports the claim.",
+    "explanation_brief": "The publishers asked for the notes to attract buyers, which shows a sales motive.",
+    "explanation_detailed": "Step 1: The claim is that the notes were a marketing device.\nStep 2: Readers who owned the poem needed a reason to buy it again.\nStep 3: Publishers asking for notes for those readers shows a sales motive.",
     "source": "College Board SAT Question Bank (Question ID: 94ca8ebd)"
   },
   {
@@ -539,8 +539,8 @@
     ],
     "correct_index": 0,
     "ai_answer_index": 0,
-    "explanation_brief": "The Wigner crystal was mostly conjecture until researchers captured the first visual confirmation of one, the strongest evidence yet that it exists.",
-    "explanation_detailed": "Step 1: The text says the Wigner crystal, proposed in 1934, “remained largely conjecture.”\nStep 2: In 2021, Feng Wang’s team trapped and cooled electrons and captured an image of the crystal.\nStep 3: The text calls this “the first visual confirmation,” so the main idea is that researchers now have the most definitive evidence of the crystal’s existence.",
+    "explanation_brief": "The team captured the first image of the crystal, the best evidence yet.",
+    "explanation_detailed": "Step 1: The Wigner crystal “remained largely conjecture.”\nStep 2: In 2021, Wang’s team captured an image of one.\nStep 3: That first visual confirmation is the strongest evidence yet.",
     "source": "College Board SAT Question Bank (Question ID: 66c47028)"
   },
   {
@@ -556,8 +556,8 @@
     ],
     "correct_index": 0,
     "ai_answer_index": 0,
-    "explanation_brief": "The research shows that interruptions can build belonging and job satisfaction, so businesses should recognize that these benefits may offset the perceived negative effects.",
-    "explanation_detailed": "Step 1: The text opens with the belief that interruptions reduce employees’ energy and productivity.\nStep 2: It then reports Puranik’s finding that interruptions by colleagues can increase belonging and job satisfaction.\nStep 3: Weighing the two, the logical completion is that the interpersonal benefits of some interruptions may offset their perceived negative effects.",
+    "explanation_brief": "Interruptions can build belonging, so their benefits may offset the downsides.",
+    "explanation_detailed": "Step 1: Businesses think interruptions lower productivity.\nStep 2: But interruptions can raise belonging and job satisfaction.\nStep 3: So the benefits may offset the negative effects.",
     "source": "College Board SAT Question Bank (Question ID: 3190835d)"
   },
   {
@@ -573,8 +573,8 @@
     ],
     "correct_index": 1,
     "ai_answer_index": 1,
-    "explanation_brief": "Armijo predicts that more heliostats will shorten roasting time, and 50 heliostats (more than the 38 to 42 used) roasting in under six minutes shows exactly that.",
-    "explanation_detailed": "Step 1: The hypothesis is that using more heliostats will reduce the solar roasting time.\nStep 2: The team used 38 to 42 heliostats, and the fastest solar batch took six minutes.\nStep 3: A batch with 50 heliostats taking fewer than six minutes means more heliostats led to faster roasting, which directly supports the hypothesis.",
+    "explanation_brief": "Using 50 heliostats, more than before, roasted the chiles in under six minutes.",
+    "explanation_detailed": "Step 1: The hypothesis is that more heliostats means faster roasting.\nStep 2: The team used 38 to 42, and the best time was six minutes.\nStep 3: 50 heliostats taking under six minutes supports it.",
     "source": "College Board SAT Question Bank (Question ID: 85439572)"
   },
   {
@@ -590,8 +590,8 @@
     ],
     "correct_index": 0,
     "ai_answer_index": 0,
-    "explanation_brief": "Tanks with watermilfoil, an underwater plant, released less methane than tanks with duckweed or algae, so underwater plants like it may help keep methane from escaping.",
-    "explanation_detailed": "Step 1: The team compared tanks with watermilfoil, an underwater plant, to tanks with duckweed or algae.\nStep 2: The tanks with duckweed and algae released more methane than the tanks with watermilfoil.\nStep 3: That suggests underwater plants like watermilfoil help prevent methane from escaping shallow lakes and ponds.",
+    "explanation_brief": "Tanks with watermilfoil released less methane, so underwater plants help hold it in.",
+    "explanation_detailed": "Step 1: The team compared watermilfoil with duckweed and algae.\nStep 2: The duckweed and algae tanks released more methane.\nStep 3: So underwater plants like watermilfoil help keep methane from escaping.",
     "source": "College Board SAT Question Bank (Question ID: 01989d77)"
   },
   {
@@ -607,8 +607,8 @@
     ],
     "correct_index": 0,
     "ai_answer_index": 0,
-    "explanation_brief": "The claim is that the book encouraged Latina authors to write about their own youth, and Latina authors saying exactly that in interviews supports it directly.",
-    "explanation_detailed": "Step 1: The underlined claim is that the depiction of Esperanza encouraged Latina authors to examine experiences from their own youth.\nStep 2: The strongest support would come from those authors themselves describing that influence.\nStep 3: Latina authors saying the book inspired them to write about their own adolescence is that direct evidence, so it most strongly supports the claim.",
+    "explanation_brief": "Latina authors saying the book inspired them to write about their youth directly supports the claim.",
+    "explanation_detailed": "Step 1: The claim is that the book encouraged Latina authors to write about their youth.\nStep 2: The best support comes from those authors themselves.\nStep 3: Their interviews saying exactly that support the claim.",
     "source": "College Board SAT Question Bank (Question ID: a13541c0)"
   }
 ]

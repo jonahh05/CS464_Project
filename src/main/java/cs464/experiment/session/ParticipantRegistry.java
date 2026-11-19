@@ -94,6 +94,25 @@ public final class ParticipantRegistry {
         return numbers;
     }
 
+    /**
+     * True if this ID (or another ID with the same number, like "2" and "P02") already has a saved
+     * session in the data folder. Checked again right before a session starts.
+     */
+    public boolean hasData(String participantId) throws IOException {
+        Integer number = numberIn(participantId);
+        if (number != null) {
+            return usedNumbers().contains(number);
+        }
+        String safe = participantId.replaceAll("[^A-Za-z0-9_-]", "_");
+        for (String name : sessionFiles()) {
+            Matcher m = SESSION_FILE.matcher(name);
+            if (m.matches() && m.group(1).equalsIgnoreCase(safe)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     /** One more than the highest saved number, but never below the pilot's first number. */
     public int nextNumber() throws IOException {
         int first = status().firstNumber();

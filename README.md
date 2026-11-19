@@ -44,7 +44,9 @@ That gives 2 participants per order for P01-P12. The experimenter can override i
 ### Participant numbers and the pilot study
 
 The setup screen fills in the next participant ID for you: one more than the highest number already
-saved in `data/` on this laptop (P01 if none). You can still type a different ID.
+saved in `data/` on this laptop (P01 if none). You can still type a different ID. When you press
+**Start session** it checks again: if that ID already has saved data on this laptop, it asks whether to
+use the next free ID instead, keep the ID anyway, or cancel.
 
 The banner at the top shows the status. **TESTING** means sessions are practice runs. Before the first
 real participant, press **Start pilot study**: every saved session is moved to `data/archive/` (nothing

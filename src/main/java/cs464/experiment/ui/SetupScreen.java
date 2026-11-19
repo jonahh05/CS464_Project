@@ -69,7 +69,13 @@ public final class SetupScreen implements Screen {
         start.setDefaultButton(true);
         start.disableProperty().bind(Bindings.createBooleanBinding(
                 () -> idField.getText().trim().isEmpty(), idField.textProperty()));
-        start.setOnAction(e -> onStart.accept(idField.getText().trim(), orderBox.getValue()));
+        start.setOnAction(e -> {
+            // Check again right before starting, in case the ID was typed in or data was added since the screen opened.
+            String id = checkIdBeforeStart(idField.getText().trim());
+            if (id != null) {
+                onStart.accept(id, orderBox.getValue());
+            }
+        });
 
         reset.setOnAction(e -> confirmReset());
 
@@ -111,6 +117,40 @@ public final class SetupScreen implements Screen {
             status.getStyleClass().setAll("status-banner", "status-testing");
             reset.setText("Start pilot study (reset participant numbers and data)");
         }
+    }
+
+    /**
+     * If the ID already has saved data on this laptop, asks whether to switch to the next free ID.
+     *
+     * @return the ID to start with, or null to stay on the setup screen
+     */
+    private String checkIdBeforeStart(String id) {
+        String next;
+        try {
+            if (!registry.hasData(id)) {
+                return id;
+            }
+            next = registry.nextId();
+        } catch (IOException | RuntimeException e) {
+            return id; // can't read the data folder; don't block the session over it
+        }
+
+        ButtonType useNext = new ButtonType("Use " + next);
+        ButtonType keep = new ButtonType("Keep " + id);
+        Alert alert = new Alert(Alert.AlertType.WARNING,
+                id + " already has saved data on this laptop. Starting another session as " + id
+                        + " would put two people's data under the same ID.",
+                useNext, keep, ButtonType.CANCEL);
+        alert.setHeaderText("This participant ID is already used");
+        Optional<ButtonType> answer = alert.showAndWait();
+        if (answer.isEmpty() || answer.get() == ButtonType.CANCEL) {
+            return null;
+        }
+        if (answer.get() == useNext) {
+            idField.setText(next); // also updates the counterbalancing order for the new ID
+            return next;
+        }
+        return id;
     }
 
     private void confirmReset() {

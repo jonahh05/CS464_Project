@@ -44,6 +44,19 @@ class ParticipantRegistryTest {
     }
 
     @Test
+    void anIdWithSavedDataIsCaughtBeforeTheSessionStarts() throws Exception {
+        session("P02", "20261119-100000");
+        session("guest", "20261119-110000");
+        ParticipantRegistry registry = new ParticipantRegistry(dataDir);
+
+        assertTrue(registry.hasData("P02"));
+        assertTrue(registry.hasData("2"), "same number typed differently");
+        assertTrue(registry.hasData("Guest"), "IDs without a number match by name");
+        assertFalse(registry.hasData("P03"));
+        assertFalse(registry.hasData("visitor"));
+    }
+
+    @Test
     void startingThePilotArchivesTestDataAndRestartsNumbering() throws Exception {
         session("P01", "20261119-100000");
         session("P02", "20261119-110000");

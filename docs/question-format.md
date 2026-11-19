@@ -38,3 +38,19 @@
 - Until the explanations are written, leave both as `""`; nothing extra is shown.
 
 Run `mvn test` after editing. It catches out-of-range indexes and unknown IDs.
+
+## Wrong (common error) answers
+
+`src/main/resources/questions/wrong_answers.json` has one entry per question in `final_questions.json`:
+the answer the AI suggests when that question is shown as wrong, plus its explanations.
+
+| Field | Meaning |
+|---|---|
+| `id` | Question id from `final_questions.json` |
+| `wrong_answer_index` | The common error choice (0 = A). Never the correct answer. |
+| `wrong_answer` | That choice's text, so the file is easy to read |
+| `common_error` | Why this choice: the mistake College Board's rationale names, or "Picked by us" / "Most tempting choice" when it names none |
+| `explanation_brief`, `explanation_detailed` | Same style as the correct answer explanations (brief: one or two sentences; detailed: three lines, `Step 1:` to `Step 3:`). They sound confident and argue only for the wrong answer. |
+
+The app doesn't read this file yet. Using it depends on how each section's accuracy is randomized (#65).
+`WrongAnswersFileTest` checks the file covers every question and follows the style.

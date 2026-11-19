@@ -6,6 +6,7 @@ import cs464.experiment.model.ExperimentConfig;
 import cs464.experiment.model.Question;
 import cs464.experiment.session.ConfigValidator;
 import cs464.experiment.session.ExperimentSession;
+import cs464.experiment.session.ParticipantRegistry;
 import cs464.experiment.session.PlannedBlock;
 import cs464.experiment.ui.ExperimentFlow;
 import cs464.experiment.ui.Navigator;
@@ -48,7 +49,8 @@ public class App extends Application {
 
         stage.setTitle(config.title());
         Navigator nav = new Navigator(stage);
-        nav.show(new SetupScreen(config, (participantId, orderId) -> {
+        ParticipantRegistry registry = new ParticipantRegistry(Path.of(config.outputDir()));
+        nav.show(new SetupScreen(config, registry, (participantId, orderId) -> {
             ExperimentSession session = ExperimentSession.create(config, questions, participantId, orderId);
             printPlan(session);
             try {

@@ -41,6 +41,19 @@ app does not advance until the second submit. These are recorded as `original_an
 The order (1-6) is picked from the participant ID: P01 gets 1, P02 gets 2, ... P07 gets 1 again.
 That gives 2 participants per order for P01-P12. The experimenter can override it on the setup screen.
 
+### Participant numbers and the pilot study
+
+The setup screen fills in the next participant ID for you: one more than the highest number already
+saved in `data/` on this laptop (P01 if none). You can still type a different ID.
+
+The banner at the top shows the status. **TESTING** means sessions are practice runs. Before the first
+real participant, press **Start pilot study**: every saved session is moved to `data/archive/` (nothing
+is deleted), numbering starts again, and the banner switches to **PILOT STUDY** with the number of
+participants saved on this laptop. The status is kept in `data/study_status.properties`.
+
+Each of us runs sessions on our own laptop, so pick a different **first participant number** for each
+laptop when you press the button (for example 1, 3, 5) so no two participants share an ID.
+
 ## Common changes and where to make them
 
 | I want to...                                   | Edit                                               | Docs |

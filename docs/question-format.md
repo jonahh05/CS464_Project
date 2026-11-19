@@ -50,7 +50,7 @@ the answer the AI suggests when that question is shown as wrong, plus its explan
 | `wrong_answer_index` | The common error choice (0 = A). Never the correct answer. |
 | `wrong_answer` | That choice's text, so the file is easy to read |
 | `common_error` | Why this choice: the mistake College Board's rationale names, or "Picked by us" / "Most tempting choice" when it names none |
-| `explanation_brief`, `explanation_detailed` | Same style as the correct answer explanations (brief: one or two sentences; detailed: three lines, `Step 1:` to `Step 3:`). They sound confident and argue only for the wrong answer. |
+| `explanation_brief`, `explanation_detailed` | Same style as the correct answer explanations (brief: one short sentence, about 8 to 18 words; detailed: three lines, `Step 1:` to `Step 3:`, one short sentence each). They sound confident and argue only for the wrong answer. |
 
 The app doesn't read this file yet. Using it depends on how each section's accuracy is randomized (#65).
 `WrongAnswersFileTest` checks the file covers every question and follows the style.

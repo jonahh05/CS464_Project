@@ -1,0 +1,290 @@
+[
+  {
+    "id": "3d1070c9",
+    "wrong_answer_index": 0,
+    "wrong_answer": "50",
+    "common_error": "College Board: this is 25(2), leaving off the + 30.",
+    "explanation_brief": "f(2) = 25(2) = 50, so the value is 50.",
+    "explanation_detailed": "Step 1: Replace x with 2: f(2) = 25(2).\nStep 2: 25(2) = 50.\nStep 3: So the value of f(x) is 50."
+  },
+  {
+    "id": "fa80893a",
+    "wrong_answer_index": 1,
+    "wrong_answer": "11",
+    "common_error": "Picked by us (College Board names no error): dividing by 3 instead of 2 gives x = 2.",
+    "explanation_brief": "2x = 6, so x = 2, and 6(2) - 1 = 11.",
+    "explanation_detailed": "Step 1: Subtract 3 from both sides: 2x = 6.\nStep 2: Divide 6 by 3: x = 2.\nStep 3: 6(2) - 1 = 12 - 1 = 11."
+  },
+  {
+    "id": "1480dd5c",
+    "wrong_answer_index": 2,
+    "wrong_answer": "4",
+    "common_error": "Picked by us (College Board names no error): dividing 28 by 7 and calling it b.",
+    "explanation_brief": "28 ÷ 7 = 4, so b = 4.",
+    "explanation_detailed": "Step 1: f(7) = 28 means x = 7 gives an output of 28.\nStep 2: 28 ÷ 7 = 4.\nStep 3: So the constant b is 4."
+  },
+  {
+    "id": "88e13c8c",
+    "wrong_answer_index": 0,
+    "wrong_answer": "$13,400",
+    "common_error": "College Board: calculation error. Here, 36(400) worked out as 12,400.",
+    "explanation_brief": "f(400) = 36(400) + 1,000 = 12,400 + 1,000 = $13,400.",
+    "explanation_detailed": "Step 1: The payment is x = 400, so find f(400).\nStep 2: 36(400) = 12,400.\nStep 3: 12,400 + 1,000 = 13,400, so the total cost is $13,400."
+  },
+  {
+    "id": "9b886541",
+    "wrong_answer_index": 1,
+    "wrong_answer": "5",
+    "common_error": "College Board: this is the value of x, not 3x + 8.",
+    "explanation_brief": "Adding 8 to both sides gives 3x = 15, so the value is 5.",
+    "explanation_detailed": "Step 1: Add 8 to both sides: 3x = 15.\nStep 2: Divide by 3: x = 5.\nStep 3: So the value is 5."
+  },
+  {
+    "id": "01682aa5",
+    "wrong_answer_index": 1,
+    "wrong_answer": "-1/9",
+    "common_error": "College Board: the reciprocal, not the negative reciprocal, of line p's slope.",
+    "explanation_brief": "Line p has a slope of -9, so a perpendicular line has a slope of -1/9.",
+    "explanation_detailed": "Step 1: Solve for y: y = -9x + 9/2.\nStep 2: So line p has a slope of -9.\nStep 3: The reciprocal of -9 is -1/9."
+  },
+  {
+    "id": "ad03127d",
+    "wrong_answer_index": 2,
+    "wrong_answer": "s = (6/7)r - t",
+    "common_error": "Picked by us (College Board names no error): dividing only the r term by 7.",
+    "explanation_brief": "Subtract t and divide by 7: s = (6/7)r - t.",
+    "explanation_detailed": "Step 1: Subtract t from both sides: 6r - t = 7s.\nStep 2: Divide by 7, which turns 6r into (6/7)r.\nStep 3: So s = (6/7)r - t."
+  },
+  {
+    "id": "f89af023",
+    "wrong_answer_index": 1,
+    "wrong_answer": "18",
+    "common_error": "College Board: this is the length of the court, not the width.",
+    "explanation_brief": "The length is 2w, so 2w² = 162 and the width is 18.",
+    "explanation_detailed": "Step 1: Let the width be w, so the area is (2w)(w) = 2w².\nStep 2: 2w² = 162, so w = 9.\nStep 3: Double 9 to get the width: 18 meters."
+  },
+  {
+    "id": "4ac59df6",
+    "wrong_answer_index": 1,
+    "wrong_answer": "56y²z",
+    "common_error": "College Board: this equals (8yz)(y)(7), dropping one z.",
+    "explanation_brief": "Multiply the numbers and the y’s, carrying the z, to get 56y²z.",
+    "explanation_detailed": "Step 1: 8 · 7 = 56.\nStep 2: y · y = y².\nStep 3: The z carries through, so the answer is 56y²z."
+  },
+  {
+    "id": "58443765",
+    "wrong_answer_index": 2,
+    "wrong_answer": "(8, 44)",
+    "common_error": "Picked by us (College Board names no error): (8, 44) satisfies only y = 5x + 4.",
+    "explanation_brief": "x = 8 gives y = 5(8) + 4 = 44, so (8, 44) works.",
+    "explanation_detailed": "Step 1: Use y = 5x + 4 and try x = 8.\nStep 2: 5(8) + 4 = 44.\nStep 3: So (8, 44) is a solution."
+  },
+  {
+    "id": "53d97af5",
+    "wrong_answer_index": 2,
+    "wrong_answer": "Approximately 30% of all fish in the pond weigh more than 2 pounds.",
+    "common_error": "College Board: the sample was only largemouth bass, so it can't be generalized to all fish.",
+    "explanation_brief": "30% of the random sample weighed over 2 pounds, so 30% of all fish do.",
+    "explanation_detailed": "Step 1: 30% of the 150 sampled fish weighed over 2 pounds.\nStep 2: A random sample represents the whole pond.\nStep 3: So about 30% of all fish in the pond weigh over 2 pounds."
+  },
+  {
+    "id": "0ae37ff3",
+    "wrong_answer_index": 0,
+    "wrong_answer": "6/7",
+    "common_error": "College Board: this is the probability of blue or yellow instead.",
+    "explanation_brief": "Blue and yellow are 66 of the 77 cubes, so the probability is 6/7.",
+    "explanation_detailed": "Step 1: There are 77 cubes in total.\nStep 2: Blue and yellow: 33 + 33 = 66.\nStep 3: 66/77 = 6/7."
+  },
+  {
+    "id": "e9fb7774",
+    "wrong_answer_index": 2,
+    "wrong_answer": "75%",
+    "common_error": "Picked by us (College Board names no specific error): using the part, 75, as the percent.",
+    "explanation_brief": "The part is 75, so 75 is 75% of 300.",
+    "explanation_detailed": "Step 1: The question asks what percent of 300 is 75.\nStep 2: A percent is the part per hundred, and the part is 75.\nStep 3: So 75 is 75% of 300."
+  },
+  {
+    "id": "8705ecba",
+    "wrong_answer_index": 0,
+    "wrong_answer": "$20.05",
+    "common_error": "College Board: adding the 0.05 without multiplying by $20.",
+    "explanation_brief": "5% is 0.05, so the total is $20 + $0.05 = $20.05.",
+    "explanation_detailed": "Step 1: 5% = 0.05.\nStep 2: Total cost = price + tax.\nStep 3: $20 + $0.05 = $20.05."
+  },
+  {
+    "id": "da9ffcf6",
+    "wrong_answer_index": 3,
+    "wrong_answer": "612",
+    "common_error": "College Board: this uses the ratio as 1 to 6 instead of 6 to 1.",
+    "explanation_brief": "The ratio is 6 to 1, so ZV = 102 × 6 = 612.",
+    "explanation_detailed": "Step 1: 6 to 1 means one segment is 6 times the other.\nStep 2: So multiply XY by 6.\nStep 3: 102 × 6 = 612 inches."
+  },
+  {
+    "id": "2a549721",
+    "wrong_answer_index": 3,
+    "wrong_answer": "140",
+    "common_error": "College Board: this is half the area, not the width.",
+    "explanation_brief": "The width covers two sides, so the width is 280 ÷ 2 = 140.",
+    "explanation_detailed": "Step 1: The area is 280 square centimeters.\nStep 2: The width covers two sides, so divide by 2.\nStep 3: 280 ÷ 2 = 140 centimeters."
+  },
+  {
+    "id": "d0b6d927",
+    "wrong_answer_index": 1,
+    "wrong_answer": "54",
+    "common_error": "College Board: this is the area minus the length.",
+    "explanation_brief": "Take the length away from the area: 63 - 9 = 54.",
+    "explanation_detailed": "Step 1: The area is 63 and the length is 9.\nStep 2: Subtract the length from the area.\nStep 3: 63 - 9 = 54 meters."
+  },
+  {
+    "id": "b434e103",
+    "wrong_answer_index": 2,
+    "wrong_answer": "126",
+    "common_error": "College Board: the angle sum would be over 180°. Here, a slip of 180 - 63 = 127.",
+    "explanation_brief": "∠S and ∠T add to 127°, so ∠S can be 126.",
+    "explanation_detailed": "Step 1: The angles of a triangle add to 180°.\nStep 2: 180 - 63 = 127°, so ∠S + ∠T = 127°.\nStep 3: ∠S must be under 127°, so 126 works."
+  },
+  {
+    "id": "87aa7bab",
+    "wrong_answer_index": 2,
+    "wrong_answer": "The popularity of the portrait miniature likely persisted for longer than art historians have assumed.",
+    "common_error": "Most tempting choice: reads \"may be overstated\" as the miniature lasting longer (College Board: the text suggests it declined earlier).",
+    "explanation_brief": "Photography’s impact “may be overstated,” so miniatures likely stayed popular longer.",
+    "explanation_detailed": "Step 1: Historians think photography replaced painted portraits.\nStep 2: The text says that impact “may be overstated.”\nStep 3: So miniatures likely stayed popular longer than assumed."
+  },
+  {
+    "id": "8c1be131",
+    "wrong_answer_index": 0,
+    "wrong_answer": "They think that pachuca style was such a popular trend that it continues to influence fashion in the United States to the present day.",
+    "common_error": "Most tempting choice: stretches the style's importance to present day fashion.",
+    "explanation_brief": "Historians see the style as lasting self expression, so it still shapes fashion today.",
+    "explanation_detailed": "Step 1: The text calls pachuca style a “striking new look.”\nStep 2: Historians say it showed a desire for freedom.\nStep 3: A style that important still influences US fashion today."
+  },
+  {
+    "id": "92c2564d",
+    "wrong_answer_index": 1,
+    "wrong_answer": "It isn’t producing young trees anymore.",
+    "common_error": "Most tempting choice: deer eating young trees read as no young trees at all.",
+    "explanation_brief": "Deer are eating Pando’s young trees, so it isn’t producing young trees anymore.",
+    "explanation_detailed": "Step 1: Ecologists are worried about grazing animals.\nStep 2: Fences could stop deer from eating young trees.\nStep 3: So Pando isn’t producing young trees anymore."
+  },
+  {
+    "id": "3543e6e2",
+    "wrong_answer_index": 0,
+    "wrong_answer": "Elinor often argues with her mother but fails to change her mind.",
+    "common_error": "Most tempting choice: \"counteract\" read as arguing.",
+    "explanation_brief": "Elinor keeps having to “counteract” her mother, so they argue without changing her mind.",
+    "explanation_detailed": "Step 1: Elinor often has to “counteract” her mother.\nStep 2: Her mother still hasn’t learned to govern her feelings.\nStep 3: So Elinor argues with her but fails to change her mind."
+  },
+  {
+    "id": "29f5c8c2",
+    "wrong_answer_index": 1,
+    "wrong_answer": "“Though some presence of transgenic fish in the wild has been recorded, there are insufficient studies of the impact of those fish on the ecosystems into which they are introduced.”",
+    "common_error": "Most tempting choice: mentions the fish's impact on ecosystems but shows no harm.",
+    "explanation_brief": "Too few studies exist on the fish’s impact, which supports the long term risk.",
+    "explanation_detailed": "Step 1: The student warns of long term ecological harm.\nStep 2: This quotation says the impact hasn’t been studied enough.\nStep 3: An unstudied impact is exactly that risk."
+  },
+  {
+    "id": "ca5a3fb4",
+    "wrong_answer_index": 3,
+    "wrong_answer": "the best way to support forest health may be to leave large forests entirely untouched.",
+    "common_error": "Most tempting choice: repeats the common view that the text calls into question.",
+    "explanation_brief": "Logging is at odds with conservation, so leaving forests untouched may be best.",
+    "explanation_detailed": "Step 1: The text says logging is “at odds with forest conservation.”\nStep 2: The study compared logged plots with unlogged ones.\nStep 3: So leaving forests untouched may be best for their health."
+  },
+  {
+    "id": "cf956802",
+    "wrong_answer_index": 0,
+    "wrong_answer": "He would have been unable to ensure that each bag included unique, handcrafted details.",
+    "common_error": "Most tempting choice: ties the handcrafted details to the sewing machines.",
+    "explanation_brief": "Without machines saving time, New couldn’t add unique details to each bag.",
+    "explanation_detailed": "Step 1: New’s process was long and painstaking.\nStep 2: Machines saved time while he handcrafted the details.\nStep 3: Without them, he couldn’t ensure each bag had unique details."
+  },
+  {
+    "id": "3091f805",
+    "wrong_answer_index": 0,
+    "wrong_answer": "None of the sea stars climbed to the tops of the tanks, but sea stars in the tank with only seawater moved around the bottom of the tank more than sea stars in the other tank did.",
+    "common_error": "Most tempting choice: shows a difference between the tanks but nothing about the barrier.",
+    "explanation_brief": "Sea stars under fresh water moved around less, so the layer held them back.",
+    "explanation_detailed": "Step 1: The hypothesis is that fresh water is a barrier.\nStep 2: Sea stars in plain seawater moved around more.\nStep 3: Less movement under fresh water shows it held them back."
+  },
+  {
+    "id": "60c6b64d",
+    "wrong_answer_index": 0,
+    "wrong_answer": "Only a small number of midges were found in the traps, though the majority were found in the trap that played calls and released carbon dioxide.",
+    "common_error": "Most tempting choice: \"only a small number\" read as carbon dioxide not working (College Board: it actually refutes the conclusion).",
+    "explanation_brief": "Only a few midges were caught, so carbon dioxide didn’t draw them in.",
+    "explanation_detailed": "Step 1: The conclusion is that carbon dioxide isn’t an extra cue.\nStep 2: Only a small number of midges were caught.\nStep 3: So carbon dioxide isn’t a strong cue."
+  },
+  {
+    "id": "1f3be847",
+    "wrong_answer_index": 3,
+    "wrong_answer": "“But the moon in her wayward beauty / Is ever and always the same.”",
+    "common_error": "Most tempting choice: describes the moon, but not as an active participant.",
+    "explanation_brief": "The moon’s “wayward beauty” gives it a will of its own in the scene.",
+    "explanation_detailed": "Step 1: The claim is that nature acts as an active participant.\nStep 2: The moon has a “wayward beauty,” like a person.\nStep 3: That personality makes it an active participant."
+  },
+  {
+    "id": "57485f5e",
+    "wrong_answer_index": 2,
+    "wrong_answer": "Heidi is initially frightened by an image in one of Grandmama’s books but quickly comes to appreciate its beauty.",
+    "common_error": "Most tempting choice: the scream read as fear.",
+    "explanation_brief": "Heidi “screamed aloud,” then looked “with glowing eyes,” so her fear turned to admiration.",
+    "explanation_detailed": "Step 1: Heidi first “screamed aloud” at the picture.\nStep 2: Then she looked at it “with glowing eyes.”\nStep 3: So she was frightened at first, then appreciated it."
+  },
+  {
+    "id": "11c68ded",
+    "wrong_answer_index": 2,
+    "wrong_answer": "When was the first recorded use of the pronoun “y’all” in the English language?",
+    "common_error": "Most tempting choice: \"has long been used\" read as the text being about origins.",
+    "explanation_brief": "The text says “y’all” “has long been used,” so it’s about when it was first recorded.",
+    "explanation_detailed": "Step 1: The text explains that “y’all” comes from “you all.”\nStep 2: It says the word “has long been used.”\nStep 3: So it answers when “y’all” was first recorded."
+  },
+  {
+    "id": "94ca8ebd",
+    "wrong_answer_index": 3,
+    "wrong_answer": "Correspondence between the poet and the publisher reveals that the poet’s explanatory notes went through several drafts.",
+    "common_error": "Most tempting choice: publisher involvement in the notes read as a sales motive.",
+    "explanation_brief": "The publisher helped revise the notes, which shows they were for marketing.",
+    "explanation_detailed": "Step 1: The claim is that the notes were a marketing device.\nStep 2: Letters show the notes went through several drafts.\nStep 3: The publisher’s involvement points to a sales purpose."
+  },
+  {
+    "id": "66c47028",
+    "wrong_answer_index": 1,
+    "wrong_answer": "Researchers have identified an innovative new method for working with unusual crystalline structures.",
+    "common_error": "Most tempting choice: focuses on the method instead of the confirmation.",
+    "explanation_brief": "Most of the text explains the team’s technique, so it’s about a new method.",
+    "explanation_detailed": "Step 1: The team trapped and cooled electrons.\nStep 2: Then they used graphene to capture an image.\nStep 3: So the main idea is an innovative new method."
+  },
+  {
+    "id": "3190835d",
+    "wrong_answer_index": 1,
+    "wrong_answer": "in order to maximize productivity, employers should be willing to interrupt employees frequently throughout the day.",
+    "common_error": "Most tempting choice: turns \"some interruptions help\" into \"interrupt often for productivity\".",
+    "explanation_brief": "Interruptions boost job satisfaction, so employers should interrupt often for productivity.",
+    "explanation_detailed": "Step 1: Interruptions can raise employees’ sense of belonging.\nStep 2: That leads to greater job satisfaction.\nStep 3: So employers should interrupt employees often to boost productivity."
+  },
+  {
+    "id": "85439572",
+    "wrong_answer_index": 0,
+    "wrong_answer": "The temperature inside the roasting drum is distributed more evenly when roasting green chiles with solar power than with propane.",
+    "common_error": "Most tempting choice: about how the drum heats, not roasting time.",
+    "explanation_brief": "More even heat means more efficient roasting, which supports faster solar roasting.",
+    "explanation_detailed": "Step 1: The hypothesis is that roasting time can be cut.\nStep 2: Solar power heats the drum more evenly than propane.\nStep 3: Even heat roasts faster, which supports the hypothesis."
+  },
+  {
+    "id": "01989d77",
+    "wrong_answer_index": 3,
+    "wrong_answer": "having a mix of algae, underwater plants, and floating plants is the best way to reduce the amount of methane in shallow lakes and ponds.",
+    "common_error": "Most tempting choice: the study never tested a mix of plants.",
+    "explanation_brief": "Each plant affected methane differently, so a mix of all three is best.",
+    "explanation_detailed": "Step 1: The team tested watermilfoil, duckweed and algae.\nStep 2: Each plant changed methane levels differently.\nStep 3: So a mix of all three is the best way to reduce methane."
+  },
+  {
+    "id": "a13541c0",
+    "wrong_answer_index": 3,
+    "wrong_answer": "Since 1984, new novels about young Latina characters by Latina authors have often been compared to The House on Mango Street.",
+    "common_error": "Most tempting choice: being compared to the book is not the same as being inspired by it.",
+    "explanation_brief": "Latina authors’ novels are often compared to the book, which shows its influence.",
+    "explanation_detailed": "Step 1: The claim is that the book inspired Latina authors to write about their youth.\nStep 2: Their novels are often compared to The House on Mango Street.\nStep 3: Those comparisons show the book’s influence on them."
+  }
+]

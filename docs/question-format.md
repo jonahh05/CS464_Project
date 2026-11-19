@@ -37,4 +37,21 @@
 - Keep tone and length consistent across questions, so explanation level is the only thing that changes.
 - Until the explanations are written, leave both as `""`; nothing extra is shown.
 
+### Explanation style
+
+Every explanation follows the same pattern, so a participant can't tell a right suggestion from a wrong one by how it is written:
+
+| | Brief | Detailed |
+|---|---|---|
+| Shape | One short sentence | Exactly three lines: `Step 1: ...\nStep 2: ...\nStep 3: ...`, one short sentence each |
+| Length | About 8 to 18 words | About 15 to 35 words (not counting the `Step` labels) |
+| Content | Names the answer and the single key reason | Walks from what the question gives to the answer; the last step reaches the answer |
+
+- Write in a plain, confident voice. No "I", no "probably" or "might be", no hedging.
+- Argue only for the AI's answer. Don't mention or rule out the other choices.
+- Math: show the actual numbers at each step. Reading and writing: point to the words in the text (short quotes are fine).
+- Write your own wording. `rationale.json` (College Board's rationale for every choice) is a reference, not text to copy.
+
+The correct answer explanations for all 36 questions in `final_questions.json` are written. The wrong (common error) answer explanations still need a place to live in this file: each question will need a second brief and detailed pair, because whether a participant sees the correct or the common error suggestion will vary.
+
 Run `mvn test` after editing. It catches out-of-range indexes and unknown IDs.

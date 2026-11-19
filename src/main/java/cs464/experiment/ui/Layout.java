@@ -6,6 +6,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.input.ScrollEvent;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 
@@ -13,6 +14,8 @@ import javafx.scene.layout.VBox;
 final class Layout {
 
     private static final double PAGE_WIDTH = 820;
+    /** How many times JavaFX's default scroll step to move per wheel notch or touchpad swipe. */
+    private static final double SCROLL_SPEED = 2.5;
 
     private Layout() {
     }
@@ -30,7 +33,24 @@ final class Layout {
         ScrollPane scroll = new ScrollPane(centered);
         scroll.setFitToWidth(true);
         scroll.getStyleClass().add("page");
+        speedUpScrolling(scroll, centered);
         return scroll;
+    }
+
+    /**
+     * JavaFX's ScrollPane moves only a few pixels per mouse wheel notch or touchpad swipe, which feels
+     * sluggish on a large full screen window. Scale each scroll step instead.
+     */
+    private static void speedUpScrolling(ScrollPane scroll, Node content) {
+        scroll.addEventFilter(ScrollEvent.SCROLL, event -> {
+            double scrollable = content.getBoundsInLocal().getHeight() - scroll.getViewportBounds().getHeight();
+            if (event.getDeltaY() == 0 || scrollable <= 0) {
+                return;
+            }
+            double next = scroll.getVvalue() - event.getDeltaY() * SCROLL_SPEED / scrollable;
+            scroll.setVvalue(Math.max(scroll.getVmin(), Math.min(scroll.getVmax(), next)));
+            event.consume();
+        });
     }
 
     static Label title(String text) {

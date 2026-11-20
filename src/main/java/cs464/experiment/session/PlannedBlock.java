@@ -22,4 +22,9 @@ public record PlannedBlock(
         long correct = questions.stream().filter(Question::isAiCorrect).count();
         return (double) correct / questions.size();
     }
+
+    /** {@link #aiAccuracy()} as a whole percentage (50, 75, 100), as written to the CSV files. */
+    public int aiAccuracyPercent() {
+        return (int) Math.round(aiAccuracy() * 100);
+    }
 }

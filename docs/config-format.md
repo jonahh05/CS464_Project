@@ -10,7 +10,7 @@
 | `shuffle_questions_within_block` | `true` = shuffle each round's questions per participant (repeatable: seeded by participant ID) |
 | `demographic_questions` | The optional "About you" questions on the first participant screen, before Welcome. Leave it out to skip that screen. See below. |
 | `rating_items` | The ratings asked before (`pre_prompt`) and after (`post_prompt`) each round. `id` becomes `item_id` in the CSV. |
-| `orders` | Counterbalancing orders of explanation levels. Order 1 is the first entry. |
+| `orders` | Counterbalancing orders of explanation levels. Order 1 is the first entry. Each participant's row in `schedule.json` selects one; the six participants use all six. |
 | `blocks` | The rounds, in presentation order |
 
 ## Demographic questions
@@ -42,7 +42,7 @@ The bundled config has 9 blocks of 4 questions (2 `math` + 2 `reading_writing`);
 Several blocks may share a slot, but every slot in the orders (0, 1, 2) must be used by at least one block, and a question can only be in one block.
 The app checks all of this at startup, and so does `mvn test`.
 
-The console prints each participant's plan when a session starts, including each block's AI accuracy:
+The console prints each participant's plan when a session starts, including each block's AI accuracy (from `schedule.json`, applied to the questions):
 
 ```
 Participant P03, order 3

@@ -4,9 +4,11 @@ import cs464.experiment.io.JsonLoader;
 import cs464.experiment.io.ResultWriter;
 import cs464.experiment.model.ExperimentConfig;
 import cs464.experiment.model.Question;
+import cs464.experiment.model.Schedule;
 import cs464.experiment.session.ConfigValidator;
 import cs464.experiment.session.ExperimentSession;
 import cs464.experiment.session.PlannedBlock;
+import cs464.experiment.session.ScheduleValidator;
 import cs464.experiment.ui.ExperimentFlow;
 import cs464.experiment.ui.Navigator;
 import cs464.experiment.ui.SetupScreen;
@@ -18,6 +20,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.nio.file.Path;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -33,14 +36,17 @@ public class App extends Application {
     public void start(Stage stage) {
         ExperimentConfig config;
         Map<String, Question> questions;
+        Schedule schedule;
         try {
             config = JsonLoader.loadConfig(JsonLoader.CONFIG_RESOURCE);
             questions = JsonLoader.loadQuestions(JsonLoader.QUESTIONS_RESOURCE);
+            schedule = JsonLoader.loadSchedule(JsonLoader.SCHEDULE_RESOURCE);
         } catch (IOException e) {
             fatal(List.of(e.getMessage()));
             return;
         }
-        List<String> problems = ConfigValidator.validate(config, questions);
+        List<String> problems = new ArrayList<>(ConfigValidator.validate(config, questions));
+        problems.addAll(ScheduleValidator.validate(schedule, config, questions));
         if (!problems.isEmpty()) {
             fatal(problems);
             return;
@@ -48,8 +54,8 @@ public class App extends Application {
 
         stage.setTitle(config.title());
         Navigator nav = new Navigator(stage);
-        nav.show(new SetupScreen(config, (participantId, orderId) -> {
-            ExperimentSession session = ExperimentSession.create(config, questions, participantId, orderId);
+        nav.show(new SetupScreen(config, schedule, (participantId, scheduled) -> {
+            ExperimentSession session = ExperimentSession.create(config, questions, participantId, scheduled);
             printPlan(session);
             try {
                 writer = new ResultWriter(Path.of(config.outputDir()), participantId);

@@ -6,6 +6,7 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.JsonParseException;
 import cs464.experiment.model.ExperimentConfig;
 import cs464.experiment.model.Question;
+import cs464.experiment.model.Schedule;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -25,6 +26,7 @@ public final class JsonLoader {
 
     public static final String QUESTIONS_RESOURCE = "/questions/final_questions.json";
     public static final String CONFIG_RESOURCE = "/config/experiment.json";
+    public static final String SCHEDULE_RESOURCE = "/questions/schedule.json";
 
     private static final Gson GSON = new GsonBuilder()
             .setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
@@ -40,6 +42,18 @@ public final class JsonLoader {
                 throw new IOException(resourcePath + " is empty");
             }
             return config;
+        } catch (JsonParseException e) {
+            throw new IOException("Could not parse " + resourcePath + ": " + e.getMessage(), e);
+        }
+    }
+
+    public static Schedule loadSchedule(String resourcePath) throws IOException {
+        try (Reader reader = open(resourcePath)) {
+            Schedule schedule = GSON.fromJson(reader, Schedule.class);
+            if (schedule == null || schedule.participants() == null || schedule.participants().isEmpty()) {
+                throw new IOException(resourcePath + " is empty or has no participants");
+            }
+            return schedule;
         } catch (JsonParseException e) {
             throw new IOException("Could not parse " + resourcePath + ": " + e.getMessage(), e);
         }

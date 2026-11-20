@@ -38,8 +38,10 @@ app does not advance until the second submit. These are recorded as `original_an
 `final_answer` in the trials CSV (see [data-dictionary](docs/data-dictionary.md)); the logic lives in
 `TwoStepAnswer` and is covered by `TwoStepAnswerTest`.
 
-The order (1-6) is picked from the participant ID: P01 gets 1, P02 gets 2, ... P07 gets 1 again.
-That gives 2 participants per order for P01-P12. The experimenter can override it on the setup screen.
+The study has **exactly six participants (P1-P6)**; this is a fixed rule. [`schedule.json`](src/main/resources/questions/schedule.json)
+gives each one an explanation order (E1 = none, E2 = brief, E3 = detailed) and an AI accuracy of 50%, 75% or 100% for
+every section. The schedule participant is picked from the number in the participant ID (P01 gets P1, P03 gets P3);
+the experimenter can change it on the setup screen, e.g. for a pilot run. See [experiment-design](docs/experiment-design.md).
 
 ## Common changes and where to make them
 
@@ -67,7 +69,8 @@ src/main/java/cs464/experiment/
   session/                      experiment logic, no UI: counterbalancing, validation
   ui/                           one class per screen + ExperimentFlow (screen order)
 src/main/resources/
-  questions/final_questions.json question bank + scripted AI answers/explanations
+  questions/final_questions.json question bank + scripted AI answers/explanations (right and wrong versions)
+  questions/schedule.json       per-participant explanation order and which AI answers are right/wrong
   config/experiment.json        sections, orders, rating items
   styles/app.css                look and feel
 src/test/java/                  unit tests (logic + bundled JSON validity)

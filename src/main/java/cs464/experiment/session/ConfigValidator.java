@@ -56,6 +56,12 @@ public final class ConfigValidator {
         if (q.aiAnswerIndex() < 0 || q.aiAnswerIndex() >= q.choices().size()) {
             errors.add(where + "ai_answer_index " + q.aiAnswerIndex() + " is out of range");
         }
+        if (q.wrongAiAnswerIndex() != null
+                && (q.wrongAiAnswerIndex() < 0 || q.wrongAiAnswerIndex() >= q.choices().size()
+                    || q.wrongAiAnswerIndex() == q.correctIndex())) {
+            errors.add(where + "wrong_ai_answer_index " + q.wrongAiAnswerIndex()
+                    + " must be a valid choice other than the correct answer");
+        }
     }
 
     private static void checkDemographics(List<DemographicQuestion> questions, List<String> errors) {

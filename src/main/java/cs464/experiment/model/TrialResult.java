@@ -9,6 +9,7 @@ public record TrialResult(
         int blockIndex,
         String blockId,
         ExplanationLevel explanationLevel,
+        int aiAccuracyPercent,
         int trialIndex,
         Question question,
         int originalIndex,

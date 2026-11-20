@@ -6,6 +6,7 @@ import cs464.experiment.model.ExperimentConfig;
 import cs464.experiment.model.ExplanationLevel;
 import cs464.experiment.model.Question;
 import cs464.experiment.model.RatingItem;
+import cs464.experiment.model.Schedule;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
@@ -14,27 +15,45 @@ import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-/** Counterbalancing, order assignment and validation, without any JSON or UI. */
+/** Counterbalancing, schedule application and validation, without any JSON or UI. */
 class SessionLogicTest {
 
     @Test
-    void twelveParticipantsCoverEachOfSixOrdersTwice() {
-        int[] counts = new int[7];
-        for (int p = 1; p <= 12; p++) {
-            counts[OrderAssigner.defaultOrderFor(String.format("P%02d", p), 6)]++;
-        }
-        for (int order = 1; order <= 6; order++) {
-            assertEquals(2, counts[order], "order " + order);
-        }
+    void scheduleParticipantIsPickedFromTheNumberInTheId() {
+        Schedule schedule = sampleSchedule();
+        assertEquals("P3", schedule.defaultFor("P03").participant());
+        assertEquals("P1", schedule.defaultFor("P1").participant());
+        assertEquals("P1", schedule.defaultFor("pilot").participant());
+        assertEquals("P1", schedule.defaultFor("150").participant());
+        assertEquals("P1", schedule.defaultFor(null).participant());
     }
 
     @Test
-    void idsWithoutNumbersFallBackToOrderOne() {
-        assertEquals(1, OrderAssigner.defaultOrderFor("pilot", 6));
-        assertEquals(1, OrderAssigner.defaultOrderFor("", 6));
-        assertEquals(1, OrderAssigner.defaultOrderFor(null, 6));
+    void scheduleSetsOrderAndMakesAiWrongOnlyWhereScheduled() {
+        // E3, E1, E2 = detailed, none, brief, which is order 5 in sampleConfig.
+        Schedule.Participant p = new Schedule.Participant("P1", List.of("E3", "E1", "E2"), List.of(50, 100, 75, 100),
+                List.of(section(1, "E1", 100, true), section(2, "E3", 50, false),
+                        section(3, "E1", 100, true), section(4, "E2", 100, true)));
+        ExperimentSession session = ExperimentSession.create(sampleConfig(), sampleQuestions(), "P01", p);
+
+        assertEquals(5, session.orderId());
+        assertEquals(ExplanationLevel.DETAILED, session.blocks().get(1).explanationLevel());
+
+        Question wrong = session.blocks().get(1).questions().get(0);
+        assertEquals(3, wrong.aiAnswerIndex());
+        assertEquals("wrong brief", wrong.explanationBrief());
+        assertEquals(0, session.blocks().get(1).aiAccuracyPercent());
+        assertEquals(100, session.blocks().get(2).aiAccuracyPercent());
+    }
+
+    @Test
+    void wrongAnswerRequiresAWrongAiAnswerIndex() {
+        Question noWrong = question("x", 1, 1, "b", "d");
+        assertThrows(IllegalStateException.class, () -> noWrong.withAiCorrect(false));
+        assertEquals(1, noWrong.withAiCorrect(true).aiAnswerIndex());
     }
 
     @Test
@@ -136,10 +155,24 @@ class SessionLogicTest {
     private static Map<String, Question> sampleQuestions() {
         Map<String, Question> map = new HashMap<>();
         map.put("q1", question("q1", 0, 0, "", ""));
-        map.put("q2", question("q2", 1, 1, "brief", "detailed"));
+        map.put("q2", new Question("q2", "math", "easy", "stem q2", List.of("a", "b", "c", "d"),
+                1, 1, "brief", "detailed", "test", 3, "wrong brief", "wrong detailed"));
         map.put("q3", question("q3", 2, 2, "brief", "detailed"));
         map.put("q4", question("q4", 0, 3, "brief", "detailed"));
         return map;
+    }
+
+    private static Schedule sampleSchedule() {
+        List<Schedule.Participant> participants = new java.util.ArrayList<>();
+        for (int i = 1; i <= 6; i++) {
+            participants.add(new Schedule.Participant("P" + i, List.of("E1", "E2", "E3"), List.of(), List.of()));
+        }
+        return new Schedule(1, List.of("E1", "E2", "E3"), participants);
+    }
+
+    private static Schedule.Section section(int number, String level, int accuracy, boolean aiCorrect) {
+        return new Schedule.Section(number, 1, level, accuracy,
+                List.of(new Schedule.ScheduledQuestion(1, "q" + number, aiCorrect)));
     }
 
     private static Question question(String id, int correct, int ai, String brief, String detailed) {

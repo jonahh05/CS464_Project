@@ -4,7 +4,10 @@ import cs464.experiment.io.JsonLoader;
 import cs464.experiment.model.DemographicQuestion;
 import cs464.experiment.model.ExperimentConfig;
 import cs464.experiment.model.Question;
+import cs464.experiment.model.Schedule;
 import cs464.experiment.session.ConfigValidator;
+import cs464.experiment.session.ExperimentSession;
+import cs464.experiment.session.ScheduleValidator;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -12,6 +15,7 @@ import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
@@ -63,12 +67,41 @@ class BundledFilesTest {
     }
 
     @Test
+    void bundledScheduleFollowsEveryDesignRule() throws Exception {
+        ExperimentConfig config = JsonLoader.loadConfig(JsonLoader.CONFIG_RESOURCE);
+        Map<String, Question> questions = JsonLoader.loadQuestions(JsonLoader.QUESTIONS_RESOURCE);
+        Schedule schedule = JsonLoader.loadSchedule(JsonLoader.SCHEDULE_RESOURCE);
+
+        assertEquals(6, schedule.participants().size());
+        assertEquals(List.of(), ScheduleValidator.validate(schedule, config, questions));
+    }
+
+    @Test
+    void everyParticipantGetsTheScheduledAccuracyInEverySection() throws Exception {
+        ExperimentConfig config = JsonLoader.loadConfig(JsonLoader.CONFIG_RESOURCE);
+        Map<String, Question> questions = JsonLoader.loadQuestions(JsonLoader.QUESTIONS_RESOURCE);
+        Schedule schedule = JsonLoader.loadSchedule(JsonLoader.SCHEDULE_RESOURCE);
+
+        for (Schedule.Participant p : schedule.participants()) {
+            ExperimentSession session = ExperimentSession.create(config, questions, p.participant(), p);
+            for (int i = 0; i < session.blocks().size(); i++) {
+                assertEquals(p.accuracyBySection().get(i).intValue(), session.blocks().get(i).aiAccuracyPercent(),
+                        p.participant() + " section " + (i + 1));
+            }
+        }
+    }
+
+    @Test
     void snakeCaseJsonMapsOntoRecordFields() throws Exception {
         Map<String, Question> questions = JsonLoader.loadQuestions(JsonLoader.QUESTIONS_RESOURCE);
         Question q = questions.get("3d1070c9");
 
         assertEquals(2, q.correctIndex());
         assertEquals(2, q.aiAnswerIndex());
-        assertEquals("", q.explanationDetailed());
+        assertTrue(q.explanationDetailed().startsWith("Step 1: Replace x with 2"));
+        assertEquals("", q.wrongExplanationBrief());
+        assertEquals("", q.wrongExplanationDetailed());
+        assertNull(q.wrongAiAnswerIndex());
+        assertEquals(1, questions.get("fa80893a").wrongAiAnswerIndex());
     }
 }

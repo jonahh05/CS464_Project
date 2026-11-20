@@ -96,8 +96,8 @@ public final class ExperimentFlow {
 
         nav.show(new QuestionScreen(progress, question, block.explanationLevel(), (original, last, initialMs, totalMs) -> {
             saveTrial(new TrialResult(session.participantId(), session.orderId(), block.index(), block.id(),
-                            block.explanationLevel(), trialIndex, question, original, last, initialMs, totalMs,
-                            Instant.now()));
+                            block.explanationLevel(), block.aiAccuracyPercent(), trialIndex, question, original, last,
+                            initialMs, totalMs, Instant.now()));
             if (trialIndex + 1 < block.questions().size()) {
                 showQuestion(blockIndex, trialIndex + 1);
             } else {
@@ -149,7 +149,8 @@ public final class ExperimentFlow {
         try {
             for (Map.Entry<String, Integer> entry : values.entrySet()) {
                 writer.writeRating(new RatingResult(session.participantId(), session.orderId(), block.index(),
-                        block.id(), block.explanationLevel(), phase, entry.getKey(), entry.getValue(), now));
+                        block.id(), block.explanationLevel(), block.aiAccuracyPercent(), phase, entry.getKey(),
+                        entry.getValue(), now));
             }
         } catch (IOException e) {
             showSaveError(e);

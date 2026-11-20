@@ -33,15 +33,15 @@ class ResultWriterTest {
 
         Path trials;
         try (ResultWriter writer = new ResultWriter(tempDir, "P01")) {
-            writer.writeTrial(new TrialResult("P01", 2, 1, "round_a", ExplanationLevel.BRIEF, 0, q, 1, 0, 4321, 9876, t));
-            writer.writeRating(new RatingResult("P01", 2, 1, "round_a", ExplanationLevel.BRIEF,
+            writer.writeTrial(new TrialResult("P01", 2, 1, "round_a", ExplanationLevel.BRIEF, 75, 0, q, 1, 0, 4321, 9876, t));
+            writer.writeRating(new RatingResult("P01", 2, 1, "round_a", ExplanationLevel.BRIEF, 75,
                     RatingPhase.PRE, "conf_ai", 7, t));
             trials = writer.trialsFile();
         }
 
         List<String> trialLines = Files.readAllLines(trials);
         assertEquals(String.join(",", ResultWriter.TRIAL_COLUMNS), trialLines.get(0));
-        assertEquals("P01,2,1,round_a,brief,0,q1,math,easy,A,false,B,A,D,false,true,true,4321,9876,2026-11-01T12:00:00Z",
+        assertEquals("P01,2,1,round_a,brief,75,0,q1,math,easy,A,false,B,A,D,false,true,true,4321,9876,2026-11-01T12:00:00Z",
                 trialLines.get(1));
                 assertTrue(trialLines.get(0).contains("original_answer,final_answer"));
                 assertFalse(trialLines.get(0).contains("chosen_answer"));
@@ -55,10 +55,10 @@ class ResultWriterTest {
                 Instant t = Instant.parse("2026-11-01T12:00:00Z");
                 Path trials;
                 try (ResultWriter writer = new ResultWriter(tempDir, "P03")) {
-                    writer.writeTrial(new TrialResult("P03", 1, 0, "round_a", ExplanationLevel.NONE, 0, q, 2, 2, 100, 200, t));
+                    writer.writeTrial(new TrialResult("P03", 1, 0, "round_a", ExplanationLevel.NONE, 100, 0, q, 2, 2, 100, 200, t));
                     trials = writer.trialsFile();
                 }
-                assertEquals("P03,1,0,round_a,none,0,q1,math,easy,A,false,C,C,D,false,false,false,100,200,2026-11-01T12:00:00Z",
+                assertEquals("P03,1,0,round_a,none,100,0,q1,math,easy,A,false,C,C,D,false,false,false,100,200,2026-11-01T12:00:00Z",
                         Files.readAllLines(trials).get(1));
             }
 

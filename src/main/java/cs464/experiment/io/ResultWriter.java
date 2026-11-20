@@ -28,13 +28,13 @@ import java.util.Map;
 public final class ResultWriter implements Closeable {
 
     public static final List<String> TRIAL_COLUMNS = List.of(
-            "participant_id", "order_id", "block_index", "block_id", "explanation_level",
+            "participant_id", "order_id", "block_index", "block_id", "explanation_level", "ai_accuracy",
             "trial_index", "question_id", "section", "difficulty",
             "ai_suggestion", "ai_correct", "original_answer", "final_answer", "correct_answer",
             "correct", "followed_ai", "switched_answer", "initial_response_time_ms", "total_response_time_ms", "timestamp");
 
     public static final List<String> RATING_COLUMNS = List.of(
-            "participant_id", "order_id", "block_index", "block_id", "explanation_level",
+            "participant_id", "order_id", "block_index", "block_id", "explanation_level", "ai_accuracy",
             "phase", "item_id", "value", "timestamp");
 
     public static final List<String> DEMOGRAPHIC_COLUMNS = List.of(
@@ -84,6 +84,7 @@ public final class ResultWriter implements Closeable {
                 String.valueOf(r.blockIndex()),
                 r.blockId(),
                 r.explanationLevel().configName(),
+                String.valueOf(r.aiAccuracyPercent()),
                 String.valueOf(r.trialIndex()),
                 q.id(),
                 nullToEmpty(q.section()),
@@ -108,6 +109,7 @@ public final class ResultWriter implements Closeable {
                 String.valueOf(r.blockIndex()),
                 r.blockId(),
                 r.explanationLevel().configName(),
+                String.valueOf(r.aiAccuracyPercent()),
                 r.phase().configName(),
                 r.itemId(),
                 String.valueOf(r.value()),

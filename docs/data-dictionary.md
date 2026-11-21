@@ -20,16 +20,17 @@ that never records the participant ID.
 | Column | Example | Meaning |
 |---|---|---|
 | `participant_id` | `P01` | Entered on the setup screen |
-| `order_id` | `3` | Counterbalancing order (1-6), see `orders` in `experiment.json` |
+| `order_id` | `3` | Counterbalancing order (1-6), see `orders` in `experiment.json`. Determined by the participant's row in `schedule.json`. |
 | `block_index` | `1` | 0-8 in presentation order (section 1 = 0) |
 | `block_id` | `round_a` | Block id from `experiment.json` |
 | `explanation_level` | `brief` | `none`, `brief` or `detailed` shown in this block |
+| `ai_accuracy` | `75` | Share (%) of this block's questions where the AI suggestion was correct for this participant: 50, 75 or 100. Computed from the questions the participant actually saw, so it always agrees with `ai_correct`. |
 | `trial_index` | `0` | Position of the question within the block (0-based) |
 | `question_id` | `set1-02` | Question id from `questions.json` |
 | `section` | `math` | From `questions.json` |
 | `difficulty` | `medium` | From `questions.json` |
 | `ai_suggestion` | `A` | Letter the AI suggested |
-| `ai_correct` | `false` | Was the AI's suggestion correct? |
+| `ai_correct` | `false` | Was the AI's suggestion correct **for this participant**? The same question can be right for one participant and wrong for another (see `schedule.json`). |
 | `original_answer` | `B` | Letter submitted the first time, before the AI suggestion was shown |
 | `final_answer` | `A` | Letter submitted the second time, after seeing the AI suggestion (same as `original_answer` if kept) |
 | `correct_answer` | `D` | The correct letter |
@@ -47,7 +48,7 @@ that never records the participant ID.
 
 | Column | Example | Meaning |
 |---|---|---|
-| `participant_id`, `order_id`, `block_index`, `block_id`, `explanation_level` | | Same as above |
+| `participant_id`, `order_id`, `block_index`, `block_id`, `explanation_level`, `ai_accuracy` | | Same as above |
 | `phase` | `pre` | `pre` (before the block's questions) or `post` (after) |
 | `item_id` | `conf_ai` | Rating item id from `experiment.json` (`conf_self`, `conf_ai`, `difficulty`, `est_accuracy`) |
 | `value` | `7` | Chosen value on the 1-10 scale |

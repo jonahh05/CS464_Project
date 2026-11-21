@@ -12,8 +12,10 @@
     ],
     "correct_index": 2,
     "ai_answer_index": 2,
-    "explanation_brief": "",
-    "explanation_detailed": "",
+    "explanation_brief": "Substituting 2 for x gives f(2) = 25(2) + 30 = 50 + 30 = 80.",
+    "explanation_detailed": "Step 1: Replace x with 2 in f(x) = 25x + 30, so f(2) = 25(2) + 30.\nStep 2: Multiply first: 25(2) = 50.\nStep 3: Add 30: 50 + 30 = 80.\nStep 4: Choice A (50) leaves out the + 30, choice B (57) adds 25 + 2 + 30, and choice D (110) computes (25 + 30)(2).\nSo the answer is choice C.",
+    "wrong_explanation_brief": "",
+    "wrong_explanation_detailed": "",
     "source": "College Board SAT Question Bank (Question ID: 3d1070c9)"
   },
   {
@@ -29,8 +31,11 @@
     ],
     "correct_index": 0,
     "ai_answer_index": 0,
-    "explanation_brief": "",
-    "explanation_detailed": "",
+    "explanation_brief": "Since 6x - 1 is 3 times 2x + 3 minus 10, it equals 3(9) - 10 = 17.",
+    "explanation_detailed": "Step 1: Notice that 6x is 3 times 2x, so multiply both sides of 2x + 3 = 9 by 3.\nStep 2: This gives 6x + 9 = 27.\nStep 3: To turn 6x + 9 into 6x - 1, subtract 10 from both sides: 6x - 1 = 27 - 10.\nStep 4: 27 - 10 = 17.\nSo the answer is choice A.",
+    "wrong_ai_answer_index": 1,
+    "wrong_explanation_brief": "Solving 2x + 3 = 9 gives x = 2, so 6x - 1 = 6(2) - 1 = 11.",
+    "wrong_explanation_detailed": "Step 1: Subtract 3 from both sides of 2x + 3 = 9, giving 2x = 4.\nStep 2: Divide both sides by 2 to get x = 2.\nStep 3: Substitute into the expression: 6x - 1 = 6(2) - 1.\nStep 4: 6(2) = 12, and 12 - 1 = 11.\nSo the answer is choice B.",
     "source": "College Board SAT Question Bank (Question ID: fa80893a)"
   },
   {
@@ -46,8 +51,11 @@
     ],
     "correct_index": 0,
     "ai_answer_index": 0,
-    "explanation_brief": "",
-    "explanation_detailed": "",
+    "explanation_brief": "Substituting x = 7 and f(7) = 28 gives 28 = 4(7) + b, so b = 28 - 28 = 0.",
+    "explanation_detailed": "Step 1: f(7) = 28 means that x = 7 and f(x) = 28 in f(x) = 4x + b.\nStep 2: Substitute: 28 = 4(7) + b, which is 28 = 28 + b.\nStep 3: Subtract 28 from both sides: 0 = b.\nStep 4: Check the other choices: b = 1 gives f(7) = 29, b = 4 gives 32, and b = 7 gives 35, none of which equal 28.\nSo the answer is choice A.",
+    "wrong_ai_answer_index": 3,
+    "wrong_explanation_brief": "Substituting x = 7 and f(7) = 28 gives 28 = 4(7) + b, and since 4(7) = 21, b = 28 - 21 = 7.",
+    "wrong_explanation_detailed": "Step 1: f(7) = 28 means that x = 7 and f(x) = 28 in f(x) = 4x + b.\nStep 2: Substitute: 28 = 4(7) + b.\nStep 3: Multiply: 4(7) = 21, so 28 = 21 + b.\nStep 4: Subtract 21 from both sides: b = 7.\nSo the answer is choice D.",
     "source": "College Board SAT Question Bank (Question ID: 1480dd5c)"
   },
   {
@@ -63,8 +71,10 @@
     ],
     "correct_index": 2,
     "ai_answer_index": 2,
-    "explanation_brief": "",
-    "explanation_detailed": "",
+    "explanation_brief": "The total cost is f(400) = 36(400) + 1,000 = 14,400 + 1,000 = $15,400.",
+    "explanation_detailed": "Step 1: The cost for a monthly payment of x dollars is f(x) = 36x + 1,000, so find f(400).\nStep 2: Substitute: f(400) = 36(400) + 1,000.\nStep 3: Multiply: 36(400) = 14,400.\nStep 4: Add 1,000: 14,400 + 1,000 = 15,400.\nSo the total cost is $15,400, which is choice C.",
+    "wrong_explanation_brief": "",
+    "wrong_explanation_detailed": "",
     "source": "College Board SAT Question Bank (Question ID: 88e13c8c)"
   },
   {
@@ -80,8 +90,11 @@
     ],
     "correct_index": 3,
     "ai_answer_index": 3,
-    "explanation_brief": "",
-    "explanation_detailed": "",
+    "explanation_brief": "Adding 8 to both sides of 3x - 8 = 7 gives 3x = 15, and adding 8 again gives 3x + 8 = 23.",
+    "explanation_detailed": "Step 1: Start with 3x - 8 = 7.\nStep 2: Add 8 to both sides: 3x = 15.\nStep 3: The expression 3x + 8 is 3x plus 8, so add 8 to both sides again: 3x + 8 = 15 + 8.\nStep 4: 15 + 8 = 23.\nChoice B (5) is the value of x, not of 3x + 8.\nSo the answer is choice D.",
+    "wrong_ai_answer_index": 1,
+    "wrong_explanation_brief": "Adding 8 to both sides of 3x - 8 = 7 gives 3x = 15, so x = 5.",
+    "wrong_explanation_detailed": "Step 1: Start with 3x - 8 = 7.\nStep 2: Add 8 to both sides: 3x = 15.\nStep 3: Divide both sides by 3: x = 5.\nStep 4: The equation is solved by this value, so the quantity the question is built around is 5.\nSo the answer is choice B.",
     "source": "College Board SAT Question Bank (Question ID: 9b886541)"
   },
   {
@@ -97,8 +110,10 @@
     ],
     "correct_index": 2,
     "ai_answer_index": 2,
-    "explanation_brief": "",
-    "explanation_detailed": "",
+    "explanation_brief": "Line p has slope -9, so the perpendicular line r has the negative reciprocal slope, 1/9.",
+    "explanation_detailed": "Step 1: Rewrite 2y + 18x = 9 in slope-intercept form by subtracting 18x: 2y = -18x + 9.\nStep 2: Divide by 2: y = -9x + 9/2, so the slope of line p is -9.\nStep 3: Perpendicular lines have slopes that are negative reciprocals, so the slope of line r is -1 / (-9) = 1/9.\nStep 4: Choice A is the slope of p, choice B is only the reciprocal, and choice D is only the negative.\nSo the answer is choice C.",
+    "wrong_explanation_brief": "",
+    "wrong_explanation_detailed": "",
     "source": "College Board SAT Question Bank (Question ID: 01682aa5)"
   },
   {
@@ -114,8 +129,11 @@
     ],
     "correct_index": 3,
     "ai_answer_index": 3,
-    "explanation_brief": "",
-    "explanation_detailed": "",
+    "explanation_brief": "Subtracting t from both sides gives 6r - t = 7s, and dividing by 7 gives s = (6r - t)/7.",
+    "explanation_detailed": "Step 1: Start with 6r = 7s + t.\nStep 2: Subtract t from both sides: 6r - t = 7s.\nStep 3: Divide the entire left side by 7 to isolate s: s = (6r - t)/7.\nSo the answer is choice D.",
+    "wrong_ai_answer_index": 2,
+    "wrong_explanation_brief": "Subtracting t from both sides gives 6r - t = 7s, and dividing by 7 gives s = (6/7)r - t.",
+    "wrong_explanation_detailed": "Step 1: Start with 6r = 7s + t.\nStep 2: Subtract t from both sides: 6r - t = 7s.\nStep 3: Divide by 7 to isolate s: 6r divided by 7 is (6/7)r.\nStep 4: The t term is already separate from the r term, so it carries over unchanged: s = (6/7)r - t.\nSo the answer is choice C.",
     "source": "College Board SAT Question Bank (Question ID: ad03127d)"
   },
   {
@@ -131,8 +149,10 @@
     ],
     "correct_index": 0,
     "ai_answer_index": 0,
-    "explanation_brief": "",
-    "explanation_detailed": "",
+    "explanation_brief": "With length 2w, the area is (2w)(w) = 162, so w^2 = 81 and the width is 9 meters.",
+    "explanation_detailed": "Step 1: Area = length x width, and the length is twice the width, so 162 = (2w)(w).\nStep 2: Simplify: 162 = 2w^2.\nStep 3: Divide by 2: w^2 = 81.\nStep 4: Take the positive square root (width can't be negative): w = 9.\nChoice B (18) is the length, not the width.\nSo the answer is choice A.",
+    "wrong_explanation_brief": "",
+    "wrong_explanation_detailed": "",
     "source": "College Board SAT Question Bank (Question ID: f89af023)"
   },
   {
@@ -148,8 +168,11 @@
     ],
     "correct_index": 0,
     "ai_answer_index": 0,
-    "explanation_brief": "",
-    "explanation_detailed": "",
+    "explanation_brief": "Multiplying the numbers and the like variables gives (8 x 7)(y x y)(z x z) = 56y^2z^2.",
+    "explanation_detailed": "Step 1: Multiplication can be regrouped, so group the numbers and the like variables: (8 x 7)(y x y)(z x z).\nStep 2: 8 x 7 = 56.\nStep 3: y x y = y^2, and z x z = z^2.\nStep 4: Combine: 56y^2z^2.\nSo the answer is choice A.",
+    "wrong_ai_answer_index": 1,
+    "wrong_explanation_brief": "Multiplying the numbers and the like variables gives (8 x 7)(y x y)(z) = 56y^2z.",
+    "wrong_explanation_detailed": "Step 1: Group the numbers and the like variables: (8 x 7) and the y's and z's.\nStep 2: 8 x 7 = 56.\nStep 3: There are two y factors, so y x y = y^2.\nStep 4: The z in 8yz and the z in 7z combine into a single z.\nStep 5: Combine: 56y^2z.\nSo the answer is choice B.",
     "source": "College Board SAT Question Bank (Question ID: 4ac59df6)"
   },
   {
@@ -165,8 +188,10 @@
     ],
     "correct_index": 1,
     "ai_answer_index": 1,
-    "explanation_brief": "",
-    "explanation_detailed": "",
+    "explanation_brief": "Setting 5x + 4 equal to 5x^2 + 4 gives 5x(x - 1) = 0, so x = 0 or 1, and x = 0 gives (0, 4).",
+    "explanation_detailed": "Step 1: Both equations equal y, so set them equal: 5x + 4 = 5x^2 + 4.\nStep 2: Subtract 4 from both sides: 5x = 5x^2, or 5x^2 - 5x = 0.\nStep 3: Factor: 5x(x - 1) = 0, so x = 0 or x = 1.\nStep 4: Only x = 0 appears among the choices; y = 5(0) + 4 = 4, giving (0, 4).\nSo the answer is choice B.",
+    "wrong_explanation_brief": "",
+    "wrong_explanation_detailed": "",
     "source": "College Board SAT Question Bank (Question ID: 58443765)"
   },
   {
@@ -182,8 +207,10 @@
     ],
     "correct_index": 3,
     "ai_answer_index": 3,
-    "explanation_brief": "",
-    "explanation_detailed": "",
+    "explanation_brief": "The random sample was only of largemouth bass, so the 30% result applies to largemouth bass in the pond, not to all fish.",
+    "explanation_detailed": "Step 1: A sample supports conclusions only about the population it was randomly drawn from.\nStep 2: Here, the sample was 150 largemouth bass, so the population is all largemouth bass in the pond.\nStep 3: 30% of the sample weighed over 2 pounds, so about 30% of all largemouth bass in the pond do.\nStep 4: Choices A, B, and C extend the result to all fish in the pond, which the sample doesn't support.\nSo the answer is choice D.",
+    "wrong_explanation_brief": "",
+    "wrong_explanation_detailed": "",
     "source": "College Board SAT Question Bank (Question ID: 53d97af5)"
   },
   {
@@ -199,8 +226,11 @@
     ],
     "correct_index": 3,
     "ai_answer_index": 3,
-    "explanation_brief": "",
-    "explanation_detailed": "",
+    "explanation_brief": "Neither blue nor yellow means red or white, so the probability is (7 + 4)/77 = 11/77 = 1/7.",
+    "explanation_detailed": "Step 1: Total cubes: 7 + 4 + 33 + 33 = 77.\nStep 2: A cube that is neither blue nor yellow must be red or white, and there are 7 + 4 = 11 of those.\nStep 3: Probability = 11/77 = 1/7.\nChoice A (6/7) is the probability of blue or yellow, the opposite event.\nSo the answer is choice D.",
+    "wrong_ai_answer_index": 0,
+    "wrong_explanation_brief": "The blue and yellow cubes total 33 + 33 = 66 of the 77 cubes, so the probability is 66/77 = 6/7.",
+    "wrong_explanation_detailed": "Step 1: Total cubes: 7 + 4 + 33 + 33 = 77.\nStep 2: Blue and yellow cubes make up most of the bag: 33 + 33 = 66.\nStep 3: Form the probability: 66/77.\nStep 4: Divide numerator and denominator by 11: 6/7.\nSo the answer is choice A.",
     "source": "College Board SAT Question Bank (Question ID: 0ae37ff3)"
   },
   {
@@ -216,8 +246,11 @@
     ],
     "correct_index": 0,
     "ai_answer_index": 0,
-    "explanation_brief": "",
-    "explanation_detailed": "",
+    "explanation_brief": "Solving (x/100)(300) = 75 gives 3x = 75, so x = 25 and 75 is 25% of 300.",
+    "explanation_detailed": "Step 1: Let x be the percentage, so (x/100)(300) = 75.\nStep 2: Simplify: 3x = 75.\nStep 3: Divide by 3: x = 25.\nStep 4: Check: 25% of 300 is 75. Also, 50% of 300 is 150 and 75% of 300 is 225, so neither matches.\nSo the answer is choice A.",
+    "wrong_ai_answer_index": 2,
+    "wrong_explanation_brief": "Testing the choices shows that 75% of 300 is 75, since 0.75 x 100 = 75.",
+    "wrong_explanation_detailed": "Step 1: The question asks what percentage of 300 equals 75, so test the choices.\nStep 2: Convert 75% to 0.75.\nStep 3: 0.75 of 300 is 0.75 x 100 = 75, which matches the target.\nStep 4: So 75 is 75% of 300.\nSo the answer is choice C.",
     "source": "College Board SAT Question Bank (Question ID: e9fb7774)"
   },
   {
@@ -233,8 +266,10 @@
     ],
     "correct_index": 2,
     "ai_answer_index": 2,
-    "explanation_brief": "",
-    "explanation_detailed": "",
+    "explanation_brief": "The 5% tax on $20 is 0.05 x 20 = $1, so the total is $20 + $1 = $21.00.",
+    "explanation_detailed": "Step 1: Convert 5% to a decimal: 0.05.\nStep 2: Tax = 0.05 x $20 = $1.\nStep 3: Total = $20 + $1 = $21.\nChoice D ($25) treats the tax as $5, and choices A and B come from leaving out the multiplication by $20.\nSo the answer is choice C.",
+    "wrong_explanation_brief": "",
+    "wrong_explanation_detailed": "",
     "source": "College Board SAT Question Bank (Question ID: 8705ecba)"
   },
   {
@@ -250,8 +285,10 @@
     ],
     "correct_index": 0,
     "ai_answer_index": 0,
-    "explanation_brief": "",
-    "explanation_detailed": "",
+    "explanation_brief": "A 6-to-1 ratio means XY is 6 times ZV, so ZV = 102 / 6 = 17 inches.",
+    "explanation_detailed": "Step 1: XY : ZV = 6 : 1, so XY / ZV = 6.\nStep 2: Let ZV = l, so 102 / l = 6.\nStep 3: Multiply both sides by l: 102 = 6l.\nStep 4: Divide by 6: l = 17.\nChoice C (102) is XY itself, and choice D (612) comes from reversing the ratio.\nSo the answer is choice A.",
+    "wrong_explanation_brief": "",
+    "wrong_explanation_detailed": "",
     "source": "College Board SAT Question Bank (Question ID: da9ffcf6)"
   },
   {
@@ -267,8 +304,11 @@
     ],
     "correct_index": 1,
     "ai_answer_index": 1,
-    "explanation_brief": "",
-    "explanation_detailed": "",
+    "explanation_brief": "Area = length x width, so 280 = 10w and the width is 280 / 10 = 28 centimeters.",
+    "explanation_detailed": "Step 1: Area = length x width, so A = lw.\nStep 2: Substitute A = 280 and l = 10: 280 = 10w.\nStep 3: Divide both sides by 10: w = 28.\nChoice A (10) is the length, and choice D (140) is half the area.\nSo the answer is choice B.",
+    "wrong_ai_answer_index": 0,
+    "wrong_explanation_brief": "The rectangle's sides are 10 cm and 28 cm, since 10 x 28 = 280, and the 10 cm side is the width.",
+    "wrong_explanation_detailed": "Step 1: Area = length x width, and the area is 280 square centimeters.\nStep 2: One side of the rectangle is given as 10 cm, and 280 / 10 = 28, so the other side is 28 cm.\nStep 3: The shorter side of a rectangle is its width, and 10 is shorter than 28, so the width is 10.\nStep 4: Check: 10 x 28 = 280.\nSo the answer is choice A.",
     "source": "College Board SAT Question Bank (Question ID: 2a549721)"
   },
   {
@@ -284,8 +324,10 @@
     ],
     "correct_index": 0,
     "ai_answer_index": 0,
-    "explanation_brief": "",
-    "explanation_detailed": "",
+    "explanation_brief": "Area = length x width, so 63 = 9w and the width is 63 / 9 = 7 meters.",
+    "explanation_detailed": "Step 1: Area = length x width, so A = lw.\nStep 2: Substitute A = 63 and l = 9: 63 = 9w.\nStep 3: Divide both sides by 9: w = 7.\nChoice B (54) is 63 - 9, choice C (81) is 9 squared, and choice D (567) is 63 x 9.\nSo the answer is choice A.",
+    "wrong_explanation_brief": "",
+    "wrong_explanation_detailed": "",
     "source": "College Board SAT Question Bank (Question ID: d0b6d927)"
   },
   {
@@ -301,8 +343,11 @@
     ],
     "correct_index": 0,
     "ai_answer_index": 0,
-    "explanation_brief": "",
-    "explanation_detailed": "",
+    "explanation_brief": "The angles of a triangle sum to 180 degrees, so with R = 63, S and T share 117 degrees, so S must be less than 117 and 116 works.",
+    "explanation_detailed": "Step 1: The angle measures of a triangle sum to 180 degrees.\nStep 2: R = 63, so S + T = 180 - 63 = 117.\nStep 3: Since T must be greater than 0, S must be less than 117.\nStep 4: Only 116 is less than 117; 118 and 126 are too large, and 180 is the sum of all three angles, not one angle.\nSo the answer is choice A.",
+    "wrong_ai_answer_index": 3,
+    "wrong_explanation_brief": "The angles of a triangle total 180 degrees, so a single angle such as S can reach that full measure.",
+    "wrong_explanation_detailed": "Step 1: The angle measures of a triangle are tied to the 180-degree angle sum.\nStep 2: R is 63 degrees, which is well under that total, so S has room to vary.\nStep 3: Compare the choices: 116, 118, and 126 are all arbitrary values with no connection to the angle sum.\nStep 4: 180 is the measure that corresponds to the triangle's angle sum, so S could be 180.\nSo the answer is choice D.",
     "source": "College Board SAT Question Bank (Question ID: b434e103)"
   },
   {
@@ -318,8 +363,10 @@
     ],
     "correct_index": 0,
     "ai_answer_index": 0,
-    "explanation_brief": "",
-    "explanation_detailed": "",
+    "explanation_brief": "The decline in portrait submissions began before photography existed, so other factors may be more responsible for the miniature's decline.",
+    "explanation_detailed": "Step 1: Art historians assume photography displaced the portrait miniature.\nStep 2: The text says this impact may be overstated, because exhibition records show the decline in portrait submissions started before photography was invented.\nStep 3: If the decline started first, photography can't be its whole cause, so other factors may be more directly responsible.\nStep 4: The text never mentions artistic merit (B), says the miniature lasted longer (C) when it actually declined earlier, or says artists became photographers (D).\nSo the answer is choice A.",
+    "wrong_explanation_brief": "",
+    "wrong_explanation_detailed": "",
     "source": "College Board SAT Question Bank (Question ID: 87aa7bab)"
   },
   {
@@ -335,8 +382,11 @@
     ],
     "correct_index": 1,
     "ai_answer_index": 1,
-    "explanation_brief": "",
-    "explanation_detailed": "",
+    "explanation_brief": "The text says historians see pachuca style as self-expression and resistance to strict expectations for women.",
+    "explanation_detailed": "Step 1: The text first mentions critics who thought women should dress traditionally.\nStep 2: It then contrasts this with historians, who \"see things differently.\"\nStep 3: Historians view the style as a form of rebellion against rigid social expectations and a desire for self-expression and freedom.\nStep 4: Choice A (lasting influence), C (support for the US), and D (similarity to other trends) are never stated in the text.\nSo the answer is choice B.",
+    "wrong_ai_answer_index": 2,
+    "wrong_explanation_brief": "Because the style emerged during World War II, historians see it as a way for women to show support for the United States.",
+    "wrong_explanation_detailed": "Step 1: The text places pachuca style in the World War II era.\nStep 2: It says some people criticized the style, but historians see things differently and view it positively.\nStep 3: Wartime wasn't only a time of rigid expectations; it was also a time of national pride, and a bold look from Mexican American women suits that.\nStep 4: Historians therefore see the style as being celebrated because it let these women show support for the US.\nSo the answer is choice C.",
     "source": "College Board SAT Question Bank (Question ID: 8c1be131)"
   },
   {
@@ -352,8 +402,10 @@
     ],
     "correct_index": 0,
     "ai_answer_index": 0,
-    "explanation_brief": "",
-    "explanation_detailed": "",
+    "explanation_brief": "The ecologists worry because Pando's growth is declining, meaning it isn't growing at the rate it used to.",
+    "explanation_detailed": "Step 1: The text says ecologists are worried that Pando's growth is declining, partly because of animal grazing.\nStep 2: Declining growth means it isn't growing at the same rate as before.\nStep 3: The text mentions protecting young trees, so it is still producing them (not B), and fences are the proposed solution rather than a barrier to growth (not C).\nStep 4: Nothing says the root system limits new trees (not D).\nSo the answer is choice A.",
+    "wrong_explanation_brief": "",
+    "wrong_explanation_detailed": "",
     "source": "College Board SAT Question Bank (Question ID: 92c2564d)"
   },
   {
@@ -369,8 +421,11 @@
     ],
     "correct_index": 3,
     "ai_answer_index": 3,
-    "explanation_brief": "",
-    "explanation_detailed": "",
+    "explanation_brief": "Elinor is only nineteen yet serves as her mother's counselor with strong understanding and judgment, so she is remarkably mature.",
+    "explanation_detailed": "Step 1: The text says Elinor is \"only nineteen.\"\nStep 2: It says she has strength of understanding and coolness of judgment, which qualify her to be her mother's counselor.\nStep 3: That level of maturity is unusual for her age.\nStep 4: The text doesn't say she argues with her mother (A), is overly sensitive (B), or sees her mother as a bad role model (C).\nSo the answer is choice D.",
+    "wrong_ai_answer_index": 1,
+    "wrong_explanation_brief": "The text says Elinor's feelings were strong, which shows she can be overly sensitive about family matters.",
+    "wrong_explanation_detailed": "Step 1: The text describes Elinor as having an excellent heart and an affectionate disposition.\nStep 2: It adds that \"her feelings were strong.\"\nStep 3: Strong feelings in a person so close to her mother and sisters point to heightened sensitivity about family matters.\nStep 4: The other choices describe arguing, criticism of her mother, or maturity, none of which are as directly tied to her feelings.\nSo the answer is choice B.",
     "source": "College Board SAT Question Bank (Question ID: 3543e6e2)"
   },
   {
@@ -386,8 +441,11 @@
     ],
     "correct_index": 3,
     "ai_answer_index": 3,
-    "explanation_brief": "",
-    "explanation_detailed": "",
+    "explanation_brief": "If transgenic fish introduce fluorescence into wild populations, those fish become easier for predators to catch, which supports the student's claim of negative ecological effects.",
+    "explanation_detailed": "Step 1: The student claims that the fish's escape into the wild may have significant negative long-term ecological effects.\nStep 2: The best support is a quotation that names a specific harm.\nStep 3: Choice D says interbreeding could spread fluorescence to wild fish, making them more vulnerable to predators, which is a negative effect on the ecosystem.\nStep 4: Choice A only compares numbers of females and males, B says more research is needed, and C says the fish may have spread further than known; none describe a harm.\nSo the answer is choice D.",
+    "wrong_ai_answer_index": 1,
+    "wrong_explanation_brief": "The quotation says that there are insufficient studies on how transgenic fish affect their ecosystems, which backs the student's concern about long-term effects.",
+    "wrong_explanation_detailed": "Step 1: The student asserts that the fish's escape may have significant long-term ecological effects.\nStep 2: Long-term effects are the kind that studies would be needed to uncover.\nStep 3: Choice B points out that insufficient studies exist on the fish's impact on the ecosystems they enter, so serious long-term effects could be going unnoticed.\nStep 4: The other quotations discuss sex ratios, interbreeding, or unobserved ecosystems, which are less relevant to the student's concern.\nSo the answer is choice B.",
     "source": "College Board SAT Question Bank (Question ID: 29f5c8c2)"
   },
   {
@@ -403,8 +461,10 @@
     ],
     "correct_index": 0,
     "ai_answer_index": 0,
-    "explanation_brief": "",
-    "explanation_detailed": "",
+    "explanation_brief": "Limited-logging plots were more robust than unlogged ones, so logging may help maintain healthy forests if it is limited.",
+    "explanation_detailed": "Step 1: Logging is commonly thought to conflict with conservation.\nStep 2: The study found that plots with limited logging may be more robust than plots that weren't logged at all.\nStep 3: This suggests logging can be useful for forest health as long as it is limited.\nStep 4: The text doesn't compare other strategies (B), doubt that the benefits can be known (C), or favor leaving forests untouched (D).\nSo the answer is choice A.",
+    "wrong_explanation_brief": "",
+    "wrong_explanation_detailed": "",
     "source": "College Board SAT Question Bank (Question ID: ca5a3fb4)"
   },
   {
@@ -420,8 +480,10 @@
     ],
     "correct_index": 1,
     "ai_answer_index": 1,
-    "explanation_brief": "",
-    "explanation_detailed": "",
+    "explanation_brief": "Sewing machines let New work faster as his customer base grew, so without them he would have struggled to meet demand.",
+    "explanation_detailed": "Step 1: The text says New gained more customers and then began using sewing machines to produce bags more efficiently.\nStep 2: Greater efficiency let him make bags faster to keep up with demand.\nStep 3: Without the machines, he would have had a harder time keeping up.\nStep 4: He added handcrafted details both before and after using machines (not A or C), and interest in his bags already existed (not D).\nSo the answer is choice B.",
+    "wrong_explanation_brief": "",
+    "wrong_explanation_detailed": "",
     "source": "College Board SAT Question Bank (Question ID: cf956802)"
   },
   {
@@ -437,8 +499,11 @@
     ],
     "correct_index": 1,
     "ai_answer_index": 1,
-    "explanation_brief": "",
-    "explanation_detailed": "",
+    "explanation_brief": "Sea stars climbing to the top in plain seawater but stopping below the fresh water layer would show fresh water acts as a barrier.",
+    "explanation_detailed": "Step 1: The hypothesis is that a layer of fresh water forms a barrier to sea stars.\nStep 2: A supporting result must show sea stars that would otherwise climb being stopped by the fresh water.\nStep 3: In choice B, sea stars in the seawater-only tank climb to the top, while those in the other tank stop just below the fresh water.\nStep 4: Choice A is irrelevant, choice C suggests there is no barrier, and choice D suggests the fresh water doesn't stop the sea stars.\nSo the answer is choice B.",
+    "wrong_ai_answer_index": 3,
+    "wrong_explanation_brief": "Sea stars in the two tanks behaved differently, with the group in the freshwater tank climbing into the fresh water layer, which shows the layer affects their movement.",
+    "wrong_explanation_detailed": "Step 1: The hypothesis concerns how the layer of fresh water affects the sea stars' movement.\nStep 2: A supporting finding should show a clear difference in behavior between the two tanks.\nStep 3: In choice D, the seawater-only sea stars stay near the bottom, while the sea stars in the freshwater tank climb into the fresh layer.\nStep 4: This contrast demonstrates that the fresh water changes how the sea stars move.\nSo the answer is choice D.",
     "source": "College Board SAT Question Bank (Question ID: 3091f805)"
   },
   {
@@ -454,8 +519,11 @@
     ],
     "correct_index": 2,
     "ai_answer_index": 2,
-    "explanation_brief": "",
-    "explanation_detailed": "",
+    "explanation_brief": "More midges in the calls-only trap than in the calls-plus-CO2 trap shows the calls were sufficient without the CO2.",
+    "explanation_detailed": "Step 1: The researchers conclude that carbon dioxide isn't an additional cue.\nStep 2: Supporting evidence would show that adding CO2 doesn't attract more midges than calls alone.\nStep 3: Choice C says more midges were in the calls-only trap, so calls alone attract midges well and CO2 adds nothing.\nStep 4: Choices A, B, and D each show midges responding to CO2, which contradicts the conclusion.\nSo the answer is choice C.",
+    "wrong_ai_answer_index": 3,
+    "wrong_explanation_brief": "The trap's catch changed with CO2 concentration, which shows the researchers closely tracked the CO2 variable and supports their conclusion about it.",
+    "wrong_explanation_detailed": "Step 1: The researchers' conclusion is about the role carbon dioxide plays as a cue.\nStep 2: Evidence that directly measures how the catch varies with CO2 concentration speaks to that role most directly.\nStep 3: Choice D reports a clear, graded pattern: few midges at low CO2 and many at high CO2.\nStep 4: The other choices give only overall counts or timing and don't track the CO2 level as closely.\nSo the answer is choice D.",
     "source": "College Board SAT Question Bank (Question ID: 60c6b64d)"
   },
   {
@@ -471,8 +539,10 @@
     ],
     "correct_index": 0,
     "ai_answer_index": 0,
-    "explanation_brief": "",
-    "explanation_detailed": "",
+    "explanation_brief": "Only choice A shows an element of nature, the moon, acting like a person: writing legends in light on the sand.",
+    "explanation_detailed": "Step 1: The claim needs a nighttime scene on water with nature as an active participant.\nStep 2: Choice A has the moon \"writ[ing] her legends,\" a humanlike action, over water and sand.\nStep 3: Choice B's waves merely ripple, which is ordinary behavior; choice C describes petals falling, with no water scene; choice D has no water and shows the moon as unchanging.\nSo the answer is choice A.",
+    "wrong_explanation_brief": "",
+    "wrong_explanation_detailed": "",
     "source": "College Board SAT Question Bank (Question ID: 1f3be847)"
   },
   {
@@ -488,8 +558,10 @@
     ],
     "correct_index": 1,
     "ai_answer_index": 1,
-    "explanation_brief": "",
-    "explanation_detailed": "",
+    "explanation_brief": "Heidi's screams, glowing eyes, and \"devoured the scene\" show she is delighted and fascinated by the picture.",
+    "explanation_detailed": "Step 1: Heidi screams on seeing the picture, but it is a peaceful pasture scene, so the scream is delight rather than fear.\nStep 2: Her eyes are \"glowing\" and she \"devoured the scene,\" showing fascination.\nStep 3: She was already looking at the books with \"wondering eyes,\" so she wasn't upset beforehand (not A).\nStep 4: She isn't frightened first (not C), and the text never says she has never seen sheep (not D).\nSo the answer is choice B.",
+    "wrong_explanation_brief": "",
+    "wrong_explanation_detailed": "",
     "source": "College Board SAT Question Bank (Question ID: 57485f5e)"
   },
   {
@@ -505,8 +577,11 @@
     ],
     "correct_index": 1,
     "ai_answer_index": 1,
-    "explanation_brief": "",
-    "explanation_detailed": "",
+    "explanation_brief": "The text explains why \"y'all\" has risen in popularity: it refers specifically to more than one person, which is more precise than \"you.\"",
+    "explanation_detailed": "Step 1: The text notes that \"y'all\" has spread beyond the South and Black communities in the US and asks what explains its rise.\nStep 2: It answers that many varieties of English lack a plural pronoun, and \"y'all\" is always plural, so it's more precise.\nStep 3: So the question addressed is why \"y'all\" has become more widely used in the US.\nStep 4: The text doesn't discuss other plural forms (A), the first recorded use (C), or use outside the US (D).\nSo the answer is choice B.",
+    "wrong_ai_answer_index": 3,
+    "wrong_explanation_brief": "The text discusses how \"y'all\" is used in English-speaking communities and notes that many varieties of English lack a plural \"you,\" so it addresses whether it's used in other English-speaking regions.",
+    "wrong_explanation_detailed": "Step 1: The text refers to \"most other English-speaking communities\" beginning to use \"y'all.\"\nStep 2: It also says that \"many varieties of English\" have no plural pronoun, which points to English as spoken across the world.\nStep 3: Taken together, the text is covering whether \"y'all\" is common in English-speaking regions beyond the US.\nStep 4: The other choices ask about other plural pronouns or its first recorded use, which the text doesn't focus on.\nSo the answer is choice D.",
     "source": "College Board SAT Question Bank (Question ID: 11c68ded)"
   },
   {
@@ -522,8 +597,11 @@
     ],
     "correct_index": 2,
     "ai_answer_index": 2,
-    "explanation_brief": "",
-    "explanation_detailed": "",
+    "explanation_brief": "If the publishers asked for the notes to make the volume attractive to readers who already owned the journal, that directly supports a marketing motive.",
+    "explanation_detailed": "Step 1: The student claims the notes were added primarily as a marketing device.\nStep 2: The best support would tie the notes to selling the book.\nStep 3: Choice C says the publishers requested them to appeal to readers who already had the poem, which shows a sales motive.\nStep 4: Choice A is about changes to the poem itself, choice B is about critics' views, and choice D is about drafts; none address motive.\nSo the answer is choice C.",
+    "wrong_ai_answer_index": 0,
+    "wrong_explanation_brief": "If the text of the poem differs between the journal and the stand-alone volume, the republication was reworked to sell as a new product, supporting the marketing claim.",
+    "wrong_explanation_detailed": "Step 1: The student claims the notes were included mainly to help sell the stand-alone volume.\nStep 2: A volume that differs from the journal version gives readers a reason to buy it again.\nStep 3: Choice A says the text of the poem isn't identical across the two publications, which shows the republication was deliberately differentiated for buyers.\nStep 4: The other choices deal with critics' opinions or drafts of the notes, which are less tied to selling.\nSo the answer is choice A.",
     "source": "College Board SAT Question Bank (Question ID: 94ca8ebd)"
   },
   {
@@ -539,8 +617,10 @@
     ],
     "correct_index": 0,
     "ai_answer_index": 0,
-    "explanation_brief": "",
-    "explanation_detailed": "",
+    "explanation_brief": "Wang's team captured the first image of the Wigner crystal, the most definitive evidence yet of its existence.",
+    "explanation_detailed": "Step 1: Wigner posited the crystal in 1934, and it remained conjecture for decades.\nStep 2: In 2021, Wang's team captured an image of it, the first visual confirmation.\nStep 3: The main idea is therefore that researchers obtained the most definitive evidence yet of the crystal's existence.\nStep 4: The text doesn't discuss other crystals (B), graphene's relative importance (C), or difficulty caused by the honeycomb structure (D).\nSo the answer is choice A.",
+    "wrong_explanation_brief": "",
+    "wrong_explanation_detailed": "",
     "source": "College Board SAT Question Bank (Question ID: 66c47028)"
   },
   {
@@ -556,8 +636,11 @@
     ],
     "correct_index": 0,
     "ai_answer_index": 0,
-    "explanation_brief": "",
-    "explanation_detailed": "",
+    "explanation_brief": "Since interruptions can increase belonging and job satisfaction, their interpersonal benefits may offset the perceived negatives.",
+    "explanation_detailed": "Step 1: Businesses believe interruptions lower energy and productivity.\nStep 2: Puranik's team found interruptions can raise employees' sense of belonging and job satisfaction.\nStep 3: So the social benefits of some interruptions may offset the perceived negative effects.\nStep 4: The text doesn't say how often interruptions are ideal (B), why employees avoid interrupting (C), or that interruptions should be discouraged (D).\nSo the answer is choice A.",
+    "wrong_ai_answer_index": 1,
+    "wrong_explanation_brief": "Since interruptions raise belonging and job satisfaction, employers who want to maximize productivity should be willing to interrupt employees frequently.",
+    "wrong_explanation_detailed": "Step 1: Puranik's team found that interruptions by colleagues can increase belonging and job satisfaction.\nStep 2: Greater job satisfaction benefits both employees and employers, which suggests better productivity.\nStep 3: If interruptions help, then more of them should help more, so employers should interrupt employees frequently.\nStep 4: The other choices either discourage interruptions or discuss why employees avoid them, which conflicts with the finding.\nSo the answer is choice B.",
     "source": "College Board SAT Question Bank (Question ID: 3190835d)"
   },
   {
@@ -573,8 +656,10 @@
     ],
     "correct_index": 1,
     "ai_answer_index": 1,
-    "explanation_brief": "",
-    "explanation_detailed": "",
+    "explanation_brief": "Armijo thinks more heliostats will shorten roasting time, so roasting in under six minutes with 50 heliostats (more than 38 to 42) supports it.",
+    "explanation_detailed": "Step 1: Armijo's hypothesis is that using more heliostats will reduce solar roasting time.\nStep 2: The team used 38 to 42 heliostats, and the fastest time was six minutes.\nStep 3: Choice B says that using 50 heliostats took fewer than six minutes, which directly shows more heliostats gave faster roasting.\nStep 4: Choices A, C, and D discuss temperature evenness, flavor, and peeling, none of which concern speed.\nSo the answer is choice B.",
+    "wrong_explanation_brief": "",
+    "wrong_explanation_detailed": "",
     "source": "College Board SAT Question Bank (Question ID: 85439572)"
   },
   {
@@ -590,8 +675,10 @@
     ],
     "correct_index": 0,
     "ai_answer_index": 0,
-    "explanation_brief": "",
-    "explanation_detailed": "",
+    "explanation_brief": "Tanks with floating duckweed and algae released more methane than tanks with watermilfoil, suggesting underwater plants like watermilfoil help prevent methane from escaping.",
+    "explanation_detailed": "Step 1: The study compared methane release from tanks with watermilfoil (underwater), duckweed (floating), and algae.\nStep 2: Duckweed and algae tanks released more methane than watermilfoil tanks.\nStep 3: So some underwater plants like watermilfoil may help keep methane from escaping.\nStep 4: The text doesn't mention deeper water (B), compare how common each plant is (C), or test mixed plantings (D).\nSo the answer is choice A.",
+    "wrong_explanation_brief": "",
+    "wrong_explanation_detailed": "",
     "source": "College Board SAT Question Bank (Question ID: 01989d77)"
   },
   {
@@ -607,8 +694,11 @@
     ],
     "correct_index": 0,
     "ai_answer_index": 0,
-    "explanation_brief": "",
-    "explanation_detailed": "",
+    "explanation_brief": "Latina authors saying the novella inspired them to write about their own adolescence directly supports the claim about Latina authors and youth.",
+    "explanation_detailed": "Step 1: The underlined claim is that Cisneros's depiction of a preteen girl encouraged Latina authors to write about their own youth.\nStep 2: The strongest support is testimony from Latina authors that the book inspired them to write about adolescence.\nStep 3: Choice A gives exactly that.\nStep 4: Choice B concerns non-Latina authors, choice C is about sales and readership, and choice D shows similarity, not influence.\nSo the answer is choice A.",
+    "wrong_ai_answer_index": 1,
+    "wrong_explanation_brief": "Several prominent authors citing the novella as an influence on their fiction supports the claim that it inspired authors broadly.",
+    "wrong_explanation_detailed": "Step 1: The underlined claim concerns the influence of Cisneros's depiction of a young girl on later authors.\nStep 2: Strong support would come from published writings by authors who explicitly credit the book.\nStep 3: Choice B offers published statements from prominent authors that reading it shaped how they write fiction.\nStep 4: Because these authors are prominent and the statements are published, they carry more weight than interviews, sales figures, or comparisons.\nSo the answer is choice B.",
     "source": "College Board SAT Question Bank (Question ID: a13541c0)"
   }
 ]

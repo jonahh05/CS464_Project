@@ -9,6 +9,7 @@ public record RatingResult(
         int blockIndex,
         String blockId,
         ExplanationLevel explanationLevel,
+        int aiAccuracyPercent,
         RatingPhase phase,
         String itemId,
         int value,

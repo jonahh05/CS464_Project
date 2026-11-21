@@ -1,0 +1,1648 @@
+{
+  "seed": 20261119,
+  "levels": [
+    "E1",
+    "E2",
+    "E3"
+  ],
+  "participants": [
+    {
+      "participant": "P1",
+      "explainability_order": [
+        "E3",
+        "E1",
+        "E2"
+      ],
+      "accuracy_by_section": [
+        50,
+        75,
+        100,
+        75,
+        100,
+        50,
+        100,
+        50,
+        75
+      ],
+      "sections": [
+        {
+          "section": 1,
+          "phase": 1,
+          "explainability": "E3",
+          "accuracy": 50,
+          "questions": [
+            {
+              "position": 1,
+              "id": "3d1070c9",
+              "ai_correct": true
+            },
+            {
+              "position": 2,
+              "id": "fa80893a",
+              "ai_correct": false
+            },
+            {
+              "position": 3,
+              "id": "87aa7bab",
+              "ai_correct": true
+            },
+            {
+              "position": 4,
+              "id": "8c1be131",
+              "ai_correct": false
+            }
+          ]
+        },
+        {
+          "section": 2,
+          "phase": 1,
+          "explainability": "E3",
+          "accuracy": 75,
+          "questions": [
+            {
+              "position": 1,
+              "id": "1480dd5c",
+              "ai_correct": true
+            },
+            {
+              "position": 2,
+              "id": "88e13c8c",
+              "ai_correct": true
+            },
+            {
+              "position": 3,
+              "id": "92c2564d",
+              "ai_correct": true
+            },
+            {
+              "position": 4,
+              "id": "3543e6e2",
+              "ai_correct": false
+            }
+          ]
+        },
+        {
+          "section": 3,
+          "phase": 1,
+          "explainability": "E3",
+          "accuracy": 100,
+          "questions": [
+            {
+              "position": 1,
+              "id": "9b886541",
+              "ai_correct": true
+            },
+            {
+              "position": 2,
+              "id": "01682aa5",
+              "ai_correct": true
+            },
+            {
+              "position": 3,
+              "id": "29f5c8c2",
+              "ai_correct": true
+            },
+            {
+              "position": 4,
+              "id": "ca5a3fb4",
+              "ai_correct": true
+            }
+          ]
+        },
+        {
+          "section": 4,
+          "phase": 2,
+          "explainability": "E1",
+          "accuracy": 75,
+          "questions": [
+            {
+              "position": 1,
+              "id": "ad03127d",
+              "ai_correct": true
+            },
+            {
+              "position": 2,
+              "id": "f89af023",
+              "ai_correct": true
+            },
+            {
+              "position": 3,
+              "id": "cf956802",
+              "ai_correct": true
+            },
+            {
+              "position": 4,
+              "id": "3091f805",
+              "ai_correct": false
+            }
+          ]
+        },
+        {
+          "section": 5,
+          "phase": 2,
+          "explainability": "E1",
+          "accuracy": 100,
+          "questions": [
+            {
+              "position": 1,
+              "id": "4ac59df6",
+              "ai_correct": true
+            },
+            {
+              "position": 2,
+              "id": "58443765",
+              "ai_correct": true
+            },
+            {
+              "position": 3,
+              "id": "60c6b64d",
+              "ai_correct": true
+            },
+            {
+              "position": 4,
+              "id": "1f3be847",
+              "ai_correct": true
+            }
+          ]
+        },
+        {
+          "section": 6,
+          "phase": 2,
+          "explainability": "E1",
+          "accuracy": 50,
+          "questions": [
+            {
+              "position": 1,
+              "id": "53d97af5",
+              "ai_correct": true
+            },
+            {
+              "position": 2,
+              "id": "0ae37ff3",
+              "ai_correct": false
+            },
+            {
+              "position": 3,
+              "id": "57485f5e",
+              "ai_correct": true
+            },
+            {
+              "position": 4,
+              "id": "11c68ded",
+              "ai_correct": false
+            }
+          ]
+        },
+        {
+          "section": 7,
+          "phase": 3,
+          "explainability": "E2",
+          "accuracy": 100,
+          "questions": [
+            {
+              "position": 1,
+              "id": "e9fb7774",
+              "ai_correct": true
+            },
+            {
+              "position": 2,
+              "id": "8705ecba",
+              "ai_correct": true
+            },
+            {
+              "position": 3,
+              "id": "94ca8ebd",
+              "ai_correct": true
+            },
+            {
+              "position": 4,
+              "id": "66c47028",
+              "ai_correct": true
+            }
+          ]
+        },
+        {
+          "section": 8,
+          "phase": 3,
+          "explainability": "E2",
+          "accuracy": 50,
+          "questions": [
+            {
+              "position": 1,
+              "id": "da9ffcf6",
+              "ai_correct": true
+            },
+            {
+              "position": 2,
+              "id": "2a549721",
+              "ai_correct": false
+            },
+            {
+              "position": 3,
+              "id": "3190835d",
+              "ai_correct": false
+            },
+            {
+              "position": 4,
+              "id": "85439572",
+              "ai_correct": true
+            }
+          ]
+        },
+        {
+          "section": 9,
+          "phase": 3,
+          "explainability": "E2",
+          "accuracy": 75,
+          "questions": [
+            {
+              "position": 1,
+              "id": "d0b6d927",
+              "ai_correct": true
+            },
+            {
+              "position": 2,
+              "id": "b434e103",
+              "ai_correct": false
+            },
+            {
+              "position": 3,
+              "id": "01989d77",
+              "ai_correct": true
+            },
+            {
+              "position": 4,
+              "id": "a13541c0",
+              "ai_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "participant": "P2",
+      "explainability_order": [
+        "E2",
+        "E1",
+        "E3"
+      ],
+      "accuracy_by_section": [
+        75,
+        100,
+        50,
+        100,
+        50,
+        75,
+        50,
+        75,
+        100
+      ],
+      "sections": [
+        {
+          "section": 1,
+          "phase": 1,
+          "explainability": "E2",
+          "accuracy": 75,
+          "questions": [
+            {
+              "position": 1,
+              "id": "3d1070c9",
+              "ai_correct": true
+            },
+            {
+              "position": 2,
+              "id": "fa80893a",
+              "ai_correct": true
+            },
+            {
+              "position": 3,
+              "id": "87aa7bab",
+              "ai_correct": true
+            },
+            {
+              "position": 4,
+              "id": "8c1be131",
+              "ai_correct": false
+            }
+          ]
+        },
+        {
+          "section": 2,
+          "phase": 1,
+          "explainability": "E2",
+          "accuracy": 100,
+          "questions": [
+            {
+              "position": 1,
+              "id": "1480dd5c",
+              "ai_correct": true
+            },
+            {
+              "position": 2,
+              "id": "88e13c8c",
+              "ai_correct": true
+            },
+            {
+              "position": 3,
+              "id": "92c2564d",
+              "ai_correct": true
+            },
+            {
+              "position": 4,
+              "id": "3543e6e2",
+              "ai_correct": true
+            }
+          ]
+        },
+        {
+          "section": 3,
+          "phase": 1,
+          "explainability": "E2",
+          "accuracy": 50,
+          "questions": [
+            {
+              "position": 1,
+              "id": "9b886541",
+              "ai_correct": false
+            },
+            {
+              "position": 2,
+              "id": "01682aa5",
+              "ai_correct": true
+            },
+            {
+              "position": 3,
+              "id": "29f5c8c2",
+              "ai_correct": false
+            },
+            {
+              "position": 4,
+              "id": "ca5a3fb4",
+              "ai_correct": true
+            }
+          ]
+        },
+        {
+          "section": 4,
+          "phase": 2,
+          "explainability": "E1",
+          "accuracy": 100,
+          "questions": [
+            {
+              "position": 1,
+              "id": "ad03127d",
+              "ai_correct": true
+            },
+            {
+              "position": 2,
+              "id": "f89af023",
+              "ai_correct": true
+            },
+            {
+              "position": 3,
+              "id": "cf956802",
+              "ai_correct": true
+            },
+            {
+              "position": 4,
+              "id": "3091f805",
+              "ai_correct": true
+            }
+          ]
+        },
+        {
+          "section": 5,
+          "phase": 2,
+          "explainability": "E1",
+          "accuracy": 50,
+          "questions": [
+            {
+              "position": 1,
+              "id": "4ac59df6",
+              "ai_correct": false
+            },
+            {
+              "position": 2,
+              "id": "58443765",
+              "ai_correct": true
+            },
+            {
+              "position": 3,
+              "id": "60c6b64d",
+              "ai_correct": false
+            },
+            {
+              "position": 4,
+              "id": "1f3be847",
+              "ai_correct": true
+            }
+          ]
+        },
+        {
+          "section": 6,
+          "phase": 2,
+          "explainability": "E1",
+          "accuracy": 75,
+          "questions": [
+            {
+              "position": 1,
+              "id": "53d97af5",
+              "ai_correct": true
+            },
+            {
+              "position": 2,
+              "id": "0ae37ff3",
+              "ai_correct": false
+            },
+            {
+              "position": 3,
+              "id": "57485f5e",
+              "ai_correct": true
+            },
+            {
+              "position": 4,
+              "id": "11c68ded",
+              "ai_correct": true
+            }
+          ]
+        },
+        {
+          "section": 7,
+          "phase": 3,
+          "explainability": "E3",
+          "accuracy": 50,
+          "questions": [
+            {
+              "position": 1,
+              "id": "e9fb7774",
+              "ai_correct": false
+            },
+            {
+              "position": 2,
+              "id": "8705ecba",
+              "ai_correct": true
+            },
+            {
+              "position": 3,
+              "id": "94ca8ebd",
+              "ai_correct": false
+            },
+            {
+              "position": 4,
+              "id": "66c47028",
+              "ai_correct": true
+            }
+          ]
+        },
+        {
+          "section": 8,
+          "phase": 3,
+          "explainability": "E3",
+          "accuracy": 75,
+          "questions": [
+            {
+              "position": 1,
+              "id": "da9ffcf6",
+              "ai_correct": true
+            },
+            {
+              "position": 2,
+              "id": "2a549721",
+              "ai_correct": true
+            },
+            {
+              "position": 3,
+              "id": "3190835d",
+              "ai_correct": false
+            },
+            {
+              "position": 4,
+              "id": "85439572",
+              "ai_correct": true
+            }
+          ]
+        },
+        {
+          "section": 9,
+          "phase": 3,
+          "explainability": "E3",
+          "accuracy": 100,
+          "questions": [
+            {
+              "position": 1,
+              "id": "d0b6d927",
+              "ai_correct": true
+            },
+            {
+              "position": 2,
+              "id": "b434e103",
+              "ai_correct": true
+            },
+            {
+              "position": 3,
+              "id": "01989d77",
+              "ai_correct": true
+            },
+            {
+              "position": 4,
+              "id": "a13541c0",
+              "ai_correct": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "participant": "P3",
+      "explainability_order": [
+        "E3",
+        "E2",
+        "E1"
+      ],
+      "accuracy_by_section": [
+        100,
+        50,
+        75,
+        50,
+        75,
+        100,
+        75,
+        100,
+        50
+      ],
+      "sections": [
+        {
+          "section": 1,
+          "phase": 1,
+          "explainability": "E3",
+          "accuracy": 100,
+          "questions": [
+            {
+              "position": 1,
+              "id": "3d1070c9",
+              "ai_correct": true
+            },
+            {
+              "position": 2,
+              "id": "fa80893a",
+              "ai_correct": true
+            },
+            {
+              "position": 3,
+              "id": "87aa7bab",
+              "ai_correct": true
+            },
+            {
+              "position": 4,
+              "id": "8c1be131",
+              "ai_correct": true
+            }
+          ]
+        },
+        {
+          "section": 2,
+          "phase": 1,
+          "explainability": "E3",
+          "accuracy": 50,
+          "questions": [
+            {
+              "position": 1,
+              "id": "1480dd5c",
+              "ai_correct": false
+            },
+            {
+              "position": 2,
+              "id": "88e13c8c",
+              "ai_correct": true
+            },
+            {
+              "position": 3,
+              "id": "92c2564d",
+              "ai_correct": true
+            },
+            {
+              "position": 4,
+              "id": "3543e6e2",
+              "ai_correct": false
+            }
+          ]
+        },
+        {
+          "section": 3,
+          "phase": 1,
+          "explainability": "E3",
+          "accuracy": 75,
+          "questions": [
+            {
+              "position": 1,
+              "id": "9b886541",
+              "ai_correct": false
+            },
+            {
+              "position": 2,
+              "id": "01682aa5",
+              "ai_correct": true
+            },
+            {
+              "position": 3,
+              "id": "29f5c8c2",
+              "ai_correct": true
+            },
+            {
+              "position": 4,
+              "id": "ca5a3fb4",
+              "ai_correct": true
+            }
+          ]
+        },
+        {
+          "section": 4,
+          "phase": 2,
+          "explainability": "E2",
+          "accuracy": 50,
+          "questions": [
+            {
+              "position": 1,
+              "id": "ad03127d",
+              "ai_correct": false
+            },
+            {
+              "position": 2,
+              "id": "f89af023",
+              "ai_correct": true
+            },
+            {
+              "position": 3,
+              "id": "cf956802",
+              "ai_correct": true
+            },
+            {
+              "position": 4,
+              "id": "3091f805",
+              "ai_correct": false
+            }
+          ]
+        },
+        {
+          "section": 5,
+          "phase": 2,
+          "explainability": "E2",
+          "accuracy": 75,
+          "questions": [
+            {
+              "position": 1,
+              "id": "4ac59df6",
+              "ai_correct": true
+            },
+            {
+              "position": 2,
+              "id": "58443765",
+              "ai_correct": true
+            },
+            {
+              "position": 3,
+              "id": "60c6b64d",
+              "ai_correct": false
+            },
+            {
+              "position": 4,
+              "id": "1f3be847",
+              "ai_correct": true
+            }
+          ]
+        },
+        {
+          "section": 6,
+          "phase": 2,
+          "explainability": "E2",
+          "accuracy": 100,
+          "questions": [
+            {
+              "position": 1,
+              "id": "53d97af5",
+              "ai_correct": true
+            },
+            {
+              "position": 2,
+              "id": "0ae37ff3",
+              "ai_correct": true
+            },
+            {
+              "position": 3,
+              "id": "57485f5e",
+              "ai_correct": true
+            },
+            {
+              "position": 4,
+              "id": "11c68ded",
+              "ai_correct": true
+            }
+          ]
+        },
+        {
+          "section": 7,
+          "phase": 3,
+          "explainability": "E1",
+          "accuracy": 75,
+          "questions": [
+            {
+              "position": 1,
+              "id": "e9fb7774",
+              "ai_correct": false
+            },
+            {
+              "position": 2,
+              "id": "8705ecba",
+              "ai_correct": true
+            },
+            {
+              "position": 3,
+              "id": "94ca8ebd",
+              "ai_correct": true
+            },
+            {
+              "position": 4,
+              "id": "66c47028",
+              "ai_correct": true
+            }
+          ]
+        },
+        {
+          "section": 8,
+          "phase": 3,
+          "explainability": "E1",
+          "accuracy": 100,
+          "questions": [
+            {
+              "position": 1,
+              "id": "da9ffcf6",
+              "ai_correct": true
+            },
+            {
+              "position": 2,
+              "id": "2a549721",
+              "ai_correct": true
+            },
+            {
+              "position": 3,
+              "id": "3190835d",
+              "ai_correct": true
+            },
+            {
+              "position": 4,
+              "id": "85439572",
+              "ai_correct": true
+            }
+          ]
+        },
+        {
+          "section": 9,
+          "phase": 3,
+          "explainability": "E1",
+          "accuracy": 50,
+          "questions": [
+            {
+              "position": 1,
+              "id": "d0b6d927",
+              "ai_correct": true
+            },
+            {
+              "position": 2,
+              "id": "b434e103",
+              "ai_correct": false
+            },
+            {
+              "position": 3,
+              "id": "01989d77",
+              "ai_correct": true
+            },
+            {
+              "position": 4,
+              "id": "a13541c0",
+              "ai_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "participant": "P4",
+      "explainability_order": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "accuracy_by_section": [
+        50,
+        100,
+        75,
+        75,
+        50,
+        100,
+        100,
+        75,
+        50
+      ],
+      "sections": [
+        {
+          "section": 1,
+          "phase": 1,
+          "explainability": "E1",
+          "accuracy": 50,
+          "questions": [
+            {
+              "position": 1,
+              "id": "3d1070c9",
+              "ai_correct": true
+            },
+            {
+              "position": 2,
+              "id": "fa80893a",
+              "ai_correct": false
+            },
+            {
+              "position": 3,
+              "id": "87aa7bab",
+              "ai_correct": true
+            },
+            {
+              "position": 4,
+              "id": "8c1be131",
+              "ai_correct": false
+            }
+          ]
+        },
+        {
+          "section": 2,
+          "phase": 1,
+          "explainability": "E1",
+          "accuracy": 100,
+          "questions": [
+            {
+              "position": 1,
+              "id": "1480dd5c",
+              "ai_correct": true
+            },
+            {
+              "position": 2,
+              "id": "88e13c8c",
+              "ai_correct": true
+            },
+            {
+              "position": 3,
+              "id": "92c2564d",
+              "ai_correct": true
+            },
+            {
+              "position": 4,
+              "id": "3543e6e2",
+              "ai_correct": true
+            }
+          ]
+        },
+        {
+          "section": 3,
+          "phase": 1,
+          "explainability": "E1",
+          "accuracy": 75,
+          "questions": [
+            {
+              "position": 1,
+              "id": "9b886541",
+              "ai_correct": true
+            },
+            {
+              "position": 2,
+              "id": "01682aa5",
+              "ai_correct": true
+            },
+            {
+              "position": 3,
+              "id": "29f5c8c2",
+              "ai_correct": false
+            },
+            {
+              "position": 4,
+              "id": "ca5a3fb4",
+              "ai_correct": true
+            }
+          ]
+        },
+        {
+          "section": 4,
+          "phase": 2,
+          "explainability": "E2",
+          "accuracy": 75,
+          "questions": [
+            {
+              "position": 1,
+              "id": "ad03127d",
+              "ai_correct": false
+            },
+            {
+              "position": 2,
+              "id": "f89af023",
+              "ai_correct": true
+            },
+            {
+              "position": 3,
+              "id": "cf956802",
+              "ai_correct": true
+            },
+            {
+              "position": 4,
+              "id": "3091f805",
+              "ai_correct": true
+            }
+          ]
+        },
+        {
+          "section": 5,
+          "phase": 2,
+          "explainability": "E2",
+          "accuracy": 50,
+          "questions": [
+            {
+              "position": 1,
+              "id": "4ac59df6",
+              "ai_correct": false
+            },
+            {
+              "position": 2,
+              "id": "58443765",
+              "ai_correct": true
+            },
+            {
+              "position": 3,
+              "id": "60c6b64d",
+              "ai_correct": false
+            },
+            {
+              "position": 4,
+              "id": "1f3be847",
+              "ai_correct": true
+            }
+          ]
+        },
+        {
+          "section": 6,
+          "phase": 2,
+          "explainability": "E2",
+          "accuracy": 100,
+          "questions": [
+            {
+              "position": 1,
+              "id": "53d97af5",
+              "ai_correct": true
+            },
+            {
+              "position": 2,
+              "id": "0ae37ff3",
+              "ai_correct": true
+            },
+            {
+              "position": 3,
+              "id": "57485f5e",
+              "ai_correct": true
+            },
+            {
+              "position": 4,
+              "id": "11c68ded",
+              "ai_correct": true
+            }
+          ]
+        },
+        {
+          "section": 7,
+          "phase": 3,
+          "explainability": "E3",
+          "accuracy": 100,
+          "questions": [
+            {
+              "position": 1,
+              "id": "e9fb7774",
+              "ai_correct": true
+            },
+            {
+              "position": 2,
+              "id": "8705ecba",
+              "ai_correct": true
+            },
+            {
+              "position": 3,
+              "id": "94ca8ebd",
+              "ai_correct": true
+            },
+            {
+              "position": 4,
+              "id": "66c47028",
+              "ai_correct": true
+            }
+          ]
+        },
+        {
+          "section": 8,
+          "phase": 3,
+          "explainability": "E3",
+          "accuracy": 75,
+          "questions": [
+            {
+              "position": 1,
+              "id": "da9ffcf6",
+              "ai_correct": true
+            },
+            {
+              "position": 2,
+              "id": "2a549721",
+              "ai_correct": false
+            },
+            {
+              "position": 3,
+              "id": "3190835d",
+              "ai_correct": true
+            },
+            {
+              "position": 4,
+              "id": "85439572",
+              "ai_correct": true
+            }
+          ]
+        },
+        {
+          "section": 9,
+          "phase": 3,
+          "explainability": "E3",
+          "accuracy": 50,
+          "questions": [
+            {
+              "position": 1,
+              "id": "d0b6d927",
+              "ai_correct": true
+            },
+            {
+              "position": 2,
+              "id": "b434e103",
+              "ai_correct": false
+            },
+            {
+              "position": 3,
+              "id": "01989d77",
+              "ai_correct": true
+            },
+            {
+              "position": 4,
+              "id": "a13541c0",
+              "ai_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "participant": "P5",
+      "explainability_order": [
+        "E1",
+        "E3",
+        "E2"
+      ],
+      "accuracy_by_section": [
+        75,
+        50,
+        100,
+        100,
+        75,
+        50,
+        50,
+        100,
+        75
+      ],
+      "sections": [
+        {
+          "section": 1,
+          "phase": 1,
+          "explainability": "E1",
+          "accuracy": 75,
+          "questions": [
+            {
+              "position": 1,
+              "id": "3d1070c9",
+              "ai_correct": true
+            },
+            {
+              "position": 2,
+              "id": "fa80893a",
+              "ai_correct": false
+            },
+            {
+              "position": 3,
+              "id": "87aa7bab",
+              "ai_correct": true
+            },
+            {
+              "position": 4,
+              "id": "8c1be131",
+              "ai_correct": true
+            }
+          ]
+        },
+        {
+          "section": 2,
+          "phase": 1,
+          "explainability": "E1",
+          "accuracy": 50,
+          "questions": [
+            {
+              "position": 1,
+              "id": "1480dd5c",
+              "ai_correct": false
+            },
+            {
+              "position": 2,
+              "id": "88e13c8c",
+              "ai_correct": true
+            },
+            {
+              "position": 3,
+              "id": "92c2564d",
+              "ai_correct": true
+            },
+            {
+              "position": 4,
+              "id": "3543e6e2",
+              "ai_correct": false
+            }
+          ]
+        },
+        {
+          "section": 3,
+          "phase": 1,
+          "explainability": "E1",
+          "accuracy": 100,
+          "questions": [
+            {
+              "position": 1,
+              "id": "9b886541",
+              "ai_correct": true
+            },
+            {
+              "position": 2,
+              "id": "01682aa5",
+              "ai_correct": true
+            },
+            {
+              "position": 3,
+              "id": "29f5c8c2",
+              "ai_correct": true
+            },
+            {
+              "position": 4,
+              "id": "ca5a3fb4",
+              "ai_correct": true
+            }
+          ]
+        },
+        {
+          "section": 4,
+          "phase": 2,
+          "explainability": "E3",
+          "accuracy": 100,
+          "questions": [
+            {
+              "position": 1,
+              "id": "ad03127d",
+              "ai_correct": true
+            },
+            {
+              "position": 2,
+              "id": "f89af023",
+              "ai_correct": true
+            },
+            {
+              "position": 3,
+              "id": "cf956802",
+              "ai_correct": true
+            },
+            {
+              "position": 4,
+              "id": "3091f805",
+              "ai_correct": true
+            }
+          ]
+        },
+        {
+          "section": 5,
+          "phase": 2,
+          "explainability": "E3",
+          "accuracy": 75,
+          "questions": [
+            {
+              "position": 1,
+              "id": "4ac59df6",
+              "ai_correct": false
+            },
+            {
+              "position": 2,
+              "id": "58443765",
+              "ai_correct": true
+            },
+            {
+              "position": 3,
+              "id": "60c6b64d",
+              "ai_correct": true
+            },
+            {
+              "position": 4,
+              "id": "1f3be847",
+              "ai_correct": true
+            }
+          ]
+        },
+        {
+          "section": 6,
+          "phase": 2,
+          "explainability": "E3",
+          "accuracy": 50,
+          "questions": [
+            {
+              "position": 1,
+              "id": "53d97af5",
+              "ai_correct": true
+            },
+            {
+              "position": 2,
+              "id": "0ae37ff3",
+              "ai_correct": false
+            },
+            {
+              "position": 3,
+              "id": "57485f5e",
+              "ai_correct": true
+            },
+            {
+              "position": 4,
+              "id": "11c68ded",
+              "ai_correct": false
+            }
+          ]
+        },
+        {
+          "section": 7,
+          "phase": 3,
+          "explainability": "E2",
+          "accuracy": 50,
+          "questions": [
+            {
+              "position": 1,
+              "id": "e9fb7774",
+              "ai_correct": false
+            },
+            {
+              "position": 2,
+              "id": "8705ecba",
+              "ai_correct": true
+            },
+            {
+              "position": 3,
+              "id": "94ca8ebd",
+              "ai_correct": false
+            },
+            {
+              "position": 4,
+              "id": "66c47028",
+              "ai_correct": true
+            }
+          ]
+        },
+        {
+          "section": 8,
+          "phase": 3,
+          "explainability": "E2",
+          "accuracy": 100,
+          "questions": [
+            {
+              "position": 1,
+              "id": "da9ffcf6",
+              "ai_correct": true
+            },
+            {
+              "position": 2,
+              "id": "2a549721",
+              "ai_correct": true
+            },
+            {
+              "position": 3,
+              "id": "3190835d",
+              "ai_correct": true
+            },
+            {
+              "position": 4,
+              "id": "85439572",
+              "ai_correct": true
+            }
+          ]
+        },
+        {
+          "section": 9,
+          "phase": 3,
+          "explainability": "E2",
+          "accuracy": 75,
+          "questions": [
+            {
+              "position": 1,
+              "id": "d0b6d927",
+              "ai_correct": true
+            },
+            {
+              "position": 2,
+              "id": "b434e103",
+              "ai_correct": true
+            },
+            {
+              "position": 3,
+              "id": "01989d77",
+              "ai_correct": true
+            },
+            {
+              "position": 4,
+              "id": "a13541c0",
+              "ai_correct": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "participant": "P6",
+      "explainability_order": [
+        "E2",
+        "E3",
+        "E1"
+      ],
+      "accuracy_by_section": [
+        100,
+        75,
+        50,
+        50,
+        100,
+        75,
+        75,
+        50,
+        100
+      ],
+      "sections": [
+        {
+          "section": 1,
+          "phase": 1,
+          "explainability": "E2",
+          "accuracy": 100,
+          "questions": [
+            {
+              "position": 1,
+              "id": "3d1070c9",
+              "ai_correct": true
+            },
+            {
+              "position": 2,
+              "id": "fa80893a",
+              "ai_correct": true
+            },
+            {
+              "position": 3,
+              "id": "87aa7bab",
+              "ai_correct": true
+            },
+            {
+              "position": 4,
+              "id": "8c1be131",
+              "ai_correct": true
+            }
+          ]
+        },
+        {
+          "section": 2,
+          "phase": 1,
+          "explainability": "E2",
+          "accuracy": 75,
+          "questions": [
+            {
+              "position": 1,
+              "id": "1480dd5c",
+              "ai_correct": false
+            },
+            {
+              "position": 2,
+              "id": "88e13c8c",
+              "ai_correct": true
+            },
+            {
+              "position": 3,
+              "id": "92c2564d",
+              "ai_correct": true
+            },
+            {
+              "position": 4,
+              "id": "3543e6e2",
+              "ai_correct": true
+            }
+          ]
+        },
+        {
+          "section": 3,
+          "phase": 1,
+          "explainability": "E2",
+          "accuracy": 50,
+          "questions": [
+            {
+              "position": 1,
+              "id": "9b886541",
+              "ai_correct": false
+            },
+            {
+              "position": 2,
+              "id": "01682aa5",
+              "ai_correct": true
+            },
+            {
+              "position": 3,
+              "id": "29f5c8c2",
+              "ai_correct": false
+            },
+            {
+              "position": 4,
+              "id": "ca5a3fb4",
+              "ai_correct": true
+            }
+          ]
+        },
+        {
+          "section": 4,
+          "phase": 2,
+          "explainability": "E3",
+          "accuracy": 50,
+          "questions": [
+            {
+              "position": 1,
+              "id": "ad03127d",
+              "ai_correct": false
+            },
+            {
+              "position": 2,
+              "id": "f89af023",
+              "ai_correct": true
+            },
+            {
+              "position": 3,
+              "id": "cf956802",
+              "ai_correct": true
+            },
+            {
+              "position": 4,
+              "id": "3091f805",
+              "ai_correct": false
+            }
+          ]
+        },
+        {
+          "section": 5,
+          "phase": 2,
+          "explainability": "E3",
+          "accuracy": 100,
+          "questions": [
+            {
+              "position": 1,
+              "id": "4ac59df6",
+              "ai_correct": true
+            },
+            {
+              "position": 2,
+              "id": "58443765",
+              "ai_correct": true
+            },
+            {
+              "position": 3,
+              "id": "60c6b64d",
+              "ai_correct": true
+            },
+            {
+              "position": 4,
+              "id": "1f3be847",
+              "ai_correct": true
+            }
+          ]
+        },
+        {
+          "section": 6,
+          "phase": 2,
+          "explainability": "E3",
+          "accuracy": 75,
+          "questions": [
+            {
+              "position": 1,
+              "id": "53d97af5",
+              "ai_correct": true
+            },
+            {
+              "position": 2,
+              "id": "0ae37ff3",
+              "ai_correct": true
+            },
+            {
+              "position": 3,
+              "id": "57485f5e",
+              "ai_correct": true
+            },
+            {
+              "position": 4,
+              "id": "11c68ded",
+              "ai_correct": false
+            }
+          ]
+        },
+        {
+          "section": 7,
+          "phase": 3,
+          "explainability": "E1",
+          "accuracy": 75,
+          "questions": [
+            {
+              "position": 1,
+              "id": "e9fb7774",
+              "ai_correct": true
+            },
+            {
+              "position": 2,
+              "id": "8705ecba",
+              "ai_correct": true
+            },
+            {
+              "position": 3,
+              "id": "94ca8ebd",
+              "ai_correct": false
+            },
+            {
+              "position": 4,
+              "id": "66c47028",
+              "ai_correct": true
+            }
+          ]
+        },
+        {
+          "section": 8,
+          "phase": 3,
+          "explainability": "E1",
+          "accuracy": 50,
+          "questions": [
+            {
+              "position": 1,
+              "id": "da9ffcf6",
+              "ai_correct": true
+            },
+            {
+              "position": 2,
+              "id": "2a549721",
+              "ai_correct": false
+            },
+            {
+              "position": 3,
+              "id": "3190835d",
+              "ai_correct": false
+            },
+            {
+              "position": 4,
+              "id": "85439572",
+              "ai_correct": true
+            }
+          ]
+        },
+        {
+          "section": 9,
+          "phase": 3,
+          "explainability": "E1",
+          "accuracy": 100,
+          "questions": [
+            {
+              "position": 1,
+              "id": "d0b6d927",
+              "ai_correct": true
+            },
+            {
+              "position": 2,
+              "id": "b434e103",
+              "ai_correct": true
+            },
+            {
+              "position": 3,
+              "id": "01989d77",
+              "ai_correct": true
+            },
+            {
+              "position": 4,
+              "id": "a13541c0",
+              "ai_correct": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
